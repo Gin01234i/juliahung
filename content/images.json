@@ -1,0 +1,1378 @@
+{
+  "works": {
+    "beingasawoman": [
+      {
+        "stem": "works/beingasawoman/2025_beingasawoman_01",
+        "width": 7360,
+        "height": 4912,
+        "caption": "2025\nEnamelled copper wire\nH35 x W21 x D15 cm",
+        "parsed": {
+          "raw": "2025, Enamelled copper wire, H35 x W21 x D15 cm",
+          "material": "Enamelled copper wire",
+          "dims": "H35 x W21 x D15 cm",
+          "year": "2025"
+        }
+      },
+      {
+        "stem": "works/beingasawoman/2025_beingasawoman_02",
+        "width": 2048,
+        "height": 1367,
+        "caption": "2025\nEnamelled copper wire\nH35 x W21 x D15 cm",
+        "parsed": {
+          "raw": "2025, Enamelled copper wire, H35 x W21 x D15 cm",
+          "material": "Enamelled copper wire",
+          "dims": "H35 x W21 x D15 cm",
+          "year": "2025"
+        }
+      },
+      {
+        "stem": "works/beingasawoman/2025_beingasawoman_03",
+        "width": 2048,
+        "height": 1367,
+        "caption": "2025\nEnamelled copper wire\nH35 x W21 x D15 cm",
+        "parsed": {
+          "raw": "2025, Enamelled copper wire, H35 x W21 x D15 cm",
+          "material": "Enamelled copper wire",
+          "dims": "H35 x W21 x D15 cm",
+          "year": "2025"
+        }
+      },
+      {
+        "stem": "works/beingasawoman/2025_beingasawoman_04",
+        "width": 2048,
+        "height": 1367,
+        "caption": "2025\nEnamelled copper wire\nH35 x W21 x D15 cm",
+        "parsed": {
+          "raw": "2025, Enamelled copper wire, H35 x W21 x D15 cm",
+          "material": "Enamelled copper wire",
+          "dims": "H35 x W21 x D15 cm",
+          "year": "2025"
+        }
+      },
+      {
+        "stem": "works/beingasawoman/2025_beingasawoman_05",
+        "width": 2048,
+        "height": 1367,
+        "caption": "2025\nEnamelled copper wire\nH35 x W21 x D15 cm",
+        "parsed": {
+          "raw": "2025, Enamelled copper wire, H35 x W21 x D15 cm",
+          "material": "Enamelled copper wire",
+          "dims": "H35 x W21 x D15 cm",
+          "year": "2025"
+        }
+      }
+    ],
+    "wispsnwhispers": [
+      {
+        "stem": "works/wispsnwhispers/2025_wispsnwhispers_01",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire\nH82 x W125 x D30 cm",
+        "parsed": {
+          "raw": "Enamelled copper wire, H82 x W125 x D30 cm",
+          "material": "Enamelled copper wire",
+          "dims": "H82 x W125 x D30 cm"
+        }
+      },
+      {
+        "stem": "works/wispsnwhispers/2025_wispsnwhispers_02",
+        "width": 3000,
+        "height": 2400,
+        "caption": "Enamelled copper wire\nH82 x W125 x D30 cm",
+        "parsed": {
+          "raw": "Enamelled copper wire, H82 x W125 x D30 cm",
+          "material": "Enamelled copper wire",
+          "dims": "H82 x W125 x D30 cm"
+        }
+      },
+      {
+        "stem": "works/wispsnwhispers/2025_wispsnwhispers_03",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+        "parsed": {
+          "raw": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+          "material": "Enamelled copper wire",
+          "dims": "H50 x W18 x D20 cm",
+          "year": "2025"
+        }
+      },
+      {
+        "stem": "works/wispsnwhispers/2025_wispsnwhispers_04",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+        "parsed": {
+          "raw": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+          "material": "Enamelled copper wire",
+          "dims": "H50 x W18 x D20 cm",
+          "year": "2025"
+        }
+      },
+      {
+        "stem": "works/wispsnwhispers/2025_wispsnwhispers_05",
+        "width": 3000,
+        "height": 2400,
+        "caption": "Enamelled copper wire, H120 x W55 x D27 cm, 2025",
+        "parsed": {
+          "raw": "Enamelled copper wire, H120 x W55 x D27 cm, 2025",
+          "material": "Enamelled copper wire",
+          "dims": "H120 x W55 x D27 cm",
+          "year": "2025"
+        }
+      }
+    ],
+    "mystic": [
+      {
+        "stem": "works/mystic/2024_mystic_01",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+          "material": "Enamelled copper wire, video projection",
+          "dims": "Dimensions variable",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/mystic/2024_mystic_02",
+        "width": 3000,
+        "height": 2400,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+          "material": "Enamelled copper wire, video projection",
+          "dims": "Dimensions variable",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/mystic/2024_mystic_03",
+        "width": 3500,
+        "height": 2334,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+          "material": "Enamelled copper wire, video projection",
+          "dims": "Dimensions variable",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/mystic/2024_mystic_04",
+        "width": 4000,
+        "height": 2668,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+          "material": "Enamelled copper wire, video projection",
+          "dims": "Dimensions variable",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/mystic/2024_mystic_05",
+        "width": 3061,
+        "height": 2041,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+          "material": "Enamelled copper wire, video projection",
+          "dims": "Dimensions variable",
+          "year": "2024"
+        }
+      }
+    ],
+    "indefinitepink": [
+      {
+        "stem": "works/indefinitepink/2024_indefinitepink_01",
+        "width": 1229,
+        "height": 1000,
+        "caption": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+        "parsed": {
+          "raw": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+          "material": "Mixed media (Thread, resin, metal structure, light bulb)",
+          "dims": "H400 x W400 x D600 cm",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/indefinitepink/2024_indefinitepink_02",
+        "width": 1500,
+        "height": 1000,
+        "caption": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+        "parsed": {
+          "raw": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+          "material": "Mixed media (Thread, resin, metal structure, light bulb)",
+          "dims": "H400 x W400 x D600 cm",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/indefinitepink/2024_indefinitepink_03",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+        "parsed": {
+          "raw": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+          "material": "Mixed media (Thread, resin, metal structure, light bulb)",
+          "dims": "H400 x W400 x D600 cm",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/indefinitepink/2024_indefinitepink_04",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+        "parsed": {
+          "raw": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+          "material": "Mixed media (Thread, resin, metal structure, light bulb)",
+          "dims": "H400 x W400 x D600 cm",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/indefinitepink/2024_indefinitepink_05",
+        "width": 3000,
+        "height": 2400,
+        "caption": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+        "parsed": {
+          "raw": "Mixed media (Thread, resin, metal structure, light bulb), H400 x W400 x D600 cm, 2024",
+          "material": "Mixed media (Thread, resin, metal structure, light bulb)",
+          "dims": "H400 x W400 x D600 cm",
+          "year": "2024"
+        }
+      }
+    ],
+    "21g": [
+      {
+        "stem": "works/21g/2024_21g_01",
+        "width": 1851,
+        "height": 1388,
+        "caption": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+          "material": "Enamelled copper wire",
+          "dims": "9 x 3 x 3 m (size varies)",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/21g/2024_21g_02",
+        "width": 8100,
+        "height": 6480,
+        "caption": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+          "material": "Enamelled copper wire",
+          "dims": "9 x 3 x 3 m (size varies)",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/21g/2024_21g_03",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+          "material": "Enamelled copper wire",
+          "dims": "9 x 3 x 3 m (size varies)",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/21g/2024_21g_04",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+          "material": "Enamelled copper wire",
+          "dims": "9 x 3 x 3 m (size varies)",
+          "year": "2024"
+        }
+      },
+      {
+        "stem": "works/21g/2024_21g_05",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+        "parsed": {
+          "raw": "Enamelled copper wire, 9 x 3 x 3 m (size varies), 2024",
+          "material": "Enamelled copper wire",
+          "dims": "9 x 3 x 3 m (size varies)",
+          "year": "2024"
+        }
+      }
+    ],
+    "untamed": [
+      {
+        "stem": "works/untamed/2023_untamed_01",
+        "width": 6004,
+        "height": 6004,
+        "caption": "Enamelled copper wire, H26 xW22 xD21 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, H26 xW22 xD21 cm, 2023",
+          "material": "Enamelled copper wire",
+          "dims": "H26 xW22 xD21 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/untamed/2023_untamed_02",
+        "width": 6511,
+        "height": 6510,
+        "caption": "Enamelled copper wire, H27.5x W34.4x D13.3 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, H27.5x W34.4x D13.3 cm, 2023",
+          "material": "Enamelled copper wire",
+          "dims": "H27.5x W34.4x D13.3 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/untamed/2023_untamed_03",
+        "width": 6160,
+        "height": 6160,
+        "caption": "Enamelled copper wire, H27.5 x W34.4 x D13.3 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, H27.5 x W34.4 x D13.3 cm, 2023",
+          "material": "Enamelled copper wire",
+          "dims": "H27.5 x W34.4 x D13.3 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/untamed/2023_untamed_04",
+        "width": 5472,
+        "height": 5472,
+        "caption": "Enamelled copper wire, H23 x W27x D22 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, H23 x W27x D22 cm, 2023",
+          "material": "Enamelled copper wire",
+          "dims": "H23 x W27x D22 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/untamed/2023_untamed_05",
+        "width": 4732,
+        "height": 4732,
+        "caption": "Enamelled copper wire, H36 xW24.2 xD18.5 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, H36 xW24.2 xD18.5 cm, 2023",
+          "material": "Enamelled copper wire",
+          "dims": "H36 xW24.2 xD18.5 cm",
+          "year": "2023"
+        }
+      }
+    ],
+    "bloom": [
+      {
+        "stem": "works/bloom/2023_bloom_01",
+        "width": 7207,
+        "height": 4810,
+        "caption": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+          "material": "Enamelled copper wire, stainless steel",
+          "dims": "H335x W335x D140 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/bloom/2023_bloom_02",
+        "width": 3877,
+        "height": 5810,
+        "caption": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+          "material": "Enamelled copper wire, stainless steel",
+          "dims": "H335x W335x D140 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/bloom/2023_bloom_03",
+        "width": 3314,
+        "height": 3717,
+        "caption": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+          "material": "Enamelled copper wire, stainless steel",
+          "dims": "H335x W335x D140 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/bloom/2023_bloom_04",
+        "width": 1310,
+        "height": 1963,
+        "caption": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+          "material": "Enamelled copper wire, stainless steel",
+          "dims": "H335x W335x D140 cm",
+          "year": "2023"
+        }
+      },
+      {
+        "stem": "works/bloom/2023_bloom_05",
+        "width": 1965,
+        "height": 2944,
+        "caption": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel, H335x W335x D140 cm, 2023",
+          "material": "Enamelled copper wire, stainless steel",
+          "dims": "H335x W335x D140 cm",
+          "year": "2023"
+        }
+      }
+    ],
+    "deja-vu": [
+      {
+        "stem": "works/deja-vu/2022_deja-vu_01",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire,  H135x W60x D72 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H135x W60x D72 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H135x W60x D72 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/deja-vu/2022_deja-vu_02",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, H135x W60x D72 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H135x W60x D72 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H135x W60x D72 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/deja-vu/2022_deja-vu_03",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Enamelled copper wire,  H135x W60x D72 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H135x W60x D72 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H135x W60x D72 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/deja-vu/2022_deja-vu_04",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, H29x W35x D32 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H29x W35x D32 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H29x W35x D32 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/deja-vu/2022_deja-vu_05",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, H29x W35x D32 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H29x W35x D32 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H29x W35x D32 cm",
+          "year": "2022"
+        }
+      }
+    ],
+    "infinite": [
+      {
+        "stem": "works/infinite/2022_infinite_01",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel plate and screw",
+          "dims": "H178x W90x D90 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/infinite/2022_infinite_02",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel plate and screw",
+          "dims": "H178x W90x D90 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/infinite/2022_infinite_03",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel plate and screw",
+          "dims": "H178x W90x D90 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/infinite/2022_infinite_04",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel plate and screw",
+          "dims": "H178x W90x D90 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/infinite/2022_infinite_05",
+        "width": 4160,
+        "height": 6240,
+        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel plate and screw",
+          "dims": "H178x W90x D90 cm",
+          "year": "2022"
+        }
+      }
+    ],
+    "debris": [
+      {
+        "stem": "works/debris/2022_debris_01",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Mixed  media  (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+        "parsed": {
+          "raw": "Mixed media (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+          "material": "Mixed media (Used fabric, wool, wire)",
+          "dims": "H113x W94x D42 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/debris/2022_debris_02",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Mixed  media  (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+        "parsed": {
+          "raw": "Mixed media (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+          "material": "Mixed media (Used fabric, wool, wire)",
+          "dims": "H113x W94x D42 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/debris/2022_debris_03",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Mixed  media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+        "parsed": {
+          "raw": "Mixed media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+          "material": "Mixed media (Used plastic bag, used fabric, wire)",
+          "dims": "H85x W76x D39 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/debris/2022_debris_04",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Mixed  media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+        "parsed": {
+          "raw": "Mixed media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+          "material": "Mixed media (Used plastic bag, used fabric, wire)",
+          "dims": "H85x W76x D39 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/debris/2022_debris_05",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Mixed media (Used plastic bag, used fabric, enamelled copper  wire , wire), H59x W40x D41 cm, 2022",
+        "parsed": {
+          "raw": "Mixed media (Used plastic bag, used fabric, enamelled copper wire , wire), H59x W40x D41 cm, 2022",
+          "material": "Mixed media (Used plastic bag, used fabric, enamelled copper wire, wire)",
+          "dims": "H59x W40x D41 cm",
+          "year": "2022"
+        }
+      }
+    ],
+    "artificial-phenomena": [
+      {
+        "stem": "works/artificial-phenomena/2022_artificial-phenomena_01",
+        "width": 2207,
+        "height": 1473,
+        "caption": "Enamelled copper wire, H115x W150x D43 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H115x W150x D43 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H115x W150x D43 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/artificial-phenomena/2022_artificial-phenomena_02",
+        "width": 1473,
+        "height": 2207,
+        "caption": "Enamelled copper wire, H115x W150x D43 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H115x W150x D43 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H115x W150x D43 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/artificial-phenomena/2022_artificial-phenomena_03",
+        "width": 1368,
+        "height": 2050,
+        "caption": "Enamelled copper wire, H115x W150x D43 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H115x W150x D43 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H115x W150x D43 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/artificial-phenomena/2022_artificial-phenomena_04",
+        "width": 1473,
+        "height": 2207,
+        "caption": "Enamelled  copper  wire, H85x W65x D62 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H85x W65x D62 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H85x W65x D62 cm",
+          "year": "2022"
+        }
+      },
+      {
+        "stem": "works/artificial-phenomena/2022_artificial-phenomena_05",
+        "width": 4912,
+        "height": 7360,
+        "caption": "Enamelled  copper  wire, H85x W65x D62 cm, 2022",
+        "parsed": {
+          "raw": "Enamelled copper wire, H85x W65x D62 cm, 2022",
+          "material": "Enamelled copper wire",
+          "dims": "H85x W65x D62 cm",
+          "year": "2022"
+        }
+      }
+    ],
+    "an-unusual-knot": [
+      {
+        "stem": "works/an-unusual-knot/2021_an-unusual-knot_01",
+        "width": 3750,
+        "height": 2500,
+        "caption": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+        "parsed": {
+          "raw": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+          "material": "Enamelled copper wire",
+          "dims": "H98x W60x D60 cm",
+          "year": "2021"
+        }
+      },
+      {
+        "stem": "works/an-unusual-knot/2021_an-unusual-knot_02",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+        "parsed": {
+          "raw": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+          "material": "Enamelled copper wire",
+          "dims": "H98x W60x D60 cm",
+          "year": "2021"
+        }
+      },
+      {
+        "stem": "works/an-unusual-knot/2021_an-unusual-knot_03",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+        "parsed": {
+          "raw": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+          "material": "Enamelled copper wire",
+          "dims": "H98x W60x D60 cm",
+          "year": "2021"
+        }
+      },
+      {
+        "stem": "works/an-unusual-knot/2021_an-unusual-knot_04",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, acrylic board, H35x W35x D15 cm, 2021",
+        "parsed": {
+          "raw": "Enamelled copper wire, acrylic board, H35x W35x D15 cm, 2021",
+          "material": "Enamelled copper wire, acrylic board",
+          "dims": "H35x W35x D15 cm",
+          "year": "2021"
+        }
+      },
+      {
+        "stem": "works/an-unusual-knot/2021_an-unusual-knot_05",
+        "width": 4199,
+        "height": 2799,
+        "caption": "Enamelled copper wire, acrylic board, H197x W96x D63 cm, 2021",
+        "parsed": {
+          "raw": "Enamelled copper wire, acrylic board, H197x W96x D63 cm, 2021",
+          "material": "Enamelled copper wire, acrylic board",
+          "dims": "H197x W96x D63 cm",
+          "year": "2021"
+        }
+      }
+    ],
+    "will-looped": [
+      {
+        "stem": "works/will-looped/2020_will-looped_01",
+        "width": 2800,
+        "height": 1871,
+        "caption": "Enamelled copper wire, Size varies, 2020",
+        "parsed": {
+          "raw": "Enamelled copper wire, Size varies, 2020",
+          "material": "Enamelled copper wire",
+          "dims": "Size varies",
+          "year": "2020"
+        }
+      },
+      {
+        "stem": "works/will-looped/2020_will-looped_02",
+        "width": 1376,
+        "height": 2061,
+        "caption": "Enamelled copper wire, H60x W115x D40 cm, 2020",
+        "parsed": {
+          "raw": "Enamelled copper wire, H60x W115x D40 cm, 2020",
+          "material": "Enamelled copper wire",
+          "dims": "H60x W115x D40 cm",
+          "year": "2020"
+        }
+      },
+      {
+        "stem": "works/will-looped/2020_will-looped_03",
+        "width": 1347,
+        "height": 2022,
+        "caption": "Enamelled copper wire, H55x W85x D45 cm, 2020",
+        "parsed": {
+          "raw": "Enamelled copper wire, H55x W85x D45 cm, 2020",
+          "material": "Enamelled copper wire",
+          "dims": "H55x W85x D45 cm",
+          "year": "2020"
+        }
+      },
+      {
+        "stem": "works/will-looped/2020_will-looped_04",
+        "width": 1900,
+        "height": 2848,
+        "caption": "Enamelled copper wire, iron wire, H126x W60x D60cm, 2020",
+        "parsed": {
+          "raw": "Enamelled copper wire, iron wire, H126x W60x D60cm, 2020",
+          "material": "Enamelled copper wire, iron wire",
+          "dims": "H126x W60x D60cm",
+          "year": "2020"
+        }
+      },
+      {
+        "stem": "works/will-looped/2020_will-looped_05",
+        "width": 1376,
+        "height": 2061,
+        "caption": "Enamelled copper wire, H121x W37x D38 cm, 2020",
+        "parsed": {
+          "raw": "Enamelled copper wire, H121x W37x D38 cm, 2020",
+          "material": "Enamelled copper wire",
+          "dims": "H121x W37x D38 cm",
+          "year": "2020"
+        }
+      }
+    ],
+    "in-the-mood-for-egg": [
+      {
+        "stem": "works/in-the-mood-for-egg/2017_in-the-mood-for-egg_01",
+        "width": 3543,
+        "height": 2172,
+        "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride), Size Varies, 2017",
+        "parsed": {
+          "raw": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride), Size Varies, 2017",
+          "material": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride)",
+          "dims": "Size Varies",
+          "year": "2017"
+        }
+      },
+      {
+        "stem": "works/in-the-mood-for-egg/2017_in-the-mood-for-egg_02",
+        "width": 2362,
+        "height": 3543,
+        "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride), Size Varies, 2017",
+        "parsed": {
+          "raw": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride), Size Varies, 2017",
+          "material": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride)",
+          "dims": "Size Varies",
+          "year": "2017"
+        }
+      },
+      {
+        "stem": "works/in-the-mood-for-egg/2017_in-the-mood-for-egg_03",
+        "width": 1838,
+        "height": 2450,
+        "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride), Size Varies, 2017",
+        "parsed": {
+          "raw": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride), Size Varies, 2017",
+          "material": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, Sodium alginate, Calcium chloride)",
+          "dims": "Size Varies",
+          "year": "2017"
+        }
+      }
+    ]
+  },
+  "exhibitions": {
+    "airydisk": [
+      {
+        "stem": "exhibitions/airydisk/2024_airydisk_01",
+        "width": 3500,
+        "height": 2334,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/airydisk/2024_airydisk_02",
+        "width": 4000,
+        "height": 2668,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/airydisk/2024_airydisk_03",
+        "width": 3061,
+        "height": 2041,
+        "caption": "Enamelled copper wire, video projection, Dimensions variable, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/airydisk/2024_airydisk_04",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, H81.5 x W38.5 x D5 cm, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/airydisk/2024_airydisk_05",
+        "width": 2000,
+        "height": 1333,
+        "caption": "Enamelled copper wire, H81.5 x W38.5 x D5 cm, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/airydisk/2024_airydisk_06",
+        "width": 2400,
+        "height": 3000,
+        "caption": "Enamelled copper wire, H90 x W61 x D12 cm, 2024",
+        "parsed": {}
+      }
+    ],
+    "an-unusual-knot": [
+      {
+        "stem": "exhibitions/an-unusual-knot/2021_an-unusual-knot_01",
+        "width": 3000,
+        "height": 2000,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/an-unusual-knot/2021_an-unusual-knot_02",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/an-unusual-knot/2021_an-unusual-knot_03",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Enamelled copper wire, acrylic board, H35x W45x D45 cm, 2021",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/an-unusual-knot/2021_an-unusual-knot_04",
+        "width": 2029,
+        "height": 1522,
+        "caption": "Enamelled copper wire, H22x W27.5x D28 cm, 2021",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/an-unusual-knot/2021_an-unusual-knot_05",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Enamelled copper wire, acrylic board, H35x W35x D15 cm, 2021",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/an-unusual-knot/2021_an-unusual-knot_06",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Pretzel Twist (Left)\nBlue Multifoil (Middel)\nSpiral Twist (Right)",
+        "parsed": {}
+      }
+    ],
+    "artificial-phenomena": [
+      {
+        "stem": "exhibitions/artificial-phenomena/2022_artificial-phenomena_01",
+        "width": 8192,
+        "height": 5464,
+        "caption": "Untitled (Chromatic Extension) (Left)\n Amphichiral (Right)",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/artificial-phenomena/2022_artificial-phenomena_02",
+        "width": 8192,
+        "height": 5464,
+        "caption": "Enamelled copper wire, H88x W66x D66 cm, 2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/artificial-phenomena/2022_artificial-phenomena_03",
+        "width": 1813,
+        "height": 1209,
+        "caption": "Untitled (Pastel Mirror) (Left)\nUntitled (Chromatin Mirror) (Middel) \nUntitled (Chromatic Pastel)",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/artificial-phenomena/2022_artificial-phenomena_04",
+        "width": 8192,
+        "height": 5464,
+        "caption": "Enamelled copper wire, H46x W33x D18 cm, 2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/artificial-phenomena/2022_artificial-phenomena_05",
+        "width": 3975,
+        "height": 5298,
+        "caption": "Enamelled copper wire, H88x W66x D66 cm, 2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/artificial-phenomena/2022_artificial-phenomena_06",
+        "width": 5464,
+        "height": 8192,
+        "caption": "Enamelled copper wire, H120x W60x D58 cm, 2021",
+        "parsed": {}
+      }
+    ],
+    "forestry-island-eco-art-festival": [
+      {
+        "stem": "exhibitions/forestry-island-eco-art-festival/2023_forestry-island-eco-art-festival_01",
+        "width": 5923,
+        "height": 3949,
+        "caption": "Debris09 (Left)\nBiomimicry02 (Right)",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/forestry-island-eco-art-festival/2023_forestry-island-eco-art-festival_02",
+        "width": 6000,
+        "height": 4000,
+        "caption": "Debris09 (Left)\nBiomimicry02 (Right)",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/forestry-island-eco-art-festival/2023_forestry-island-eco-art-festival_03",
+        "width": 6000,
+        "height": 4000,
+        "caption": "Mixed Medium (Used fabric,wool, iron wire), H113 x W94 x D42 cm, 2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/forestry-island-eco-art-festival/2023_forestry-island-eco-art-festival_04",
+        "width": 6000,
+        "height": 4000,
+        "caption": "Mixed Medium (Used fabric,wool, iron wire)  H113 x W94 x D42 cm  2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/forestry-island-eco-art-festival/2023_forestry-island-eco-art-festival_05",
+        "width": 5377,
+        "height": 3585,
+        "caption": "Mixed Medium (Used fabric, wool, used plastic bottle, paper string, enamelled copper wire, iron wire),  H79x W64x D27 cm, 2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/forestry-island-eco-art-festival/2023_forestry-island-eco-art-festival_06",
+        "width": 6000,
+        "height": 4000,
+        "caption": "Mixed Medium (Used fabric, wool, used plastic bottle, paper string, enamelled copper wire, iron wire),  H79x W64x D27 cm, 2022",
+        "parsed": {}
+      }
+    ],
+    "in-the-mood-for-egg": [
+      {
+        "stem": "exhibitions/in-the-mood-for-egg/2017_in-the-mood-for-egg_01",
+        "width": 3543,
+        "height": 2172,
+        "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, sodium alginate, calcium chloride), 6 x 6 x 5 cm, 2017",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/in-the-mood-for-egg/2017_in-the-mood-for-egg_02",
+        "width": 2362,
+        "height": 3543,
+        "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, sodium alginate, calcium chloride), 6 x 6 x 5 cm, 2017",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/in-the-mood-for-egg/2017_in-the-mood-for-egg_03",
+        "width": 1838,
+        "height": 2450,
+        "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, sodium alginate, calcium chloride), 6 x 6 x 5 cm, 2017",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/in-the-mood-for-egg/2017_in-the-mood-for-egg_04",
+        "width": 2362,
+        "height": 3543,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/in-the-mood-for-egg/2017_in-the-mood-for-egg_05",
+        "width": 3543,
+        "height": 2323,
+        "caption": "",
+        "parsed": {}
+      }
+    ],
+    "taipeidangdai2024": [
+      {
+        "stem": "exhibitions/taipeidangdai2024/2024_taipeidangdai2024_01",
+        "width": 1500,
+        "height": 1000,
+        "caption": "Mixed media, H4 x W4 x D6m, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/taipeidangdai2024/2024_taipeidangdai2024_02",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Mixed media, H4 x W4 x D6m, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/taipeidangdai2024/2024_taipeidangdai2024_03",
+        "width": 2092,
+        "height": 1702,
+        "caption": "Mixed media, H4 x W4 x D6m, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/taipeidangdai2024/2024_taipeidangdai2024_04",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Mixed media, H4 x W4 x D6m, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/taipeidangdai2024/2024_taipeidangdai2024_05",
+        "width": 3000,
+        "height": 2000,
+        "caption": "Mixed media, H4 x W4 x D6m, 2024",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/taipeidangdai2024/2024_taipeidangdai2024_06",
+        "width": 2000,
+        "height": 3000,
+        "caption": "Mixed media, H4 x W4 x D6m, 2024",
+        "parsed": {}
+      }
+    ],
+    "taiwan-lantern-festival": [
+      {
+        "stem": "exhibitions/taiwan-lantern-festival/2019_taiwan-lantern-festival_01",
+        "width": 4032,
+        "height": 3024,
+        "caption": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/taiwan-lantern-festival/2019_taiwan-lantern-festival_02",
+        "width": 4032,
+        "height": 3024,
+        "caption": "Mixed media (repurposed plastic bag, metal structure,LED light),6 x 6 x 4m, 2019",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/taiwan-lantern-festival/2019_taiwan-lantern-festival_03",
+        "width": 3024,
+        "height": 4032,
+        "caption": "Mixed media (repurposed plastic bag, metal structure,LED light)\n, 6 x 6 x 4m, 2019",
+        "parsed": {}
+      }
+    ],
+    "the-interval-between": [
+      {
+        "stem": "exhibitions/the-interval-between/2025_the-interval-between_01",
+        "width": 2048,
+        "height": 1367,
+        "caption": "2025\nEnamelled copper wire\nH35x W21x D15 cm",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-interval-between/2025_the-interval-between_02",
+        "width": 7360,
+        "height": 4912,
+        "caption": "2025\nEnamelled copper wire\nH35x W21x D15 cm",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-interval-between/2025_the-interval-between_03",
+        "width": 2400,
+        "height": 3000,
+        "caption": "2025\nEnamelled copper wire\nH125 x W102 x D30 cm",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-interval-between/2025_the-interval-between_04",
+        "width": 2000,
+        "height": 1999,
+        "caption": "2025\nEnamelled copper wire\nH125 x W102 x D30 cm",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-interval-between/2025_the-interval-between_05",
+        "width": 1000,
+        "height": 1000,
+        "caption": "2023\nEnamelled copper wire\nH27 x W23 x D22 cm",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-interval-between/2025_the-interval-between_06",
+        "width": 1000,
+        "height": 667,
+        "caption": "Enamelled copper wire\nH27 x W23 x D22 cm\n2023",
+        "parsed": {}
+      }
+    ],
+    "the-miscellaneous-of-being-and-living": [
+      {
+        "stem": "exhibitions/the-miscellaneous-of-being-and-living/2021_the-miscellaneous-of-being-and-living_01",
+        "width": 2248,
+        "height": 1500,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-miscellaneous-of-being-and-living/2021_the-miscellaneous-of-being-and-living_02",
+        "width": 2247,
+        "height": 1500,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-miscellaneous-of-being-and-living/2021_the-miscellaneous-of-being-and-living_03",
+        "width": 2248,
+        "height": 1500,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-miscellaneous-of-being-and-living/2021_the-miscellaneous-of-being-and-living_04",
+        "width": 1800,
+        "height": 1295,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-miscellaneous-of-being-and-living/2021_the-miscellaneous-of-being-and-living_05",
+        "width": 2248,
+        "height": 1500,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-miscellaneous-of-being-and-living/2021_the-miscellaneous-of-being-and-living_06",
+        "width": 2248,
+        "height": 1500,
+        "caption": "",
+        "parsed": {}
+      }
+    ],
+    "the-seedin-lab-ocean": [
+      {
+        "stem": "exhibitions/the-seedin-lab-ocean/2022_the-seedin-lab-ocean_01",
+        "width": 2750,
+        "height": 1823,
+        "caption": "Mixed media (used fishing net), Installation (size varies), 2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-seedin-lab-ocean/2022_the-seedin-lab-ocean_02",
+        "width": 2999,
+        "height": 1936,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-seedin-lab-ocean/2022_the-seedin-lab-ocean_03",
+        "width": 2667,
+        "height": 2002,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-seedin-lab-ocean/2022_the-seedin-lab-ocean_04",
+        "width": 2002,
+        "height": 2511,
+        "caption": "Mixed media (used fishing net), Installation (size varies),  2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-seedin-lab-ocean/2022_the-seedin-lab-ocean_05",
+        "width": 4896,
+        "height": 3264,
+        "caption": "Mixed media (used fabric, used plastic bag, wool, wire), H113x W94x D42 cm, 2022",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/the-seedin-lab-ocean/2022_the-seedin-lab-ocean_06",
+        "width": 2002,
+        "height": 3000,
+        "caption": "Mixed media (used plastic bag, used fabric, wool, paper string, wire), H85x W76x D39 cm, 2022",
+        "parsed": {}
+      }
+    ],
+    "untamed": [
+      {
+        "stem": "exhibitions/untamed/2023_untamed_01",
+        "width": 2006,
+        "height": 1338,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/untamed/2023_untamed_02",
+        "width": 1758,
+        "height": 1172,
+        "caption": "Enamelled copper wire,H70x W81x D20 cm,\n2023",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/untamed/2023_untamed_03",
+        "width": 3543,
+        "height": 2363,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/untamed/2023_untamed_04",
+        "width": 8192,
+        "height": 5464,
+        "caption": "Enamelled copper wire, Size varies, 2023",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/untamed/2023_untamed_05",
+        "width": 2048,
+        "height": 1366,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/untamed/2023_untamed_06",
+        "width": 2048,
+        "height": 1366,
+        "caption": "Untamed 18 (Left)\nUntamed 02 (Middle)\nUntamed 10 (Right)",
+        "parsed": {}
+      }
+    ],
+    "whennightfalls": [
+      {
+        "stem": "exhibitions/whennightfalls/2025_whennightfalls_01",
+        "width": 2000,
+        "height": 1333,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/whennightfalls/2025_whennightfalls_02",
+        "width": 1333,
+        "height": 2000,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/whennightfalls/2025_whennightfalls_03",
+        "width": 3000,
+        "height": 2000,
+        "caption": "",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/whennightfalls/2025_whennightfalls_04",
+        "width": 2400,
+        "height": 3000,
+        "caption": "",
+        "parsed": {}
+      }
+    ],
+    "will-looped": [
+      {
+        "stem": "exhibitions/will-looped/2020_will-looped_01",
+        "width": 5323,
+        "height": 3543,
+        "caption": "Untitled (Pink swirl) (Left)\nUntitled (Colored organism) (Middle)\nUntitled (Burgundy swirl with blue hint) (Right)",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/will-looped/2020_will-looped_02",
+        "width": 4912,
+        "height": 7360,
+        "caption": "Enameled copper wire,\niron wire, H126x W60x D60 cm, 2020",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/will-looped/2020_will-looped_03",
+        "width": 4680,
+        "height": 7012,
+        "caption": "Enameled copper wire, H37 x W45x D50 cm, 2020",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/will-looped/2020_will-looped_04",
+        "width": 1589,
+        "height": 2379,
+        "caption": "Enameled copper wire, H130x W50x D50 cm, 2020",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/will-looped/2020_will-looped_05",
+        "width": 3024,
+        "height": 4032,
+        "caption": "Enameled copper wire, H130x W50x D50 cm, 2020",
+        "parsed": {}
+      },
+      {
+        "stem": "exhibitions/will-looped/2020_will-looped_06",
+        "width": 7360,
+        "height": 4912,
+        "caption": "Enamelled copper wire, Size varies, 2020",
+        "parsed": {}
+      }
+    ]
+  }
+}

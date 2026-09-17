@@ -1,0 +1,89 @@
+{
+  "_comment": "Transcribed from the published /about page on 2026-09-17. The Wix About collection was older; this matches what is live. Julia edits here, then reruns tools/stamp.py - or edits about/index.html directly.",
+  "name": "Julia Yu-Wen Hung",
+  "name_zh": "洪郁雯",
+  "born": "Born 1986 in Taipei; currently based between Taipei and New York",
+  "born_zh": "1986 年生於台北，現往返於台北與紐約",
+  "statement": [
+    "Julia Hung (b. 1986, Taipei) creates installations and sculptures that explore transformation through material, perception, and impermanence. Using techniques historically associated with domestic labor—such as cooking, ironing, and textile-based processes—she reconfigures overlooked materials, including discarded plastics, ordinary objects, and daily gestures, into biomorphic, fluid forms. Her practice examines how systems of value, cultural meaning, and perception are continuously constructed, dissolved, and reshaped through shifting states between presence and absence, permanence and ephemerality.",
+    "Hung holds a BDes from OCAD University (2012) and an MFA from HEAD – Genève (2016). She was awarded the Asian Cultural Council New York Fellowship (2024) and was a finalist for the New Heads – Fondation BNP Paribas Art Award (2017) and the Taoyuan Fine Arts Exhibition (2023). Her work is held in public and private collections including the King Car Cultural & Educational Foundation, t.Hub Taipei, and Hotel Indigo Alishan."
+  ],
+  "sections": [
+    {
+      "heading": "Education",
+      "entries": [
+        ["2016", "Master of Art HES-SO in Fine Art, Work.Master — Contemporary Artist Practice, HEAD, Geneva"],
+        ["2012", "Bachelor of Design, Illustration, OCAD University, Toronto"]
+      ]
+    },
+    {
+      "heading": "Selected Solo Exhibitions",
+      "entries": [
+        ["2023", "<em>Untamed</em>, Soka Art, Tainan"],
+        ["2021", "<em>An Unusual Knot</em>, Hiro Hiro Art Space, Taipei"],
+        ["2021", "<em>The Miscellaneous of Being and Living</em>, New Taipei City Arts Center, New Taipei City"],
+        ["2020", "<em>Will Looped</em>, The Art Space by the Studio, Taipei"]
+      ]
+    },
+    {
+      "heading": "Selected Group Exhibitions / Collaborations",
+      "entries": [
+        ["2026", "<em>Secret Forms</em>, Galerie Georges-Philippe &amp; Nathalie Vallois, New York"],
+        ["2025", "<em>The Interval Between: Galerie Pierre 35th Anniversary Exhibition</em>, Galerie Pierre, Taichung"],
+        ["2025", "<em>When Night Falls</em>, TKG+ Projects, Taipei"],
+        ["2024", "<em>Airy Disk</em>, River Art Gallery, Taichung"],
+        ["2024", "<em>Art Taipei 2024</em>, Taipei World Trade Center Exhibition Hall 1, Taipei"],
+        ["2024", "<em>Taipei Dangdai</em>, NODE, Taipei Nangang Exhibition Center, Taipei"],
+        ["2024", "<em>Voices</em>, POPOP Taipei, Taipei"],
+        ["2023", "<em>Forestry Island Eco Art Festival 2023</em>, Pingtung"],
+        ["2023", "<em>Similarities: Co-exhibition of 6 Artists</em>, San Gallery, Tainan"],
+        ["2023", "<em>Art Taipei 2023</em>, Taipei World Trade Center Exhibition Hall 1, Taipei"],
+        ["2023", "<em>Art Osaka 2023</em>, Osaka City Central Public Hall, Osaka"],
+        ["2023", "<em>Breeze — Female Artists Group Exhibition</em>, isart Gallery, Taipei"],
+        ["2023", "<em>FIABCN 2023 — Contemporary Art Collectors Virtual Gallery</em>, Museu Marítim de Barcelona, Barcelona"],
+        ["2022", "<em>The Seedin Lab — Ocean</em>, The Seedin Lab, Taipei"],
+        ["2022", "<em>Artificial Phenomena</em>, Centurion House, Taipei"],
+        ["2021", "<em>All Solo!</em>, Dadaocheng Project by Liang Gallery, OrigInn Space, Taipei"],
+        ["2020", "<em>Pingtung Art Exhibition</em>, Pingtung Art Museum, Pingtung"],
+        ["2019", "<em>Taiwan Lantern Festival</em>, Pingtung"],
+        ["2018", "<em>Immortagram</em>, Element, Taipei"],
+        ["2017", "<em>L’Oranger</em>, LIYH (LiveInYourHead Gallery), Geneva"],
+        ["2016", "<em>Happy Silly Kids</em>, HEAD, Geneva"],
+        ["2016", "<em>Chantier Confort</em>, Le Confort Moderne, Poitiers"],
+        ["2014", "<em>White Noise</em>, HEAD, Geneva"],
+        ["2014", "<em>Bourgeois Bore</em>, Istituto Svizzero di Roma, Rome"],
+        ["2013", "<em>Eggspectation — Sunny Side Up</em>, HEAD, Geneva"]
+      ]
+    },
+    {
+      "heading": "Awards / Grants",
+      "entries": [
+        ["2024", "Asian Cultural Council, New York Fellowship, Grantee, New York"],
+        ["2023", "Taoyuan Fine Arts Exhibition, Finalist, Taoyuan"],
+        ["2020", "Pingtung Fine Art Award, Runner-up, Pingtung"],
+        ["2017", "New Heads — Fondation BNP Paribas Art Awards, Finalist, Geneva"]
+      ]
+    },
+    {
+      "heading": "Selected Collections / Public Art",
+      "entries": [
+        ["", "King Car Cultural &amp; Educational Foundation, Taipei"],
+        ["", "Hotel Indigo Alishan, Chiayi"],
+        ["", "Hon Hui Rui Guang Co., Ltd., Taipei"],
+        ["", "Artvera’s Gallery, Geneva"],
+        ["", "Private collections in Taiwan, China and Switzerland"]
+      ]
+    },
+    {
+      "heading": "Publications / Writing",
+      "entries": [
+        ["2023", "<em>Untamed</em>"],
+        ["2017", "<em>L’Oranger</em> (exhibition catalogue)"],
+        ["2016", "<em>Vrai de Vrai / Real de Real — In the Mood for Egg</em>"],
+        ["2016", "<em>A Recipe of No Recipe</em>"]
+      ]
+    }
+  ],
+  "cv_pdf": null,
+  "_cv_pdf_note": "Drop Julia_Hung_CV_2026-08.pdf into assets/docs/ and set this to /assets/docs/Julia_Hung_CV_2026-08.pdf to light up the download link."
+}

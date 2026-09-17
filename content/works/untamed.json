@@ -1,0 +1,515 @@
+{
+  "slug": "untamed",
+  "title": "Untamed",
+  "title_zh": "「初始狀態」系列",
+  "year": "2023",
+  "material": "Enamelled copper wire",
+  "material_zh": "彩漆銅線",
+  "series": "Untamed series",
+  "series_zh": "初始狀態",
+  "dimensions": "H26 xW22 xD21 cm",
+  "statement": [
+    "Untamed considers the idea of an original state, questioning the extent to which it can exist outside systems of control. The work reflects on the tension between imposed structure and unregulated formation.",
+    "Developed without predeterminated composition, asymmetrical forms emerge intuitively, allowing material, light, and shadow to remain in flux. Rather than proposing a return to an untouched state, the work holds open the question of whether such a condition is possible—or already shaped by the very frameworks it seeks to resist."
+  ],
+  "statement_zh": [
+    "撰稿人/ 廖家誠 Chia-cheng LIAO",
+    "“The dreamer's untamed eye sees beyond the illusions to the heart of what is real.”──Bryant H. McGill",
+    "“夢想家的赤子之眼能看穿超脫於幻覺的真實所在。”──美國作家布萊恩‧麥吉爾",
+    "在形式多變的藝術表現世界中，何謂創作的「初始」？萬物能否終有回復到未經修飾的純粹狀態之時？藝術家洪郁雯從探討主體自由意志的創作思路為始，在歷經不同階段的感知與思辨後，本次個展透過其擅長之金屬銅線手工編織技法，以及標誌性的有機形體創作，帶領觀者探究關於人與萬物的「初始狀態」。",
+    "與展覽同名之最新創作系列《初始狀態》，藝術家嘗試以非對稱式的結構與隨興自在的作品線條，呈現不受準則拘束的不羈精神。在銅線編織交錯之中，其作品仍保留了媒材的個別原色，型塑出具流動感、非單一形體的樣貌，蘊含著專屬手工創作的初始與自然。",
+    "別於傳統構圖原則，直覺式的創作，使得洪郁雯的作品始終蘊藏著「有機性」，如其英文展名「Untamed（未經馴化的）」，不僅深刻呼應美國作家布萊恩‧麥吉爾之引言，以流線輪廓、豐富多彩的半透視銅線雕塑，思考人造現實，更跳脫單一視角觀賞之框架限制，任其自由地與空間、光影交錯對話，進而開啟獨特的視覺律動。",
+    "1986年，藝術家Julia Hung洪郁雯出生於臺北，自小旅居各國，受多元文化薰陶，對身處環境的人事物總是抱持開放及好奇的態度，喜歡提出疑問，與社會對話。 洪郁雯的作品常透過各種媒材探索並實驗不同的可能性，運用豐富的色彩，思考人造現實、消費文化和事物一體兩面的觀點，與人開啟對談，並從藝術中找尋身為人的使命與意義，為近年臺灣新銳藝術家。"
+  ],
+  "exhibitions": [
+    {
+      "text": "Untamed",
+      "href": "https://www.jujuhung.com/exhibitions/untamed"
+    }
+  ],
+  "exhibitions_zh": [
+    {
+      "text": "2023台北國際藝博會",
+      "href": "https://www.jujuhung.com/zh/exhibition/art-taipei-2023"
+    },
+    {
+      "text": "2023桃源美展",
+      "href": "https://www.jujuhung.com/zh/exhibition/taoyuan-fine-arts-exhibition-2023"
+    },
+    {
+      "text": "2023大阪國際藝博會",
+      "href": "https://www.jujuhung.com/zh/exhibition/art-osaka-2023"
+    },
+    {
+      "text": "初始狀態",
+      "href": "https://www.jujuhung.com/zh/exhibition/untamed"
+    }
+  ],
+  "video": null,
+  "images": [
+    {
+      "media": "2116cb_2af8d9286281456ab6047c3352ef932c~mv2.jpg",
+      "width": 6004,
+      "height": 6004,
+      "caption": "Enamelled copper wire, H26 xW22 xD21 cm, 2023",
+      "title": "Untamed01",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H26 xW22 xD21 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H26 xW22 xD21 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_c97b6bc55d164c44a5b6d5331531fc79~mv2.jpg",
+      "width": 6511,
+      "height": 6510,
+      "caption": "Enamelled copper wire, H27.5x W34.4x D13.3 cm, 2023",
+      "title": "Untamed02",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H27.5x W34.4x D13.3 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H27.5x W34.4x D13.3 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_b55a568f349a475bb4be34c6ef661685~mv2.jpg",
+      "width": 6160,
+      "height": 6160,
+      "caption": "Enamelled copper wire, H27.5 x W34.4 x D13.3 cm, 2023",
+      "title": "Untamed03",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H27.5 x W34.4 x D13.3 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H27.5 x W34.4 x D13.3 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_eded225d621d4bfebdd9ccba6482a809~mv2.jpg",
+      "width": 5472,
+      "height": 5472,
+      "caption": "Enamelled copper wire, H23 x W27x D22 cm, 2023",
+      "title": "Untamed05",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H23 x W27x D22 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H23 x W27x D22 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_7221b2da120a44599d155beb9640a524~mv2.jpg",
+      "width": 4732,
+      "height": 4732,
+      "caption": "Enamelled copper wire, H36 xW24.2 xD18.5 cm, 2023",
+      "title": "Untamed06",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H36 xW24.2 xD18.5 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H36 xW24.2 xD18.5 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_ed0b27b9163c4911a3bef202575cfb3a~mv2.jpg",
+      "width": 6470,
+      "height": 6470,
+      "caption": "Enamelled copper wire, H36x W24.2x D18.5 cm, 2023",
+      "title": "Untamed07",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H36x W24.2x D18.5 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H36x W24.2x D18.5 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_416fa19086de455395f2159311bd97b0~mv2.jpg",
+      "width": 6375,
+      "height": 6375,
+      "caption": "Enamelled copper wire, H52x W36x D32 cm, 2023",
+      "title": "Untamed08",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H52x W36x D32 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H52x W36x D32 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_09777b4d5fda443abe40534d3b8a2386~mv2.jpg",
+      "width": 4868,
+      "height": 4868,
+      "caption": "Enamelled copper wire, H43x W41x D34 cm, 2023",
+      "title": "Untamed09",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H43x W41x D34 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H43x W41x D34 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_8046ca34a3cc4ed6a982f092e28c7f7e~mv2.jpg",
+      "width": 6438,
+      "height": 6438,
+      "caption": "Enamelled copper wire, H66.4x W40x D33 cm, 2023",
+      "title": "Untamed10",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H66.4x W40x D33 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H66.4x W40x D33 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_92b0c3033e8f4774936538561382d406~mv2.jpg",
+      "width": 6567,
+      "height": 6567,
+      "caption": "Enamelled copper wire, H70x W81x D20 cm, 2023",
+      "title": "Untamed11",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H70x W81x D20 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H70x W81x D20 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_27c280258dd2410bbf7a1a367f0172fe~mv2.jpg",
+      "width": 4912,
+      "height": 4912,
+      "caption": "Enamelled copper wire, H75x W47x D43 cm, 2023",
+      "title": "Untamed12",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H75x W47x D43 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H75x W47x D43 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_6673f1fe378d4b38a256a905b37a9ca4~mv2.jpg",
+      "width": 7970,
+      "height": 7971,
+      "caption": "Enamelled copper wire, H86x W56x D34 cm, 2023",
+      "title": "Untamed13",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H86x W56x D34 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H86x W56x D34 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_c5ae08c151e0409b9122797462d3ab03~mv2.jpg",
+      "width": 6874,
+      "height": 6874,
+      "caption": "Enamelled copper wire, H76x W77x D35 cm, 2023",
+      "title": "Untamed15",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H76x W77x D35 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H76x W77x D35 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_54c52400458e454e8ea8178a725170c8~mv2.jpg",
+      "width": 3200,
+      "height": 3668,
+      "caption": "Enamelled copper wire, H77.5x W61x D53.5 cm, 2023",
+      "title": "Untamed16",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H77.5x W61x D53.5 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H77.5x W61x D53.5 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_e74652994b22419cadda75cb06be38f7~mv2.jpg",
+      "width": 8034,
+      "height": 8033,
+      "caption": "Enamelled copper wire, H143x W51.5x D49 cm, 2023",
+      "title": "Untamed17",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H143x W51.5x D49 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H143x W51.5x D49 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_234548900afc4289b363141112c01da4~mv2.jpg",
+      "width": 7360,
+      "height": 7360,
+      "caption": "Enamelled copper wire, H152x W60.3x D49 cm, 2023",
+      "title": "Untamed18",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H152x W60.3x D49 cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H152x W60.3x D49 cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_0730c0c98de64761b72b4d7add34bde2~mv2.jpg",
+      "width": 4966,
+      "height": 4966,
+      "caption": "Enamelled copper wire, H156x W80x D68cm, 2023",
+      "title": "Untamed19",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H156x W80x D68cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H156x W80x D68cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_4ba24fb0089749feb4583a96817feaee~mv2.jpg",
+      "width": 2406,
+      "height": 2406,
+      "caption": "Enamelled copper wire, H180x W80x D80cm, 2023",
+      "title": "Untamed20",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H180x W80x D80cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H180x W80x D80cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_d86bec83ca3a4cf09196e24d8ed273ea~mv2.jpg",
+      "width": 3000,
+      "height": 3000,
+      "caption": "Enamelled copper wire, H69x W41x D29  cm, 2023",
+      "title": "Untamed21",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H69x W41x D29  cm, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "H69x W41x D29  cm",
+        "year": "2023"
+      }
+    },
+    {
+      "media": "2116cb_517b3757436e4b2d838358b6b3b2469d~mv2.jpg",
+      "width": 3000,
+      "height": 3000,
+      "caption": "Enamelled copper wire, H73x W43x D39 cm, 2023",
+      "title": "Untamed22",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H73x W43x D39 cm, 2023",
+        "material": "Enamelled copper wire,  2023",
+        "dims": "H73x W43x D39 cm"
+      }
+    },
+    {
+      "media": "2116cb_10cdb21a428a40349e00f1befe31ff4a~mv2.jpg",
+      "width": 2201,
+      "height": 1468,
+      "caption": "Enamelled copper wire, Size  varies, 2023",
+      "title": "Untamed (Installation)",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, Size varies, 2023",
+        "material": "Enamelled copper wire",
+        "dims": "Size varies",
+        "year": "2023"
+      }
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "2116cb_2af8d9286281456ab6047c3352ef932c~mv2.jpg",
+      "width": 6004,
+      "height": 6004,
+      "caption": "彩漆銅線, H26x W22x D21 cm, 2023",
+      "title": "「初始狀態01」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_c97b6bc55d164c44a5b6d5331531fc79~mv2.jpg",
+      "width": 6511,
+      "height": 6510,
+      "caption": "彩漆銅線, H27.5x W34.4x D13.3 cm, 2023",
+      "title": "「初始狀態02」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_b55a568f349a475bb4be34c6ef661685~mv2.jpg",
+      "width": 6160,
+      "height": 6160,
+      "caption": "彩漆銅線, H27.5x W34.4x D13.3 cm, 2023",
+      "title": "「初始狀態03」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_eded225d621d4bfebdd9ccba6482a809~mv2.jpg",
+      "width": 5472,
+      "height": 5472,
+      "caption": "彩漆銅線, H23x W27x D22 cm, 2023",
+      "title": "「初始狀態05」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_7221b2da120a44599d155beb9640a524~mv2.jpg",
+      "width": 4732,
+      "height": 4732,
+      "caption": "彩漆銅線, H36x W24.2x D18.5 cm, 2023",
+      "title": "「初始狀態06」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_ed0b27b9163c4911a3bef202575cfb3a~mv2.jpg",
+      "width": 6470,
+      "height": 6470,
+      "caption": "彩漆銅線, H36x W24.2x D18.5 cm, 2023",
+      "title": "「初始狀態07」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_fb21d081165941c3966d85460da5203a~mv2.jpg",
+      "width": 1964,
+      "height": 1964,
+      "caption": "彩漆銅線, H52x W36x D32 cm, 2023",
+      "title": "「初始狀態08」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_d1d01cef8c7f4353b2ded1615a6d746a~mv2.jpg",
+      "width": 2029,
+      "height": 2029,
+      "caption": "彩漆銅線, H43x W41x D34 cm, 2023",
+      "title": "「初始狀態09」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_6b0b0f9230204c63a7d5ebaa0f8577e2~mv2.jpg",
+      "width": 2093,
+      "height": 2149,
+      "caption": "彩漆銅線, H66.4x W40x D33 cm, 2023",
+      "title": "「初始狀態10」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_285698fbfab54c3688d8e30888ae0658~mv2.jpg",
+      "width": 2003,
+      "height": 2003,
+      "caption": "彩漆銅線, H70x W81x D20 cm, 2023",
+      "title": "「初始狀態11」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_bb40ebaccaa54357b0f8fc1b0e0f7f05~mv2.jpg",
+      "width": 2459,
+      "height": 2459,
+      "caption": "彩漆銅線, H75x W47x D43 cm, 2023",
+      "title": "「初始狀態12」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_fb74ebe2898e408dbf2750fc47a3ea1f~mv2.jpg",
+      "width": 2256,
+      "height": 2256,
+      "caption": "彩漆銅線, H86x W56x D34 cm, 2023",
+      "title": "「初始狀態13」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_6701cf2ff6b046438d2b5b5c116c96c7~mv2.jpg",
+      "width": 1858,
+      "height": 1858,
+      "caption": "彩漆銅線, H76 x W77 x D35 cm, 2023",
+      "title": "「初始狀態15」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_deb8b59156ae40b29a2b1087fbab073c~mv2.jpg",
+      "width": 2028,
+      "height": 2028,
+      "caption": "彩漆銅線, H77.5x W61x D53.5 cm, 2023",
+      "title": "「初始狀態16」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_c3588d2132d046d28ad563229d18f244~mv2.jpg",
+      "width": 2540,
+      "height": 2540,
+      "caption": "彩漆銅線, H143x W51.5x D49 cm, 2023",
+      "title": "「初始狀態17」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_34eb61a37b844d948c417ef7eacefaa9~mv2.jpg",
+      "width": 2601,
+      "height": 2601,
+      "caption": "彩漆銅線, H152x W60.3x D49 cm, 2023",
+      "title": "「初始狀態18」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_d8bcf7afa4844a7a9ed2fd052aa4bd20~mv2.jpg",
+      "width": 2444,
+      "height": 2444,
+      "caption": "彩漆銅線, H156x W80x D68cm, 2023",
+      "title": "「初始狀態19」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_4ba24fb0089749feb4583a96817feaee~mv2.jpg",
+      "width": 2406,
+      "height": 2406,
+      "caption": "彩漆銅線, H180x W80x D80cm, 2023",
+      "title": "「初始狀態20」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_d86bec83ca3a4cf09196e24d8ed273ea~mv2.jpg",
+      "width": 3000,
+      "height": 3000,
+      "caption": "彩漆銅線, H69 x W41 x D29  cm, 2023",
+      "title": "「初始狀態 21 」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_517b3757436e4b2d838358b6b3b2469d~mv2.jpg",
+      "width": 3000,
+      "height": 3000,
+      "caption": "彩漆銅線, H73 x W43 x D39 cm, 2023",
+      "title": "「初始狀態 22」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_10cdb21a428a40349e00f1befe31ff4a~mv2.jpg",
+      "width": 2201,
+      "height": 1468,
+      "caption": "彩漆銅線, 尺寸依場地調整, 2023",
+      "title": "「初始狀態 (裝置)」",
+      "filename": ""
+    }
+  ],
+  "source": "Portfolio/6ff573b3-1358-4240-99bc-f1db3463975f"
+}

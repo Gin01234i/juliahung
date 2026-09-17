@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Unlisted: shared by link, not indexed.
+Disallow: /commission/
+
+Sitemap: https://www.jujuhung.com/sitemap.xml

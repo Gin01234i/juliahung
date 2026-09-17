@@ -1,0 +1,45 @@
+{
+  "_comment": "News / Updates. Newest first. Add an entry here and rerun tools/stamp.py; the home page shows the top two. Keep it to things with a date - the spec's warning is that a stale news page reads worse than no news page.",
+  "items": [
+    {
+      "date": "2026",
+      "label": "Exhibition",
+      "en": "<em>Secret Forms</em> opens at Galerie Georges-Philippe &amp; Nathalie Vallois, New York.",
+      "zh": "《Secret Forms》於紐約 Galerie Georges-Philippe &amp; Nathalie Vallois 展出。"
+    },
+    {
+      "date": "2025.12",
+      "label": "Exhibition",
+      "en": "<em>The Interval Between</em>, Galerie Pierre's 35th anniversary exhibition, runs in Taichung until 13 February 2026.",
+      "zh": "臻品藝術中心 35 週年特展《未及之間》於台中展出，至 2026 年 2 月 13 日。",
+      "href": "/exhibitions/the-interval-between/"
+    },
+    {
+      "date": "2025.09",
+      "label": "Press",
+      "en": "Whitehot Magazine covers <em>When Night Falls</em> at TKG+ Projects.",
+      "zh": "Whitehot Magazine 報導 TKG+ Projects《未央・夜》。",
+      "href": "/blog/"
+    },
+    {
+      "date": "2025",
+      "label": "Exhibition",
+      "en": "<em>When Night Falls</em>, TKG+ Projects, Taipei.",
+      "zh": "《未央・夜》，TKG+ Projects，台北。",
+      "href": "/exhibitions/whennightfalls/"
+    },
+    {
+      "date": "2024",
+      "label": "Award",
+      "en": "Awarded the Asian Cultural Council New York Fellowship.",
+      "zh": "獲亞洲文化協會紐約獎助。"
+    },
+    {
+      "date": "2024",
+      "label": "Art fair",
+      "en": "<em>Indefinite Pink</em> shown at Taipei Dangdai, Taipei Nangang Exhibition Center.",
+      "zh": "《不定的粉紅》於台北當代藝術博覽會展出，台北南港展覽館。",
+      "href": "/exhibitions/taipeidangdai2024/"
+    }
+  ]
+}

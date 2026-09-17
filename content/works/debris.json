@@ -1,0 +1,406 @@
+{
+  "slug": "debris",
+  "title": "Debris",
+  "title_zh": "「殘骸」系列",
+  "year": "2022",
+  "material": "Mixed media",
+  "material_zh": "複合媒材",
+  "series": "Debris series",
+  "series_zh": "殘骸",
+  "dimensions": "H113x W94x D42 cm",
+  "statement": [
+    "Using crocheting as both technique and gesture, Julia Hung engages questions of identity in relation to place, community, and gender. Drawing on Taiwan’s oceanic context, she transforms discarded materials into organic forms that evoke marine life, fossils, and drifting, plume-like formations. Through this process of material reconfiguration, the Debris series reflects on how external forces—such as environmental pollution or cultural pressure—reshape existing conditions, considering what endures, what is relinquished, and how identity evolves."
+  ],
+  "statement_zh": [
+    "藝術家洪郁雯 Julia Hung 有感於消費主義而生的社會及環境問題，以消費後廢棄物為材創作，呼應永續海洋主題，提出疑問與觀者一同反思。",
+    "藝術家認為「殘骸」並無好壞之分，萬物終成殘骸，而人類又會為這個世界留下什麼殘骸及影響？",
+    "本系列探討海洋中珊瑚白化或化為殘骸的議題，以舊衣物、寶特瓶、塑膠袋等回收材，編織出繽紛的有機形狀及白色區塊，並保留衣物原有的標籤、鈕扣，將人造殘骸與自然生物的樣貌連結，象徵著消費主義下的人類，是否也逐漸在社會的標準化中，失去自己的色彩？",
+    "洪郁雯透過特殊方法使裁成條狀的保特瓶瓶或塑膠袋與衣料等連接在一起，過程中不需要再使用膠水等新添耗材，更落實永續環保精神，而且在編織的反覆動作中，創作者本身也被療癒。其中「Debris 05」作品的核心塑料編織部分，是她望著宜蘭海岸時所創作，回到台北後才繼續用回收衣物完成整件作品。衣料原本使用的鈕釦、標籤等也被完整保留融入，這讓作品顯得更為有機，既能延續物件本身的價值並注入創作者的想法，也會再觸動觀者產生更多靈感與情感連結，生生不息。"
+  ],
+  "exhibitions": [
+    {
+      "text": "Forestry Island Eco Art Festival",
+      "href": "https://www.jujuhung.com/exhibitions/forestry-island-eco-art-festival"
+    },
+    {
+      "text": "The Seedin Lab Ocean",
+      "href": "https://www.jujuhung.com/exhibitions/the-seedin-lab-ocean"
+    }
+  ],
+  "exhibitions_zh": [
+    {
+      "text": "海島之森 － 小琉球藝術季",
+      "href": "https://www.jujuhung.com/zh/exhibition/forestry-island-eco-art-festival"
+    },
+    {
+      "text": "我吃了一個展覽 － 海洋",
+      "href": "https://www.jujuhung.com/zh/exhibition/the-seedin-lab-ocean"
+    }
+  ],
+  "video": null,
+  "images": [
+    {
+      "media": "ccce62_dccbfe2ba7fe40528c0192caff921c62~mv2.png",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Mixed  media  (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+      "title": "Debris01",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+        "material": "Mixed media (Used fabric, wool, wire)",
+        "dims": "H113x W94x D42 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_8ae607d223c442b5b2b8eac6ca56a0fb~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed  media  (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+      "title": "Debris01 (detail)",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric, wool, wire), H113x W94x D42 cm, 2022",
+        "material": "Mixed media (Used fabric, wool, wire)",
+        "dims": "H113x W94x D42 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_06d5a9481ee44d238fc2321f5794170e~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Mixed  media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+      "title": "Debris02",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+        "material": "Mixed media (Used plastic bag, used fabric, wire)",
+        "dims": "H85x W76x D39 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_ed77ee620dde4271a35c3571bf08740b~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed  media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+      "title": "Debris02 (detail)",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used plastic bag, used fabric, wire), H85x W76x D39 cm, 2022",
+        "material": "Mixed media (Used plastic bag, used fabric, wire)",
+        "dims": "H85x W76x D39 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_f5455fc3d142434ba7c26fb48a90e633~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Mixed media (Used plastic bag, used fabric, enamelled copper  wire , wire), H59x W40x D41 cm, 2022",
+      "title": "Debris03",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used plastic bag, used fabric, enamelled copper wire , wire), H59x W40x D41 cm, 2022",
+        "material": "Mixed media (Used plastic bag, used fabric, enamelled copper wire, wire)",
+        "dims": "H59x W40x D41 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_b7bab7c1253340ebb13c4c70687d2049~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed media (Used plastic bag, used fabric, enamelled copper  wire , wire), H59x W40x D41 cm, 2022",
+      "title": "Debris 03 ( details )",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used plastic bag, used fabric, enamelled copper wire , wire), H59x W40x D41 cm, 2022",
+        "material": "Mixed media (Used plastic bag, used fabric, enamelled copper wire, wire)",
+        "dims": "H59x W40x D41 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_cf2c77e0a205484d884bab699d180ca6~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Mixed media (Used fabric, wool, used plastic bottle,  paper string, enamelled  copper  wire ,  wire), H79x W64x D27 cm, 2022",
+      "title": "Debris05",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric, wool, used plastic bottle, paper string, enamelled copper wire , wire), H79x W64x D27 cm, 2022",
+        "material": "Mixed media (Used fabric, wool, used plastic bottle, paper string, enamelled copper wire, wire)",
+        "dims": "H79x W64x D27 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_978130c89eed484ea52ee955bc2754c9~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed media (Used fabric, wool, used plastic bottle,  paper string, enamelled  copper  wire ,  wire), H79x W64x D27 cm, 2022",
+      "title": "Debris05 (detail)",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric, wool, used plastic bottle, paper string, enamelled copper wire , wire), H79x W64x D27 cm, 2022",
+        "material": "Mixed media (Used fabric, wool, used plastic bottle, paper string, enamelled copper wire, wire)",
+        "dims": "H79x W64x D27 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_1cdcfd2a4be34095a84b90c3782a3ac2~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Mixed media (Used  fabric , used  ribbon,  wire), H74x W54x D17 cm, 2022",
+      "title": "Debris06",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric , used ribbon, wire), H74x W54x D17 cm, 2022",
+        "material": "Mixed media (Used fabric, used ribbon, wire)",
+        "dims": "H74x W54x D17 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_1dd0a3572c844d9fb460a438c5dca154~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed media (Used  fabric , used  ribbon,  wire), H74x W54x D17 cm, 2022",
+      "title": "Debris06 (detail)",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric , used ribbon, wire), H74x W54x D17 cm, 2022",
+        "material": "Mixed media (Used fabric, used ribbon, wire)",
+        "dims": "H74x W54x D17 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_181e1599f2124625b78b5d8a0f05fd89~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Mixed media (Used  fabric, used  plastic bag, wire), H65x W35x D29 cm, 2022",
+      "title": "Debris07",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric, used plastic bag, wire), H65x W35x D29 cm, 2022",
+        "material": "Mixed media (Used fabric, used plastic bag, wire)",
+        "dims": "H65x W35x D29 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_6715e745ca6742e981718eb89458d12f~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed media (Used  fabric, used  plastic bag, wire), H65x W35x D29 cm, 2022",
+      "title": "Debris07 (detail)",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (Used fabric, used plastic bag, wire), H65x W35x D29 cm, 2022",
+        "material": "Mixed media (Used fabric, used plastic bag, wire)",
+        "dims": "H65x W35x D29 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_2276075134934f418b429fbcece6fff2~mv2.jpg",
+      "width": 2002,
+      "height": 2511,
+      "caption": "Mixed media (used fishing net), Installation (size varies), 2022",
+      "title": "Debris08",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (used fishing net), Installation (size varies), 2022",
+        "material": "Mixed media (used fishing net)",
+        "dims": "Installation (size varies)",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_65879e2765b94b3f8832d7a87932e6e3~mv2.jpg",
+      "width": 2942,
+      "height": 1963,
+      "caption": "Mixed media (glass, fishbone, shell, used cap of plastic bottle), Installation (size varies), 2022",
+      "title": "Debris09",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (glass, fishbone, shell, used cap of plastic bottle), Installation (size varies), 2022",
+        "material": "Mixed media (glass, fishbone, shell, used cap of plastic bottle)",
+        "dims": "Installation (size varies)",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_91fdf6fdca774fd28c8f220ba0a894fe~mv2.jpg",
+      "width": 1889,
+      "height": 2888,
+      "caption": "Mixed media (glass, fishbone, shell, used cap of plastic bottle), Installation (size varies), 2022",
+      "title": "Debris09",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (glass, fishbone, shell, used cap of plastic bottle), Installation (size varies), 2022",
+        "material": "Mixed media (glass, fishbone, shell, used cap of plastic bottle)",
+        "dims": "Installation (size varies)",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "ccce62_79dfad70503746c78adc1a0c2ce7a8a5~mv2.jpg",
+      "width": 3102,
+      "height": 4136,
+      "caption": "Mixed media (glass, fishbone, shell, used cap of plastic bottle), Installation (size varies), 2022",
+      "title": "Debris09",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (glass, fishbone, shell, used cap of plastic bottle), Installation (size varies), 2022",
+        "material": "Mixed media (glass, fishbone, shell, used cap of plastic bottle)",
+        "dims": "Installation (size varies)",
+        "year": "2022"
+      }
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "ccce62_b3c6a93ec1264e0db2214f0347a4edc9~mv2.png",
+      "width": 2000,
+      "height": 3000,
+      "caption": "複合媒材 (回收衣物, 毛線, 鐵絲), H113x W94x D42 cm, 2022",
+      "title": "「 殘骸01 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_daabe8013b0b4add8a1130341f4c6d80~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收衣物, 毛線, 鐵絲), H113x W94x D42 cm, 2022",
+      "title": "「 殘骸01 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_06d5a9481ee44d238fc2321f5794170e~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H85x W76x D39 cm, 2022",
+      "title": "「 殘骸02 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_ed77ee620dde4271a35c3571bf08740b~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H85x W76x D39 cm, 2022",
+      "title": "「 殘骸02 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_30facec12bf6433b8a65f0225034270d~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H59x W40x D41 cm, 2022",
+      "title": "「 殘骸03 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_b7bab7c1253340ebb13c4c70687d2049~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H59x W40x D41 cm, 2022",
+      "title": "「 殘骸03 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_e8a9d0410d184ed6a1fad8c40f5735e2~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H79x W64x D27 cm, 2022",
+      "title": "「 殘骸05 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_978130c89eed484ea52ee955bc2754c9~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H79x W64x D27 cm, 2022",
+      "title": "「 殘骸05 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_eda88305ad1a424e854758a917e1d842~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H79x W64x D27 cm, 2022",
+      "title": "「 殘骸05 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_885f583e10fa4d3c8a5d0a4ba8decbbb~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H74x W54x D17 cm, 2022",
+      "title": "「 殘骸06 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_1dd0a3572c844d9fb460a438c5dca154~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H74x W54x D17 cm, 2022",
+      "title": "「 殘骸06 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_7ed8bb120d774c8d9435f66dd5e15075~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H65x W35x D29 cm, 2022",
+      "title": "「 殘骸07 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_6715e745ca6742e981718eb89458d12f~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收衣物, 毛線, 回收塑膠瓶, 木漿紙線, 彩漆銅線, 鐵絲), H65x W35x D29 cm, 2022",
+      "title": "「 殘骸 07 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_2276075134934f418b429fbcece6fff2~mv2.jpg",
+      "width": 2002,
+      "height": 2511,
+      "caption": "複合媒材 (回收漁網), 裝置 (尺寸依場地調整), 2022",
+      "title": "「殘骸08」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_65879e2765b94b3f8832d7a87932e6e3~mv2.jpg",
+      "width": 2942,
+      "height": 1963,
+      "caption": "複合媒材 (玻璃、魚骨、貝殼、回收塑膠瓶蓋), 裝置 (尺寸依場地調整), 2022",
+      "title": "「殘骸09」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_91fdf6fdca774fd28c8f220ba0a894fe~mv2.jpg",
+      "width": 1889,
+      "height": 2888,
+      "caption": "複合媒材 (玻璃、魚骨、貝殼、回收塑膠瓶蓋), 裝置 (尺寸依場地調整), 2022",
+      "title": "「殘骸09」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_79dfad70503746c78adc1a0c2ce7a8a5~mv2.jpg",
+      "width": 3102,
+      "height": 4136,
+      "caption": "複合媒材 (玻璃、魚骨、貝殼、回收塑膠瓶蓋), 裝置 (尺寸依場地調整), 2022",
+      "title": "「殘骸09」",
+      "filename": ""
+    }
+  ],
+  "source": "Portfolio/9faac76d-1366-406c-ab21-c08096bd8d8c"
+}

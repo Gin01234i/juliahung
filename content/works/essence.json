@@ -1,0 +1,121 @@
+{
+  "slug": "essence",
+  "title": "Essence",
+  "title_zh": "醇",
+  "year": "2022",
+  "material": "Enamelled copper wire",
+  "material_zh": "彩漆銅線",
+  "series": "Essence",
+  "series_zh": "收藏",
+  "dimensions": "H130x W113x D38 cm",
+  "statement": [
+    "Essence traces shifting states of matter through woven copper wire. Condensed forms descend into fluid movement, dispersing into cloud-like extensions that hover between density and diffusion.",
+    "Rather than fixed states, the work unfolds through continuous transformation—where solidity and permeability, containment and release, remain mutually constitutive and interchangeable."
+  ],
+  "statement_zh": [
+    "金車文教基金會收藏，現展示於噶瑪蘭威士忌忠孝展售中心。",
+    "《 醇 Essence 》 為台灣藝術家洪郁雯的「銅線編織系列」作品之一，創作手法承自傳統編織工藝，選用金屬媒材揉合出嶄新姿態。象徵對釀造工藝的堅持，編織出極致感官饗宴，孕育出台灣威士忌新故鄉的創新精神。",
+    "作品中央似若琥珀色酒液般流動，蔓延兩側猶如醇香綻發，詮釋出噶瑪蘭威士忌在風味追尋與探索的臻至展現。"
+  ],
+  "exhibitions": [],
+  "exhibitions_zh": [
+    {
+      "text": "2022 台中藝術博覽會",
+      "href": "https://www.jujuhung.com/zh/exhibition/art-taichung-2022"
+    }
+  ],
+  "video": null,
+  "images": [
+    {
+      "media": "2116cb_851cbf66aa4d4bc38d89db9ec1e1b499~mv2.jpg",
+      "width": 7296,
+      "height": 4864,
+      "caption": "Enamelled copper wire,\nH130x W113x D38 cm,\n2022",
+      "title": "",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire,, H130x W113x D38 cm,, 2022",
+        "material": "Enamelled copper wire",
+        "dims": "H130x W113x D38 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "2116cb_c6c2c7c54c974edcab8016f27bad57e4~mv2.png",
+      "width": 1398,
+      "height": 890,
+      "caption": "Enamelled copper wire,\nH130x W113x D38 cm,\n2022",
+      "title": "Displaying at King Car Kavalan Whiskey (Zhongxiao Exhibition and Sales Center)",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire,, H130x W113x D38 cm,, 2022",
+        "material": "Enamelled copper wire",
+        "dims": "H130x W113x D38 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "2116cb_37d138efe7df4d0aa7ac477363308222~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Enamelled copper wire,\nH130x W113x D38 cm,\n2022",
+      "title": "",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire,, H130x W113x D38 cm,, 2022",
+        "material": "Enamelled copper wire",
+        "dims": "H130x W113x D38 cm",
+        "year": "2022"
+      }
+    },
+    {
+      "media": "2116cb_382d8e8d573849f9ac20e3da3fe87496~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Enamelled copper wire,\nH130x W113x D38 cm,\n2022",
+      "title": "",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire,, H130x W113x D38 cm,, 2022",
+        "material": "Enamelled copper wire",
+        "dims": "H130x W113x D38 cm",
+        "year": "2022"
+      }
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "2116cb_5c72c0bc58b04672851e28d62f0cfcf2~mv2.jpg",
+      "width": 5624,
+      "height": 3749,
+      "caption": "彩漆銅線, 高 130 x 寬 112 x 深 38 公分, 2022",
+      "title": "醇",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_0733e74198d745eb970be1315716cfcb~mv2.jpg",
+      "width": 2272,
+      "height": 1515,
+      "caption": "彩漆銅線, 高 130 x 寬 112 x 深 38 公分, 2022",
+      "title": "現展示於噶瑪蘭威士忌忠孝展售中心",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_37d138efe7df4d0aa7ac477363308222~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "彩漆銅線, 高 130 x 寬 112 x 深 38 公分, 2022",
+      "title": "醇 (細節)",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_382d8e8d573849f9ac20e3da3fe87496~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "彩漆銅線, 高 130 x 寬 112 x 深 38 公分, 2022",
+      "title": "醇 (細節)",
+      "filename": ""
+    }
+  ],
+  "source": "Portfolio/ab5acdd7-5e12-4c50-8140-74f25482c4ef"
+}

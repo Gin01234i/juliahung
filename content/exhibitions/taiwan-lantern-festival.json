@@ -1,0 +1,67 @@
+{
+  "slug": "taiwan-lantern-festival",
+  "title": "Taiwan Lantern Festival",
+  "title_zh": null,
+  "venue": "Pingtung, Taiwan",
+  "venue_raw": "2019 Taiwan Lantern Festival in Pingtung｜Public Art Project",
+  "kind": null,
+  "solo": false,
+  "year": "2019",
+  "dates": [
+    "2019",
+    "Pingtung, Taiwan"
+  ],
+  "dates_zh": [],
+  "categories": [
+    "Group exhibitions"
+  ],
+  "text": [
+    "”Dreamy Tide“",
+    "What is this? A wave? A tree? A starry sky?",
+    "Is there right or wrong?",
+    "Julia believes that everything is interdependent and interchangeable. Handmade with hundreds of used plastic bags, this artificial wave questions today’s artificial world and its social values.This artificial wave is handmade with hundreds of used plastic bags. Its lengthy process might seem excessive in this fast-paced world. Some might wonder if it is worthwhile. What is worthwhile? What is art? If art is seen as garbage when unappreciated, would garbage be art when appreciated? Do solid qualities exist, or are they based on fluid perceptions? Which is more shocking - animals dying from consuming plastics, or humans consuming problems? Which is more unsettling - having one’s own stance or following the masses? In this artificial world, what do you believe in?"
+  ],
+  "text_zh": [],
+  "detail": [
+    "Venue",
+    "Pingtung",
+    "Year",
+    "2019"
+  ],
+  "detail_zh": [],
+  "works": [
+    {
+      "text": "Dreamy Tide",
+      "href": "https://www.jujuhung.com/artworks/dreamy-tide"
+    }
+  ],
+  "images": [
+    {
+      "media": "ccce62_3a2a843ce2a14521985ad47a7409ad01~mv2.jpg",
+      "width": 4032,
+      "height": 3024,
+      "caption": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+      "title": "Dreamy Tide",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_087cb1b3beb240209593eb0ac9d0b5e7~mv2.jpg",
+      "width": 4032,
+      "height": 3024,
+      "caption": "Mixed media (repurposed plastic bag, metal structure,LED light),6 x 6 x 4m, 2019",
+      "title": "Dreamy Tide",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_35fa6fc7e6074342924081244a451a0f~mv2.jpg",
+      "width": 3024,
+      "height": 4032,
+      "caption": "Mixed media (repurposed plastic bag, metal structure,LED light)\n, 6 x 6 x 4m, 2019",
+      "title": "Dreamy Tide",
+      "filename": ""
+    }
+  ],
+  "images_zh": [],
+  "order": 3,
+  "source": "Recipes/881935a6-d7b4-4003-b0ba-c0b765b2d7ad"
+}

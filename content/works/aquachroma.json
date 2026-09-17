@@ -1,0 +1,160 @@
+{
+  "slug": "aquachroma",
+  "title": "Aquachroma",
+  "title_zh": "「水之彩」系列",
+  "year": "2021",
+  "material": "Enamelled copper wire",
+  "material_zh": "彩漆銅線",
+  "series": "Aquachroma series",
+  "series_zh": "水之彩",
+  "dimensions": "H155x W128x D55 cm",
+  "statement": [
+    "Commissioned for Ji-An Japanese Restaurant",
+    "A commissioned, site-specific triptych tracing states of striving, flow, and return. From left to right, the forms suggest ascent, sustained ease, and cyclical movement. Fish-like structures, built through repeated gestures in copper wire, move between effort and ease, individuality and connection—reflecting a continuous process of becoming in which paths unfold and converge."
+  ],
+  "statement_zh": [
+    "「水之彩」系列收藏並展示於濟安鮨 日本料理",
+    "「水之彩」蘊含著水中的繽紛色彩，以抽象的美感展現，令觀者陶醉其中。",
+    "在左邊的第一件作品「極」，璀璨的極光散發出七彩光芒，仿佛水中游動的魚群奮力向前，向所有追求極致的人致敬，包括濟安鮨日本料理的創辦人及首席料理師 - 濟安師傅。",
+    "中間的「悠」，如一隻自在悠遊於水中的魚，盡情享受著悠然自得的愜意。這也彷彿象徵著在創作或追求喜愛事物時，沉浸於心流的美妙感覺。",
+    "而右邊的「迴」，則以兩隻迴旋的魚，象徵著人與人之間永恆的連結，無論經歷多少輪迴，彼此總能尋找到對方。同時，相信造訪這裡的饕客，都會再「迴」訪，享受回味無窮的美妙時光。"
+  ],
+  "exhibitions": [],
+  "exhibitions_zh": [],
+  "video": null,
+  "images": [
+    {
+      "media": "ccce62_819c27bd0d3243d09979484998fa1c23~mv2.jpg",
+      "width": 3596,
+      "height": 2400,
+      "caption": "Ji/ Utmost ( Left )\nYou/ Leisurely ( Middle )\nHui/ Revolve ( Right )",
+      "title": "",
+      "filename": "",
+      "parsed": {
+        "raw": "Ji/ Utmost ( Left ), You/ Leisurely ( Middle ), Hui/ Revolve ( Right )",
+        "material": "Ji/ Utmost ( Left ), You/ Leisurely ( Middle ), Hui/ Revolve ( Right )"
+      }
+    },
+    {
+      "media": "2116cb_dfc72d42745c46f0a8d71f26aefae91e~mv2.jpg",
+      "width": 1708,
+      "height": 1708,
+      "caption": "Enamelled copper wire, H155x W128x D55 cm, 2021",
+      "title": "Ji/ Utmost",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H155x W128x D55 cm, 2021",
+        "material": "Enamelled copper wire",
+        "dims": "H155x W128x D55 cm",
+        "year": "2021"
+      }
+    },
+    {
+      "media": "2116cb_6c7196ce0300483a8a2ab3fbee15f4d5~mv2.jpg",
+      "width": 2127,
+      "height": 2127,
+      "caption": "Enamelled copper wire, H85x W58x D36cm, 2021",
+      "title": "You / Leisurely",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H85x W58x D36cm, 2021",
+        "material": "Enamelled copper wire",
+        "dims": "H85x W58x D36cm",
+        "year": "2021"
+      }
+    },
+    {
+      "media": "2116cb_c826ee49f6ef46da8adac07427ab0134~mv2.jpg",
+      "width": 2002,
+      "height": 2002,
+      "caption": "Enamelled copper wire, H90x W80x D50 cm, 2021",
+      "title": "Hui/ Revolve",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H90x W80x D50 cm, 2021",
+        "material": "Enamelled copper wire",
+        "dims": "H90x W80x D50 cm",
+        "year": "2021"
+      }
+    },
+    {
+      "media": "ccce62_b2a2c92850e84263aaa158be62f81cf3~mv2.jpg",
+      "width": 3596,
+      "height": 2400,
+      "caption": "Enamelled copper wire, H155x W128x D55 cm, 2021",
+      "title": "Ji/ Utmost (detail)",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H155x W128x D55 cm, 2021",
+        "material": "Enamelled copper wire",
+        "dims": "H155x W128x D55 cm",
+        "year": "2021"
+      }
+    },
+    {
+      "media": "ccce62_7ef88f0239bf4030a200341fbdfe6b85~mv2.jpg",
+      "width": 3596,
+      "height": 2400,
+      "caption": "Enamelled copper wire, H85x W58x D36cm, 2021",
+      "title": "You / Leisurely (detail)",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H85x W58x D36cm, 2021",
+        "material": "Enamelled copper wire",
+        "dims": "H85x W58x D36cm",
+        "year": "2021"
+      }
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "ccce62_819c27bd0d3243d09979484998fa1c23~mv2.jpg",
+      "width": 3596,
+      "height": 2400,
+      "caption": "「 極 」(左)\n「 悠 」(中)\n「 迴 」(右)",
+      "title": "「水之彩」系列收藏於濟安鮨 日本料理",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_572eed3e409444e5bb57f0f0ad8e46e2~mv2.jpg",
+      "width": 1708,
+      "height": 2003,
+      "caption": "彩漆銅線, H155x W128x D55 cm, 2021",
+      "title": "「 極 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_b2a2c92850e84263aaa158be62f81cf3~mv2.jpg",
+      "width": 3596,
+      "height": 2400,
+      "caption": "彩漆銅線, H155x W128x D55 cm, 2021",
+      "title": "「 極 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_d89d9ef205ae4840b8b80e569e466787~mv2.jpg",
+      "width": 2789,
+      "height": 3934,
+      "caption": "彩漆銅線, H85x W58x D36 cm, 2021",
+      "title": "「 悠 」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_7ef88f0239bf4030a200341fbdfe6b85~mv2.jpg",
+      "width": 3596,
+      "height": 2400,
+      "caption": "彩漆銅線, H85x W58x D36 cm, 2021",
+      "title": "「 悠 」(局部細節)",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_e89d8c4c54324c24b55da2f021ac098c~mv2.jpg",
+      "width": 2400,
+      "height": 3596,
+      "caption": "彩漆銅線, H90x W80x D50 cm, 2021",
+      "title": "「 迴 」",
+      "filename": ""
+    }
+  ],
+  "source": "Portfolio/00000000-0000-0000-0000-000000000003"
+}

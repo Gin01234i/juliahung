@@ -1,0 +1,189 @@
+{
+  "slug": "an-unusual-knot",
+  "title": "An Unusual Knot",
+  "title_zh": "非平凡紐結",
+  "venue": "Hiro Hiro Art Space, Taipei",
+  "venue_raw": "Hiro Hiro Art Space",
+  "kind": "Sole Exhibition",
+  "solo": true,
+  "year": "2021",
+  "dates": [
+    "2021",
+    "Hiro Hiro Art Space, Taipei"
+  ],
+  "dates_zh": [
+    "2021.09.18 - 2021.10.17",
+    "Hiro Hiro Art Space, 台北"
+  ],
+  "categories": [
+    "Solo exhibitions"
+  ],
+  "text": [
+    "A proud alumna of Geneva University of Art and Design, Julia Hung holds an M.F.A. (Master of Fine Arts) degree in contemporary artistic practices. When working with metal, Hung removes its common association to coldness and rigidness by applying methods inspired by her grandmother’s crocheting techniques. She treats metal material as silk threads, gently and finely weaving them into organic, semi-translucent copper wire sculptures, creating rather unique spatial sensations. Through her artworks, Hung raises questions towards the reality and possibility of free will, discussing and reflecting on subjective free will as well as thought processes that go into the creation of an artwork.",
+    "The exhibition title “An Unusual Knot” is borrowed from the mathematical term nontrivial knot, which refers to a knot that cannot be untied in a 3-dimensional space. Hung takes the concept of this idea and interprets various “unusual knots” – a series of 3-dimensional sculptures created by her practice of weaving and crisscrossing copper wires. She attempts at expressing how nature, nurture, and memories are all entangled in our thread of consciousness – influencing our decision-making at all moments, turning all shapes into “unusual knots,” and eventually we are left with the completed artwork – something with the appearance of “free will.”",
+    "However, how much of our “voluntary” decision-making is achieved “freely”? External and internal factors such as nature, nurture, and memories mold us while holding us down at the same time; we are torn between freedom and constraints like untouched threads undergoing weaving, mutually pulling in never-ending cycles, outlining endless loops that penetrate and perforate each other spatially, forming a tangible, webbing sculpture. Meanwhile, as an artist, Hung experiences intuitive creation where there is zero composition. With seemingly no pre-made plans, she weaves continuously until the artwork is “born,” almost as if already having a hidden blueprint in mind that guides her through every knot-choosing in the creative process. What looked like a linear process – the beginning, process, and end – brought her beyond the 3-dimensional to reflect on whether it is at all possible for non-linear time and free will to coexist. And yet, free will resembles unusual knots – wherein freedom and constraints are impossible to untie from each other."
+  ],
+  "text_zh": [
+    "畢業於日內瓦高等藝術設計學院碩士班的藝術家洪郁雯在「非平凡紐結 An Unusual Knot」展覽中，透過傳承自阿嬤的編織技法，跳脫金屬的冰冷剛硬，將金屬媒材宛若作絲縷，細細密密勾勒出有機半透視的銅線雕塑，妄自長出獨特的空間感。她經由作品對自由意志的真實性及可能性提出疑問，從而探討主體性的自由意志及其藝術創作之思路軌跡。",
+    "「非平凡紐結」在數學的紐結理論中，指在三維空間裡無法被分解的紐結。展覽借用此定義，經由銅線編織交錯的表現手法，表達從基因、環境、記憶拉展出的維度裡，與意識的線不可分離地絲絲繞繞，時時刻刻影響著我們的選擇，構成非平凡紐結的形體，其表面似為「自由意志」後的完成體。",
+    "然而「自發性」的選擇，究竟有多少成分是「自由」的？基因、環境、記憶等內外部因素亦塑造亦牽制著我們，在自由和束縛中拉扯，如同初始未塑形的線，經過編織，循環式地交互牽引，勾勒出無數迴圈，在空間中相互貫通、滲透，構成了有形的網狀雕塑，與此同時洪郁雯感知自我以零構圖的直覺式創作，在看似沒有計劃性的選擇之下反覆編織，直至作品「誕生」，彷彿腦海裡早有隱性的藍圖，引導著她在創作過程中做出每一個紐結選擇，然而開始、過程、及結束看似為線性的程序，卻引發她超脫三維空間，試圖思考自由意志不存在於非線性時間的可能性，而自由意志中自由及限制的一體兩面，彷彿非平凡紐結般難分難解。"
+  ],
+  "detail": [
+    "Venue",
+    "Hiro Hiro Art Space, Taipei",
+    "Year",
+    "2021",
+    "View exhibition"
+  ],
+  "detail_zh": [
+    "開幕茶會",
+    "2021.09.18 週六 15 : 00",
+    "地點",
+    "2021.09.18 (六) - 2021.10.17 (日)",
+    "展期",
+    "Hiro Hiro Art Space，台北",
+    "參觀時間",
+    "週二 - 週日 11 : 00 - 19 : 30  (週一公休)",
+    "活動頁面"
+  ],
+  "works": [
+    {
+      "text": "An Unusual Knot",
+      "href": "https://www.jujuhung.com/artworks/an-unusual-knot"
+    }
+  ],
+  "images": [
+    {
+      "media": "2116cb_ce43879f48ee449bbafa547d30096d48~mv2.jpeg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "",
+      "title": "",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_edeb2a39713843d2a13739dca8d22fc9~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Enamelled copper wire, H98x W60x D60 cm, 2021",
+      "title": "Pink Torus",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_f6348a50f050494c930a958d7c06a37d~mv2.jpeg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Enamelled copper wire, acrylic board, H35x W45x D45 cm, 2021",
+      "title": "Vibrant Sphere",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_ba5f7b234ae8434ba887cbdfa5c7c011~mv2.jpg",
+      "width": 2029,
+      "height": 1522,
+      "caption": "Enamelled copper wire, H22x W27.5x D28 cm, 2021",
+      "title": "Pink Trefoil",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_6daac121625e487aac38da4dd6a32ed8~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Enamelled copper wire, acrylic board, H35x W35x D15 cm, 2021",
+      "title": "Torus",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_6f3a42b79cab40448670c4fea1c7060a~mv2.jpeg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Pretzel Twist (Left)\nBlue Multifoil (Middel)\nSpiral Twist (Right)",
+      "title": "",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_309c1757d9a94379b7da3d6d620161cb~mv2.jpeg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Enamelled copper wire,  H48x W19x D24 cm,  2021",
+      "title": "Pretzel Twist",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_00b3bc1c94bc49819a3a02420f6eb668~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "Enamelled copper wire, acrylic board, H197x W96x D 63 cm, 2021",
+      "title": "Amphichiral",
+      "filename": ""
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "2116cb_ce43879f48ee449bbafa547d30096d48~mv2.jpeg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "",
+      "title": "",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_edeb2a39713843d2a13739dca8d22fc9~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "彩漆銅線, H98x W60x D60 cm, 2021",
+      "title": "「粉紅環面」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_f6348a50f050494c930a958d7c06a37d~mv2.jpeg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "彩漆銅線, H35x W45x D45 cm, 2021",
+      "title": "「彩球」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_ba5f7b234ae8434ba887cbdfa5c7c011~mv2.jpg",
+      "width": 2029,
+      "height": 1522,
+      "caption": "彩漆銅線, H22x W27.5x D28 cm, 2021",
+      "title": "「粉紅三葉」",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_6f3a42b79cab40448670c4fea1c7060a~mv2.jpeg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "「靛藍多葉 (中)」\n「旋 (右)」",
+      "title": "",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_309c1757d9a94379b7da3d6d620161cb~mv2.jpeg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "彩漆銅線, H48 x W19 x D24 cm, 2021",
+      "title": "「卷」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_6daac121625e487aac38da4dd6a32ed8~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "彩漆銅線、壓克力板, H35x W 35x D15 cm, 2021",
+      "title": "「環」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_00b3bc1c94bc49819a3a02420f6eb668~mv2.jpg",
+      "width": 2000,
+      "height": 3000,
+      "caption": "彩漆銅線、壓克力板, H197x W96x D63 cm, 2021",
+      "title": "「對應」",
+      "filename": ""
+    }
+  ],
+  "order": 9,
+  "source": "Recipes/35799383-5f14-406e-af68-5f6bf501469c"
+}

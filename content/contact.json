@@ -1,0 +1,11 @@
+{
+  "_comment": "Contact. No form - the spec removes it, and Wix's would not have survived migration anyway. A form needs Formspree or similar; ask before adding one.",
+  "fields": [
+    { "label": "Email", "en": "atelier@jujuhung.com", "href": "mailto:atelier@jujuhung.com" },
+    { "label": "Studio", "en": "Taipei, Taiwan · New York, USA", "zh": "台北 · 紐約" },
+    { "label": "Representation", "en": "Enquiries via the studio", "zh": "請逕洽工作室" },
+    { "label": "Instagram", "en": "@juju.hung", "href": "https://www.instagram.com/juju.hung/" },
+    { "label": "Commissions", "en": "Commission guide on request", "zh": "委託創作說明請來信索取" }
+  ],
+  "_representation_note": "The site currently names no gallery. If Julia is represented, replace this row with the gallery name and a link."
+}

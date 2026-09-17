@@ -1,0 +1,157 @@
+{
+  "slug": "in-the-mood-for-egg",
+  "title": "In the Mood for Egg?",
+  "title_zh": "蛋也？",
+  "venue": "LIYH, Geneva",
+  "venue_raw": "LiveInYourHead Gallery",
+  "kind": "Group exhibitions",
+  "solo": false,
+  "year": "2017",
+  "dates": [
+    "2017",
+    "LIYH, Geneva"
+  ],
+  "dates_zh": [
+    "2017.01.18 - 2017.02.19",
+    "LIYH, 日內瓦"
+  ],
+  "categories": [
+    "Group exhibitions"
+  ],
+  "text": [
+    "Inspired by the news about fake eggs in China and vegan eggs in the states, Julia presents her version of artificial eggs, both edible and non-edible, to showcase the era of artificial reality.",
+    "a world",
+    "in-between the real and the fake",
+    "separated from the origin",
+    "filled with stories",
+    "that sell",
+    "stories",
+    "that gain their existence",
+    "beyond stories",
+    "They might not be 100% real, but they are surely not fake - they are merely artificial.",
+    "Curator | Jeanne Graff"
+  ],
+  "text_zh": [
+    "以中國人造假蛋和美國素食蛋的新聞為靈感，Julia呈現了⾃己的人造蛋，有可食用和非食用性的，來表現這個人造現實的時代。",
+    "我們所在的世界",
+    "處於真實和虛假之間",
+    "與根源分離",
+    "充滿了",
+    "有賣點的",
+    "故事",
+    "這些故事",
+    "超越了自⾝",
+    "在這個世界上存在著",
+    "他們或許不是百分之百真實，但也絕非虛假 -",
+    "他們僅僅是⼈造的。",
+    "策展⼈ | Jeanne Graff"
+  ],
+  "detail": [
+    "Venue",
+    "LIYH, Geneva",
+    "Year",
+    "2017"
+  ],
+  "detail_zh": [
+    "地點",
+    "LIYH ( LiveInYourHead Gallery ), 日內瓦",
+    "展覽",
+    "2017.01.18 (三) - 2017.02.19 (日)"
+  ],
+  "works": [
+    {
+      "text": "In the Mood for Egg?",
+      "href": "https://www.jujuhung.com/artworks/in-the-mood-for-egg"
+    },
+    {
+      "text": "?Gge rof Doom eht ni",
+      "href": "https://www.jujuhung.com/artworks/gge-rof-doom-eht-ni"
+    }
+  ],
+  "images": [
+    {
+      "media": "ccce62_8cce95ca6277494ea3f39a684a1c4010~mv2.jpg",
+      "width": 3543,
+      "height": 2172,
+      "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, sodium alginate, calcium chloride), 6 x 6 x 5 cm, 2017",
+      "title": "In the Mood for Egg?",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_07a4397556474366b186413b2a13c163~mv2.jpg",
+      "width": 2362,
+      "height": 3543,
+      "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, sodium alginate, calcium chloride), 6 x 6 x 5 cm, 2017",
+      "title": "In the Mood for Egg?",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_d49debac245e411bb4cf41826bba29f2~mv2.jpg",
+      "width": 1838,
+      "height": 2450,
+      "caption": "Mixed media (paper cup, coconut milk, agar agar, juice, jam, sodium alginate, calcium chloride), 6 x 6 x 5 cm, 2017",
+      "title": "In the Mood for Egg?",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_0317ca3fd0b14fa8871fa88f01dc2803~mv2.jpg",
+      "width": 2362,
+      "height": 3543,
+      "caption": "",
+      "title": "In the Mood for Egg?",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_2f34ebd1d446400ba86bdb303f600135~mv2.jpg",
+      "width": 3543,
+      "height": 2323,
+      "caption": "",
+      "title": "In the Mood for Egg?",
+      "filename": ""
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "ccce62_8cce95ca6277494ea3f39a684a1c4010~mv2.jpg",
+      "width": 3543,
+      "height": 2172,
+      "caption": "",
+      "title": "「蛋也？」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_07a4397556474366b186413b2a13c163~mv2.jpg",
+      "width": 2362,
+      "height": 3543,
+      "caption": "",
+      "title": "「蛋也？」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_3a074dc8acea4a1caa1e7ce5cd030245~mv2.jpg",
+      "width": 1838,
+      "height": 2450,
+      "caption": "",
+      "title": "「蛋也？」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_0317ca3fd0b14fa8871fa88f01dc2803~mv2.jpg",
+      "width": 2362,
+      "height": 3543,
+      "caption": "",
+      "title": "「蛋也？」",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_2f34ebd1d446400ba86bdb303f600135~mv2.jpg",
+      "width": 3543,
+      "height": 2323,
+      "caption": "",
+      "title": "",
+      "filename": ""
+    }
+  ],
+  "order": 1,
+  "source": "Recipes/57bb86b9-93a4-4ffa-a410-8b5db40ece31"
+}

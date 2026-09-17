@@ -1,0 +1,101 @@
+[
+  {
+    "number": 1,
+    "_id": "d182be86-af70-4fbb-b6ef-c53978c3472f",
+    "_owner": "2116cb88-25e6-4033-8c98-36a1bb8f4bef",
+    "_createdDate": {
+      "$date": "2024-02-26T02:49:31.353Z"
+    },
+    "_updatedDate": {
+      "$date": "2026-05-12T03:44:20.171Z"
+    },
+    "richtext": "<p class=\"font_8\" style=\"text-align: justify\">Julia Hung, born in Taipei in 1986, is an artist whose multicultural upbringing breathes</p>\n<p class=\"font_8\" style=\"text-align: justify\">life into both her identity and her art. Her creations exhibit an ever-changing quality,</p>\n<p class=\"font_8\" style=\"text-align: justify\">reminiscent of water, effortlessly transcending boundaries and forms while retaining</p>\n<p class=\"font_8\" style=\"text-align: justify\">their intrinsic essence. This fluidity mirrors her diverse perspective and embraces the</p>\n<p class=\"font_8\" style=\"text-align: justify\">profound Taoist philosophy of interdependence and interchangeability.</p>\n<p class=\"font_8\" style=\"text-align: justify\"><br></p>\n<p class=\"font_8\">With a Bachelor of Design degree from OCAD University and a Master of Fine Arts</p>\n<p class=\"font_8\" style=\"text-align: justify\">degree from HEAD ‒ Genève, Hung seamlessly blends traditional techniques with</p>\n<p class=\"font_8\" style=\"text-align: justify\">various mediums to explore alternative modes of thinking and creating art. The</p>\n<p class=\"font_8\" style=\"text-align: justify\">resulting microcosm boldly ventures beyond societal norms and cultural barriers.</p>\n<p class=\"font_8\" style=\"text-align: justify\">In 2017, Hung emerged as a finalist for the “New Heads ‒ Fondation BNP Paribas Art</p>\n<p class=\"font_8\" style=\"text-align: justify\">Award”, and her works have been acquired by Artvera's gallery. Recognitions include</p>\n<p class=\"font_8\" style=\"text-align: justify\">being a finalist in the “Taoyuan Fine Arts Exhibition” in 2023 and runner-up in the</p>\n<p class=\"font_8\" style=\"text-align: justify\">“Pingtung Fine Art Award” in 2020.</p>\n<p class=\"font_8\" style=\"text-align: justify\"><br></p>\n<p class=\"font_8\">Her diverse portfolio encompasses the collection of King Car Cultural &amp; Educational</p>\n<p class=\"font_8\" style=\"text-align: justify\">Foundation and several permanent public artworks, such as a recent suspension</p>\n<p class=\"font_8\" style=\"text-align: justify\">sculpture gracing the lobby of t.Hub Taipei and Hotel Indigo Alishan. Hung has</p>\n<p class=\"font_8\" style=\"text-align: justify\">conducted solo exhibitions in Taiwan and participated in group exhibitions in Europe</p>\n<p class=\"font_8\" style=\"text-align: justify\">and Canada. In recent years, she has gained recognition as a rising talent in Asia.</p>",
+    "title": "Bio"
+  },
+  {
+    "number": 2,
+    "_id": "ee8d85f8-7680-4475-831a-e238ae2b3acc",
+    "_owner": "2116cb88-25e6-4033-8c98-36a1bb8f4bef",
+    "_createdDate": {
+      "$date": "2023-02-04T05:18:01.978Z"
+    },
+    "year": "2016",
+    "text": "Master of art HES-SO in Fine Art,Work Master - Contemporary Artist Practice, HEAD, Geneva, Switzerland\n",
+    "_updatedDate": {
+      "$date": "2026-05-12T03:44:20.171Z"
+    },
+    "richtext": "<p class=\"font_8\">2016 &nbsp;&nbsp;&nbsp;MASTER OF ART HES-SO IN FINE ART, WORK.MASTER - CONTEMPORARY ARTIST</p>\n<p class=\"font_8\">PRACTICE, HEAD, GENEVA</p>\n<p class=\"font_8\">2012 &nbsp;&nbsp;&nbsp;BACHELOR OF DESIGN, ILLUSTRATION, OCAD UNIVERSITY, TORONTO</p>",
+    "title": "Education"
+  },
+  {
+    "number": 3,
+    "_id": "38ace2c9-fc38-4dae-9292-4cb72b1364a6",
+    "_owner": "2116cb88-25e6-4033-8c98-36a1bb8f4bef",
+    "_createdDate": {
+      "$date": "2023-02-04T05:20:53.931Z"
+    },
+    "year": "2021",
+    "text": "An Unusual Knot, Hiro Hiro Art Space, Taipei, Taiwan",
+    "_updatedDate": {
+      "$date": "2026-05-12T03:44:20.171Z"
+    },
+    "richtext": "<p class=\"font_8\">2023 &nbsp;&nbsp;&nbsp;&nbsp;<em>Untamed</em>, Soka Art, Tainan</p>\n<p class=\"font_8\">2021 &nbsp;&nbsp;&nbsp;&nbsp;<em>An Unusual Knot</em>, Hiro Hiro Art Space, Taipei</p>\n<p class=\"font_8\">2021 &nbsp;&nbsp;&nbsp;&nbsp;<em>The Miscellaneous of Being and Living</em>, New Taipei City Arts Center, Taipei</p>\n<p class=\"font_8\">2020 &nbsp;&nbsp;&nbsp;<em>Will Looped</em>, The Art Space by the Studio, Taipei</p>\n<p class=\"font_8\">2015 &nbsp;&nbsp;&nbsp;&nbsp;<em>CAPRICE - Eggspectation</em>, KO Art | Cafe | Life, Taipei</p>\n<p class=\"font_8\">2012 &nbsp;&nbsp;&nbsp;&nbsp;<em>Cupicle</em>, Chococrepe, Toronto</p>",
+    "title": "Solo Exhibition"
+  },
+  {
+    "number": 4,
+    "_id": "68d3ce6b-a90f-4f2a-b0f9-0b5004727710",
+    "_owner": "2116cb88-25e6-4033-8c98-36a1bb8f4bef",
+    "_createdDate": {
+      "$date": "2023-02-04T05:22:23.353Z"
+    },
+    "year": "2022",
+    "text": "Art Taipei 2022, Taipei World Trade Center Exhibition Hall 1, Taipei, Taiwan",
+    "_updatedDate": {
+      "$date": "2026-05-12T03:44:20.171Z"
+    },
+    "richtext": "<p class=\"font_8\">2025</p>\n<p class=\"font_8\">When Night Falls, TKG+Projects, Taipei</p>\n<p class=\"font_8\">2024</p>\n<h6 class=\"font_6\"><em>Art Taipei 2024</em>, Taipei World Trade Center Exhibition Hall 1, Taipei<br>\n<a href=\"https://www.jujuhung.com/exhibitions/airydisk\" target=\"_self\"><u><em>Airy Disk</em></u></a><em>,</em> River Art Gallery, Taichung<br>\n<a href=\"https://www.jujuhung.com/exhibitions/taipeidangdai2024\" target=\"_self\"><u><em>Taipei Dangdai</em></u></a>, NODE, Taipei Nangan Exhibition Center, Taipei<br>\n<a href=\"https://www.jujuhung.com/exhibitions/voices\" target=\"_self\"><u><em>Voices</em></u></a><em>,</em> POPOP Taipei, Taipei</h6>\n<p class=\"font_8\">2023 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>FIABCN 2023 — Contemporary Art Collectors Virtual Gallery</em>,Museu Marítim de Barcelona, Barcelona</p>\n<p class=\"font_8\"><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Breeze — Female Artists Group Exhibition</em>, isart Gallery, Taipei</p>\n<p class=\"font_8\"><em>Art Taipei 2023</em>, Taipei World Trade Center Exhibition Hall 1, Taipei</p>\n<p class=\"font_8\"><em>Art Osaka 2023</em>, Osaka City Central Public Hall, Osaka City</p>\n<p class=\"font_8\"><em>Forestry Island Eco Art Festival 2023</em>, Pingtung</p>\n<p class=\"font_8\"><em>New Balance Grey Day 2023</em>, Taipei</p>\n<p class=\"font_8\"><em>Similarities: Co-exhibition of 6 Artists</em>, San Gallery, Tainan</p>\n<p class=\"font_8\"><em>#ohplastic, 2023 Taiwan Lantern Festival in Taipei</em>, Bar Mood Taipei, Taipei</p>\n<p class=\"font_8\">2022 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>The Seedin Lab - Ocean</em>, The Seedin Lab, Taipei</p>\n<p class=\"font_8\"><em>Art Taipei 2022</em>, Taipei World Trade Center Exhibition Hall 1, Taipei</p>\n<p class=\"font_8\"><em>Wonders &amp; Wonderers</em> - Trends Art Window, Breeze Xin Yi, Taipei</p>\n<p class=\"font_8\"><em>Artificial Phenomena</em>, American Express Centurion House, Regent Taipei (Hotel), Taipei</p>\n<p class=\"font_8\">2021 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>World Masterpiece</em>, Taipei 101, Taipei</p>\n<p class=\"font_8\"><em>All Solo!</em>, Dadaocheng Project by Liang Gallery, OrigInn Space, Taipei</p>\n<p class=\"font_8\"><em>Taiwan Annuel</em> (Online), AVAT, Taipei</p>\n<p class=\"font_8\">2020 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Pingtung Art Exhibition</em>, Pingtung Art Museum, Pingtung</p>\n<p class=\"font_8\">2019 &nbsp;&nbsp;&nbsp;<em>Taiwan Lantern Festival</em>, Pingtung</p>\n<p class=\"font_8\">2018 &nbsp;&nbsp;<em>Immortagram</em>, Element, Taipei</p>\n<p class=\"font_8\">2017 &nbsp;&nbsp;<em>L’Oranger</em>, Art Genève, Palexpo, Geneva</p>\n<p class=\"font_8\"><em>L’Oranger</em>, LIYH (LiveInYourHead Gallery), Geneva</p>\n<p class=\"font_8\">2016 <em>Happy Silly Kids</em>, HEAD, &nbsp;Geneva</p>\n<p class=\"font_8\"><em>Chantier Confort</em>, Le Confort Moderne , Poitiers</p>\n<p class=\"font_8\"><em>A Recipe of No Recipe</em>, HEAD, &nbsp;Geneva</p>\n<p class=\"font_8\">2014 &nbsp;&nbsp;&nbsp;&nbsp;<em>White Noise</em>, HEAD, Geneva</p>\n<p class=\"font_8\"><em>Bourgeois Bore</em>, ISTITUTO SVIZZERO DI ROMA, Rome</p>\n<p class=\"font_8\"><em>Me Meet Meat</em>, Pop-up, Geneva</p>\n<p class=\"font_8\"><em>Eggspectation - Sunny Side Up</em>, HEAD, &nbsp;Geneva</p>\n<p class=\"font_8\">2013 <em>Cupcake.Cliché.Fusion</em>, HEAD, Geneva</p>\n<p class=\"font_8\">2012 &nbsp;&nbsp;&nbsp;<em>97th Annual OCAD Graduate Exhibition</em>, OCAD, Toronto</p>",
+    "title": "Selected Group Exhibition"
+  },
+  {
+    "number": 5,
+    "_id": "c1f6763a-3eb0-423a-a1a2-f4c6146993bb",
+    "_owner": "2116cb88-25e6-4033-8c98-36a1bb8f4bef",
+    "_createdDate": {
+      "$date": "2023-02-04T05:33:10.062Z"
+    },
+    "year": "2020",
+    "text": "Pingtung Awards, honorable mention, Pingtung, Taiwan",
+    "_updatedDate": {
+      "$date": "2026-05-12T03:44:20.171Z"
+    },
+    "title": "Award"
+  },
+  {
+    "number": 6,
+    "_id": "9a17e8f1-f7a6-4593-9f3d-f6b0af114fe4",
+    "_owner": "2116cb88-25e6-4033-8c98-36a1bb8f4bef",
+    "_createdDate": {
+      "$date": "2023-02-04T05:33:58.112Z"
+    },
+    "text": "Kavalan Single Malt Whiskey, Taipei, Taiwan\n\nArtvera’s Gallery, Geneve, Switzerland\n\nIndigo Hotel Alishan, Chiayi, Taiwan\n\nJian Sushi Restaurant, Taipei, Taiwan\n\nPrivate collections in China, Taiwan, and Switzerland\n",
+    "_updatedDate": {
+      "$date": "2026-05-12T03:44:20.171Z"
+    },
+    "title": "Collection"
+  },
+  {
+    "number": 7,
+    "_id": "610a850b-ba8c-4403-9e99-c87cc0a7193f",
+    "_owner": "2116cb88-25e6-4033-8c98-36a1bb8f4bef",
+    "_createdDate": {
+      "$date": "2023-02-04T05:34:10.573Z"
+    },
+    "year": "2017",
+    "text": "L’Oranger (exhibition catalogue)",
+    "_updatedDate": {
+      "$date": "2026-05-12T03:44:20.171Z"
+    },
+    "title": "Publication / Writing"
+  }
+]

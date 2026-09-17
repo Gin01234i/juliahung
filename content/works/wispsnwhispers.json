@@ -1,0 +1,268 @@
+{
+  "slug": "wispsnwhispers",
+  "title": "Wisps and Whispers",
+  "title_zh": "「載夢」系列",
+  "year": "2025",
+  "material": "Enamelled copper wire",
+  "material_zh": "彩漆銅線",
+  "series": null,
+  "series_zh": null,
+  "dimensions": "H82 x W125 x D30 cm",
+  "statement": [
+    "I imagine the night as I weave, with threads as delicate as drifting mist. Suspended in the still air, they form tiny universes cloaked in darkness, where they are both observers and observed.",
+    "Darkness softens everything it touches, while silence sharpens the subtlest details and thoughts.",
+    "Light fades into a pale brilliance, softly illuminating the flow of time.",
+    "In the shadows, all things merge and silently transform, and the rhythms of life are hidden, inaudible.",
+    "The boundaries between dream and reality, presence and absence, blur and nearly diffuse. In the depths of darkness, when time feels frozen, it seems to cradle eternity—yet these universes slip away like phantoms, vanishing as quickly as they appear."
+  ],
+  "statement_zh": [
+    "我編織著對夜的想像，線條如雲霧般飄渺而纖細，靜止於空氣中，然後在各自築起的小宇宙，幪上夜紗，從中窺探和被窺探著。",
+    "黑暗，矇矓了一切，寂靜襯出細微的事物與心念。光，也顯得黯淡亦燦爛，映出時間的流動。",
+    "萬物在暗影中交融，悄然蜕變，靜默中潛藏著生命的律動。",
+    "夢與現實、存在與虛無的界線漸漸模糊。沈浸於漆黑中，空氣凝結的瞬間，仿若承載著永恆，卻也似幻影，稍縱而逝。"
+  ],
+  "exhibitions": [
+    {
+      "text": "When Night Falls",
+      "href": "https://www.jujuhung.com/exhibitions/whennightfalls"
+    },
+    {
+      "text": "The Interval Between",
+      "href": "https://www.jujuhung.com/exhibitions/the-interval-between"
+    }
+  ],
+  "exhibitions_zh": [
+    {
+      "text": "未央・夜",
+      "href": "https://www.jujuhung.com/zh/exhibition/whennightfalls"
+    }
+  ],
+  "video": null,
+  "images": [
+    {
+      "media": "813b18_54d66ef9433d491db6235a571feef48e~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Enamelled copper wire\nH82 x W125 x D30 cm",
+      "title": "Wisps and Whispers III",
+      "filename": "2025_Wisps and Whispers 03_JuliaHung_enamelled copper wire_H82 x W125 x D30 cm_3.jpg",
+      "parsed": {
+        "raw": "Enamelled copper wire, H82 x W125 x D30 cm",
+        "material": "Enamelled copper wire",
+        "dims": "H82 x W125 x D30 cm"
+      }
+    },
+    {
+      "media": "813b18_20a0a739f99d48499ca4a9578b2ca19f~mv2.jpg",
+      "width": 3000,
+      "height": 2400,
+      "caption": "Enamelled copper wire\nH82 x W125 x D30 cm",
+      "title": "Wisps and Whispers III",
+      "filename": "2025_Wisps and Whispers 03_JuliaHung_enamelled copper wire_H82 x W125 x D30 cm_4.jpg",
+      "parsed": {
+        "raw": "Enamelled copper wire, H82 x W125 x D30 cm",
+        "material": "Enamelled copper wire",
+        "dims": "H82 x W125 x D30 cm"
+      }
+    },
+    {
+      "media": "813b18_904e3fa086144e34a5ff071f34802c6f~mv2.jpg",
+      "width": 2400,
+      "height": 3000,
+      "caption": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+      "title": "Wisps and Whispers 01",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H50 x W18 x D20 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_ef8a95a66a974435b480787a05930508~mv2.jpg",
+      "width": 2400,
+      "height": 3000,
+      "caption": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+      "title": "Wisps and Whispers 01",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H50 x W18 x D20 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H50 x W18 x D20 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_28d7328afd74433da6f05376ccf9b380~mv2.jpg",
+      "width": 3000,
+      "height": 2400,
+      "caption": "Enamelled copper wire, H120 x W55 x D27 cm, 2025",
+      "title": "Wisps and Whispers 02",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H120 x W55 x D27 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H120 x W55 x D27 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_17876cc298fc4dcf9e378391bd923722~mv2.jpg",
+      "width": 1333,
+      "height": 2000,
+      "caption": "Enamelled copper wire, H120 x W55 x D27 cm, 2025",
+      "title": "Wisps and Whispers 02",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H120 x W55 x D27 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H120 x W55 x D27 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_bc200ab5f01c4c48a598757cdd1513fa~mv2.jpg",
+      "width": 2400,
+      "height": 3000,
+      "caption": "Enamelled copper wire, H148 x W55 x D45 cm, 2025",
+      "title": "Wisps and Whispers 05",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H148 x W55 x D45 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H148 x W55 x D45 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_e3e1111d5874417e8a08ea8c4bf823f5~mv2.jpg",
+      "width": 2000,
+      "height": 1999,
+      "caption": "Enamelled copper wire, H148 x W55 x D45 cm, 2025",
+      "title": "Wisps and Whispers 05",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H148 x W55 x D45 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H148 x W55 x D45 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_983cab5c30144657b68618f50bce6ac4~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Enamelled copper wire, H125 x W102 x D30 cm, 2025",
+      "title": "Wisps and Whispers 06",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H125 x W102 x D30 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H125 x W102 x D30 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_49ccd17c26ef4a908d5a3a03db8b31c6~mv2.jpg",
+      "width": 3000,
+      "height": 2400,
+      "caption": "Enamelled copper wire, H125 x W102 x D30 cm, 2025",
+      "title": "Wisps and Whispers 06",
+      "filename": "",
+      "parsed": {
+        "raw": "Enamelled copper wire, H125 x W102 x D30 cm, 2025",
+        "material": "Enamelled copper wire",
+        "dims": "H125 x W102 x D30 cm",
+        "year": "2025"
+      }
+    },
+    {
+      "media": "813b18_084def8075164ea78fad536cb894849a~mv2.jpg",
+      "width": 2000,
+      "height": 1333,
+      "caption": "Exhibition photo provided by TKG+",
+      "title": "Wisps and Whispers series",
+      "filename": "",
+      "parsed": {
+        "raw": "Exhibition photo provided by TKG+",
+        "material": "Exhibition photo provided by TKG+"
+      }
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "813b18_904e3fa086144e34a5ff071f34802c6f~mv2.jpg",
+      "width": 2400,
+      "height": 3000,
+      "caption": "彩漆銅線, H50 x W18 x D20 cm, 2025",
+      "title": "載夢01",
+      "filename": ""
+    },
+    {
+      "media": "813b18_ef8a95a66a974435b480787a05930508~mv2.jpg",
+      "width": 2400,
+      "height": 3000,
+      "caption": "彩漆銅線, H50 x W18 x D20 cm, 2025",
+      "title": "載夢01",
+      "filename": ""
+    },
+    {
+      "media": "813b18_e8f1f1be02084a648185d9a674c7d761~mv2.jpg",
+      "width": 3000,
+      "height": 2400,
+      "caption": "彩漆銅線, H120 x W55 x D27 cm, 2025",
+      "title": "載夢02",
+      "filename": ""
+    },
+    {
+      "media": "813b18_17876cc298fc4dcf9e378391bd923722~mv2.jpg",
+      "width": 1333,
+      "height": 2000,
+      "caption": "彩漆銅線, H120 x W55 x D27 cm, 2025",
+      "title": "載夢02",
+      "filename": ""
+    },
+    {
+      "media": "813b18_8640ec36dc4e4c6ab3ac998aae2cf6cf~mv2.jpg",
+      "width": 2400,
+      "height": 3000,
+      "caption": "彩漆銅線, H148 x W55 x D45 cm, 2025",
+      "title": "載夢05",
+      "filename": ""
+    },
+    {
+      "media": "813b18_e3e1111d5874417e8a08ea8c4bf823f5~mv2.jpg",
+      "width": 2000,
+      "height": 1999,
+      "caption": "",
+      "title": "載夢05",
+      "filename": ""
+    },
+    {
+      "media": "813b18_983cab5c30144657b68618f50bce6ac4~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "彩漆銅線, H125 x W102 x D30 cm, 2025",
+      "title": "載夢06",
+      "filename": ""
+    },
+    {
+      "media": "813b18_49ccd17c26ef4a908d5a3a03db8b31c6~mv2.jpg",
+      "width": 3000,
+      "height": 2400,
+      "caption": "彩漆銅線, H125 x W102 x D30 cm, 2025",
+      "title": "載夢06",
+      "filename": ""
+    },
+    {
+      "media": "813b18_084def8075164ea78fad536cb894849a~mv2.jpg",
+      "width": 2000,
+      "height": 1333,
+      "caption": "展場照由TKG+提供",
+      "title": "「載夢」系列",
+      "filename": ""
+    }
+  ],
+  "source": "Portfolio/6a292a8e-17bc-427c-a0c9-5645c5bed12f"
+}

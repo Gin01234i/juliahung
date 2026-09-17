@@ -1,0 +1,99 @@
+{
+  "slug": "dreamy-tide",
+  "title": "Dreamy Tide",
+  "title_zh": "星光潮來",
+  "year": "2019",
+  "material": "Mixed media",
+  "material_zh": "複合媒材",
+  "series": "Dreamy Tide",
+  "series_zh": "台灣燈會",
+  "dimensions": "6 x 6 x 4m",
+  "statement": [
+    "Oscillating between wave, tree, and starry sky, the work resists fixed interpretation. Composed of hundreds of used plastic bags, this artificial form reflects Julia Hung’s exploration of interdependence and interchangeability. In doing so, it unsettles fixed notions of right and wrong, questioning the value systems embedded within an increasingly constructed environment."
+  ],
+  "statement_zh": [
+    "這是...？",
+    "海浪？樹？雲？洋裝？星空？",
+    "有對錯嗎？",
+    "藝術家Julia相信萬物皆可相生互換。這座人造海浪經過冗長的純手工製程，賦予幾百個回收塑膠袋重生，進而對這個人造世界和其社會價值提出疑問。"
+  ],
+  "exhibitions": [
+    {
+      "text": "Taiwan Lantern Festival",
+      "href": "https://www.jujuhung.com/exhibitions/taiwan-lantern-festival"
+    }
+  ],
+  "exhibitions_zh": [],
+  "video": null,
+  "images": [
+    {
+      "media": "2116cb_3d55ae35590b4ec492e30472e2acf137~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+      "title": "",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+        "material": "Mixed media (repurposed plastic bag, metal structure, LED light)",
+        "dims": "6 x 6 x 4m",
+        "year": "2019"
+      }
+    },
+    {
+      "media": "2116cb_3cf1e4a1f83a4b488651ea0c48267737~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+      "title": "",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+        "material": "Mixed media (repurposed plastic bag, metal structure, LED light)",
+        "dims": "6 x 6 x 4m",
+        "year": "2019"
+      }
+    },
+    {
+      "media": "ccce62_35fa6fc7e6074342924081244a451a0f~mv2.jpg",
+      "width": 3024,
+      "height": 4032,
+      "caption": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+      "title": "",
+      "filename": "",
+      "parsed": {
+        "raw": "Mixed media (repurposed plastic bag, metal structure,LED light), 6 x 6 x 4m, 2019",
+        "material": "Mixed media (repurposed plastic bag, metal structure, LED light)",
+        "dims": "6 x 6 x 4m",
+        "year": "2019"
+      }
+    }
+  ],
+  "images_zh": [
+    {
+      "media": "2116cb_3d55ae35590b4ec492e30472e2acf137~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收塑膠袋、鐵架、LED燈), 6 x 6 x 4m, 2019",
+      "title": "",
+      "filename": ""
+    },
+    {
+      "media": "2116cb_3cf1e4a1f83a4b488651ea0c48267737~mv2.jpg",
+      "width": 3000,
+      "height": 2000,
+      "caption": "複合媒材 (回收塑膠袋、鐵架、LED燈), 6 x 6 x 4m, 2019",
+      "title": "",
+      "filename": ""
+    },
+    {
+      "media": "ccce62_35fa6fc7e6074342924081244a451a0f~mv2.jpg",
+      "width": 3024,
+      "height": 4032,
+      "caption": "複合媒材 (回收塑膠袋、鐵架、LED燈), 6 x 6 x 4m, 2019",
+      "title": "(局部細節)",
+      "filename": ""
+    }
+  ],
+  "source": "Portfolio/288f5c89-5977-48f1-9ada-57da482eba7c"
+}
