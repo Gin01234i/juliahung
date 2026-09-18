@@ -233,13 +233,28 @@ def work_detail(slug, prev_slug, next_slug):
         if en:
             meta_rows.append(f"    <dt>{bi_span(label, UI.get(label))}</dt>\n"
                              f"    <dd>{bi_span(esc(en), esc(zhv))}</dd>")
-    shown = rec.get("exhibitions") or []
-    if shown:
-        links = ", ".join(
-            f'<a class="lnk" href="{local_href(s["href"])}">{esc(s["text"])}</a>'
-            if local_href(s["href"]) else esc(s["text"]) for s in shown)
+    # Shown: the two languages list *different* exhibitions, not translations
+    # of one list — the Chinese record for Untamed names four shows where the
+    # English names one, and 21g has a Chinese credit and no English one. So
+    # render both, rather than translating the labels of a single list.
+    def shown_list(items):
+        return ", ".join(
+            f'<a class="lnk" href="{local_href(i["href"])}">{esc(i["text"])}</a>'
+            if local_href(i["href"]) else esc(i["text"]) for i in items)
+
+    shown_en = rec.get("exhibitions") or []
+    shown_zh = rec.get("exhibitions_zh") or []
+    if shown_en or shown_zh:
+        # Whichever language stands alone has to survive the toggle.
+        only = not (shown_en and shown_zh)
+        fb = ' class="is-fallback"' if only else ""
+        parts = []
+        if shown_en:
+            parts.append(f'<span lang="en"{fb}>{shown_list(shown_en)}</span>')
+        if shown_zh:
+            parts.append(f'<span lang="zh"{fb}>{shown_list(shown_zh)}</span>')
         meta_rows.append(f'    <dt>{bi_span("Shown", UI["Shown"])}</dt>\n'
-                         f"    <dd>{links}</dd>")
+                         f'    <dd>{"".join(parts)}</dd>')
 
     note = ""
     st_en = rec.get("statement") or []

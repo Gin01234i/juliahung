@@ -131,16 +131,21 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
+/* The wordmark is the largest type on the site — above .t-display. It scales
+   with the viewport so it never crowds the nav on the way down to 600px,
+   below which the nav takes its own row and the mark has the line to itself. */
 .hdr__mark {
-  font-size: 15px; line-height: 1.2; letter-spacing: 0.02em;
+  font-size: clamp(24px, 3.4vw, 34px);
+  line-height: 1.1; letter-spacing: -0.005em;
   font-weight: 500; color: var(--ink);
 }
 /* 洪郁雯 sits beneath the wordmark on the home page only. */
 .hdr__mark-zh {
   display: block;
-  font-size: 11px; line-height: 1.4; letter-spacing: 0.04em;
+  font-size: clamp(13px, 1.5vw, 16px);
+  line-height: 1.3; letter-spacing: 0.04em;
   font-weight: 400; color: var(--mute);
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 /* min-width:0 lets the nav shrink below its content width so wrapping can
@@ -305,8 +310,11 @@ a { color: inherit; text-decoration: none; }
 html[data-lang="en"] [lang="zh"],
 html[data-lang="zh"] [lang="en"] { display: none; }
 
-/* A record with no Chinese falls back rather than rendering empty. */
-html[data-lang="zh"] [lang="en"].is-fallback { display: revert; }
+/* A record with only one language falls back rather than rendering empty.
+   Needed in both directions: a few works carry a Chinese exhibition credit
+   and no English one. */
+html[data-lang="zh"] [lang="en"].is-fallback,
+html[data-lang="en"] [lang="zh"].is-fallback { display: revert; }
 
 /* --- Responsive ---------------------------------------------------------- */
 
