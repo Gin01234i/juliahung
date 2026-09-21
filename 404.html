@@ -14,20 +14,31 @@
 <meta property="og:url" content="https://www.jujuhung.com/404.html">
 <meta property="og:image" content="https://www.jujuhung.com/assets/img/works/untamed/2023_untamed_01-1600.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="/assets/css/site.css">
+<!-- 404.html is served for any missing path, so "relative" would mean
+     whatever the visitor typed. Resolve the site root first: one path
+     segment on a github.io project site, the domain root everywhere else.
+     Without JavaScript the page still reads; it just loses its stylesheet. -->
+<script>
+(function () {
+  var m = location.hostname.slice(-10) === ".github.io" &&
+          location.pathname.match(/^\/[^\/]+\//);
+  document.write('<base href="' + (m ? m[0] : "/") + '">');
+})();
+</script>
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
 <div class="page">
 
 <header class="hdr">
-  <a class="hdr__mark" href="/">Julia Hung</a>
+  <a class="hdr__mark" href="./">Julia Hung</a>
   <nav class="hdr__nav t-meta" aria-label="Main">
-    <a href="/artworks/">Works</a>
-    <a href="/exhibitions/">Exhibitions</a>
-    <a href="/news/">News</a>
-    <a href="/blog/">Press</a>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
+    <a href="artworks/">Works</a>
+    <a href="exhibitions/">Exhibitions</a>
+    <a href="news/">News</a>
+    <a href="blog/">Press</a>
+    <a href="about/">About</a>
+    <a href="contact/">Contact</a>
   </nav>
 </header>
 
@@ -35,8 +46,8 @@
   <h1 class="t-display">Not found</h1>
   <p class="t-body">That page does not exist, or it moved when the site was
     rebuilt.</p>
-  <p><a class="lnk" href="/artworks/">Works →</a></p>
-  <p><a class="lnk" href="/exhibitions/">Exhibitions →</a></p>
+  <p><a class="lnk" href="artworks/">Works →</a></p>
+  <p><a class="lnk" href="exhibitions/">Exhibitions →</a></p>
 </section>
 
 </div>

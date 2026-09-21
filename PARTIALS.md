@@ -13,8 +13,8 @@ place the six links are duplicated outside this partial.
 
 ## Header
 
-One variant is intentional: the current page's nav link carries
-`aria-current="page"`.
+This is the header as it is written in `tools/stamp.py`, with root-absolute
+paths:
 
 ```html
 <header class="hdr">
@@ -30,19 +30,36 @@ One variant is intentional: the current page's nav link carries
 </header>
 ```
 
+On disk every path is relative to the page holding it, so the site serves
+from a project subpath as well as from the domain root — see
+`tools/relativize.py`. The same header two directories down reads:
+
+```html
+    <a href="../../artworks/">Works</a>
+```
+
+Two variants are therefore intentional: the `../` depth, and the current
+page's nav link carrying `aria-current="page"`. `tools/check_site.py` reads
+the links back as site paths before comparing, so it still sees one header.
+
 ## Changing the navigation by hand
 
-Add a link to every page in one pass:
+Change `NAV` in `tools/stamp.py` and rerun it — that is the one-pass route,
+and it keeps the relative depths right by construction.
+
+By hand, the `../` prefix has to be carried through. Capture it:
 
 ```bash
 # from the repo root
 grep -rl '<nav class="hdr__nav' --include=index.html . | \
-  xargs sed -i '' 's|<a href="/about/">|<a href="/new-page/">New</a>\n    <a href="/about/">|'
+  xargs sed -i '' -E 's|<a href="((\.\./)*)about/">|<a href="\1new-page/">New</a>\
+    <a href="\1about/">|'
 python3 tools/check_site.py     # confirms all 55 headers still match
 ```
 
-The `sed` only works because the header is byte-identical everywhere. Keep it
-that way.
+The `sed` only works because the header is identical everywhere but for that
+prefix — zero `../` at the root, two on a work page. Keep it that way.
+`--include=index.html` misses `404.html`; name it on the `sed` as well.
 
 ## Closing markup
 

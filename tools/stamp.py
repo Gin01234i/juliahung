@@ -13,6 +13,8 @@ Usage:  python3 tools/stamp.py
 import html, json, os, re, shutil, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+from relativize import relativize            # noqa: E402
 SITE = "https://www.jujuhung.com"
 
 sel = json.load(open(f"{ROOT}/content/selection.json", encoding="utf-8"))
@@ -95,11 +97,19 @@ def document(*, title, desc, path, body, og_image=None, jsonld=None,
 
 
 def write(path, content):
+    """Write one page, its internal URLs made relative to where it lands.
+
+    Everything above is written with root-absolute paths — `/artworks/` reads
+    as what it is. The site has to serve from a project subpath as well as
+    from the domain root, so the paths are turned relative here, once, on the
+    way out. See tools/relativize.py.
+    """
     dest = os.path.join(ROOT, path.strip("/"), "index.html") if path != "/" \
         else os.path.join(ROOT, "index.html")
     os.makedirs(os.path.dirname(dest), exist_ok=True)
+    depth = path.strip("/").count("/") + 1 if path != "/" else 0
     with open(dest, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write(relativize(content, depth))
     return dest
 
 
@@ -1022,6 +1032,20 @@ def empty_category():
         '<link rel="canonical" href="https://www.jujuhung.com/blog/">')
 
 
+BASE_SCRIPT = """<!-- 404.html is served for any missing path, so "relative" would mean
+     whatever the visitor typed. Resolve the site root first: one path
+     segment on a github.io project site, the domain root everywhere else.
+     Without JavaScript the page still reads; it just loses its stylesheet. -->
+<script>
+(function () {
+  var m = location.hostname.slice(-10) === ".github.io" &&
+          location.pathname.match(/^\\/[^\\/]+\\//);
+  document.write('<base href="' + (m ? m[0] : "/") + '">');
+})();
+</script>
+"""
+
+
 def not_found():
     body = """<section class="s-index stack--tight">
   <h1 class="t-display">Not found</h1>
@@ -1133,8 +1157,10 @@ def main():
     written.append(write("/blog/categories/curator-s-pick/", empty_category()))
     written.append(write("/commission/", commission()))
 
+    doc = relativize(not_found(), 0).replace(
+        '<link rel="stylesheet"', BASE_SCRIPT + '<link rel="stylesheet"', 1)
     with open(f"{ROOT}/404.html", "w", encoding="utf-8") as f:
-        f.write(not_found())
+        f.write(doc)
     written.append(f"{ROOT}/404.html")
 
     # Public pages only: the commission guide and 404 stay out.
