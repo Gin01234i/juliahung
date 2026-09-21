@@ -3,9 +3,6 @@
 Static site for Julia Hung 洪郁雯. Plain HTML and CSS — no build step, no
 dependencies, no framework. Deploys to GitHub Pages by pushing.
 
-Built to the **Direction 1A "Register"** specification: text-first, one ink on
-one paper, no accent colour, no dark mode, and no motion except colour. The
-work is the only saturated thing on the page.
 
 ## Running it
 
