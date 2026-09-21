@@ -472,7 +472,19 @@ a { color: inherit; text-decoration: none; }
   border-bottom-color: var(--ink);
 }
 
-.form__actions { display: flex; justify-content: flex-end; margin-top: 40px; }
+/* The note sits left of SEND and appears only once the button is pressed,
+   so the row is the button alone until there is something to say. */
+.form__actions {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 32px;
+  margin-top: 40px;
+}
+.form__actions .btn { margin-left: auto; flex: none; }
+
+.form__note { max-width: 46ch; font-size: 13px; line-height: 1.7; color: var(--body); }
+.form__note[hidden] { display: none; }
 
 /* The only filled element anywhere on the site: ink block, paper text,
    square corners. Colour is still the only thing that moves. */
@@ -553,6 +565,7 @@ a { color: inherit; text-decoration: none; }
   /* Name and email stop sharing a line; SEND takes the full width rather
      than sitting as a small block against the right edge. */
   .field-pair { grid-template-columns: 1fr; gap: 28px; }
+  .form__actions { flex-direction: column; align-items: stretch; gap: 20px; }
   .btn { width: 100%; }
 
   /* The month moves above its entry rather than holding a 56px gutter. */

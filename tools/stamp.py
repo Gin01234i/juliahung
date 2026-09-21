@@ -645,20 +645,6 @@ def field(name, label, *, kind="text", placeholder="", required=True,
             f'    </div>')
 
 
-# Where SEND goes when content/contact.json has not named a destination.
-# The old page ran Wix's form app; it posted to Wix and forwarded to an
-# address kept in the Wix account, so there is nothing to carry over.
-FORM_TODO = """  <!-- TODO \u2014 this form has no destination. It renders and validates, but
-       SEND posts nowhere. Pick one and the page is finished:
-
-         Formspree  set "action" in content/contact.json to
-                    https://formspree.io/f/<form-id> and rerun stamp.py
-         Netlify    add data-netlify="true" netlify-honeypot="_gotcha" to the
-                    <form> tag in stamp.py contact() and rerun
-
-       The _gotcha honeypot below already serves either one. -->"""
-
-
 def contact():
     data = json.load(open(f"{ROOT}/content/contact.json", encoding="utf-8"))
     email = data["email"]
@@ -683,8 +669,10 @@ def contact():
         field("message", "Message", rows=7),
     ]
 
-    action = f' action="{esc(form["action"])}"' if form.get("action") else ""
-    todo = "" if form.get("action") else FORM_TODO + "\n"
+    # No backend. The action is the honest fallback — a browser with no
+    # JavaScript posts the fields to the same address as plain text —
+    # and contact.js replaces it with a composed subject and body.
+    fallback = f"mailto:{email}?subject=Enquiry%20via%20jujuhung.com"
 
     body = f"""<section class="s-index contact">
 
@@ -696,18 +684,20 @@ def contact():
     </div>
   </div>
 
-{todo}  <form class="form"{action} method="post">
+  <form class="form" data-mailto="{esc(email)}"
+        action="{esc(fallback)}" method="post" enctype="text/plain">
 {chr(10).join(rows)}
-    <div class="vh" aria-hidden="true">
-      <label for="_gotcha">Leave this field empty</label>
-      <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
-    </div>
     <div class="form__actions">
+      <p class="form__note" data-note hidden>Opening your email app with this
+        message ready to send. If nothing happens, write to
+        <a class="lnk-inline" href="mailto:{esc(email)}">{esc(email)}</a>.</p>
       <button class="btn" type="submit">Send</button>
     </div>
   </form>
 
-</section>"""
+</section>
+
+<script src="/assets/js/contact.js" defer></script>"""
     return document(
         title="Contact — Julia Hung",
         desc=f"Contact Julia Hung — {email}. Enquiries about exhibitions, "

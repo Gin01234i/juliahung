@@ -42,16 +42,8 @@
     </div>
   </div>
 
-  <!-- TODO — this form has no destination. It renders and validates, but
-       SEND posts nowhere. Pick one and the page is finished:
-
-         Formspree  set "action" in content/contact.json to
-                    https://formspree.io/f/<form-id> and rerun stamp.py
-         Netlify    add data-netlify="true" netlify-honeypot="_gotcha" to the
-                    <form> tag in stamp.py contact() and rerun
-
-       The _gotcha honeypot below already serves either one. -->
-  <form class="form" method="post">
+  <form class="form" data-mailto="atelier@jujuhung.com"
+        action="mailto:atelier@jujuhung.com?subject=Enquiry%20via%20jujuhung.com" method="post" enctype="text/plain">
     <div class="field-pair">
       <div class="field">
         <label class="t-label" for="name">Name</label>
@@ -76,16 +68,17 @@
       <label class="t-label" for="message">Message</label>
       <textarea id="message" name="message" rows="7" required></textarea>
     </div>
-    <div class="vh" aria-hidden="true">
-      <label for="_gotcha">Leave this field empty</label>
-      <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
-    </div>
     <div class="form__actions">
+      <p class="form__note" data-note hidden>Opening your email app with this
+        message ready to send. If nothing happens, write to
+        <a class="lnk-inline" href="mailto:atelier@jujuhung.com">atelier@jujuhung.com</a>.</p>
       <button class="btn" type="submit">Send</button>
     </div>
   </form>
 
 </section>
+
+<script src="/assets/js/contact.js" defer></script>
 
 </div>
 </body>

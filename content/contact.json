@@ -1,5 +1,5 @@
 {
-  "_comment": "Contact. Address and social marks left, enquiry form right. The form has NO DESTINATION yet: the old page ran Wix's 'Old Wix Forms and Payments' app, which posted to Wix's servers and forwarded to an address held in the Wix account — none of which survives the migration. Set form.action below and rerun stamp.py; nothing else has to change.",
+  "_comment": "Contact. Address and social marks left, enquiry form right. The form has no backend and wants none: SEND composes a mailto: to the address below and hands it to the visitor's own mail client. The old page ran Wix's form app, which posted to Wix and forwarded to an address held in the Wix account; none of that survives the migration, and nothing replaces it.",
 
   "email": "atelier@jujuhung.com",
 
@@ -11,8 +11,7 @@
   ],
 
   "form": {
-    "action": null,
-    "_action_note": "null leaves the form inert — it renders and validates, but SEND goes nowhere. Formspree: set this to 'https://formspree.io/f/<form-id>'. Netlify Forms: leave it null and add data-netlify=\"true\" to the <form> in stamp.py instead. The honeypot field (_gotcha) is already in place for either.",
+    "_mailto_note": "SEND goes to the address in \"email\" above. assets/js/contact.js builds the subject from the enquiry type and the sender's name and puts the message in the body; with JavaScript off the form posts to the same address as plain text. Nothing is stored and nothing is sent without the visitor pressing send in their own mail client, so there is no spam surface and no honeypot.",
     "enquiry_label": "Type of inquiry",
     "enquiry_options": [
       { "value": "general",    "label": "General inquiries" },
