@@ -26,7 +26,7 @@ about/  news/  contact/        About + CV, News, Contact
 blog/                          Press index
 post/<slug>/                   18 press citation pages (URLs kept from Wix)
 commission/                    Commission guide — unlisted, noindex
-404.html  robots.txt  sitemap.xml  CNAME
+404.html  robots.txt  sitemap.xml
 
 assets/css/site.css            the stylesheet — the spec, in one file
 assets/css/stage.css           the alternative home only; loaded by nothing else
