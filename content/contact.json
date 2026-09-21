@@ -1,11 +1,27 @@
 {
-  "_comment": "Contact. No form - the spec removes it, and Wix's would not have survived migration anyway. A form needs Formspree or similar; ask before adding one.",
-  "fields": [
-    { "label": "Email", "en": "atelier@jujuhung.com", "href": "mailto:atelier@jujuhung.com" },
-    { "label": "Studio", "en": "Taipei, Taiwan · New York, USA", "zh": "台北 · 紐約" },
-    { "label": "Representation", "en": "Enquiries via the studio", "zh": "請逕洽工作室" },
-    { "label": "Instagram", "en": "@juju.hung", "href": "https://www.instagram.com/juju.hung/" },
-    { "label": "Commissions", "en": "Commission guide on request", "zh": "委託創作說明請來信索取" }
+  "_comment": "Contact. Address and social marks left, enquiry form right. The form has NO DESTINATION yet: the old page ran Wix's 'Old Wix Forms and Payments' app, which posted to Wix's servers and forwarded to an address held in the Wix account — none of which survives the migration. Set form.action below and rerun stamp.py; nothing else has to change.",
+
+  "email": "atelier@jujuhung.com",
+
+  "_socials_note": "Taken verbatim from the archived Wix contact page. Note that the Instagram handle there is @jujuhung, not the @juju.hung this file used to carry — the old one was wrong.",
+  "socials": [
+    { "name": "Instagram", "icon": "instagram", "href": "https://www.instagram.com/jujuhung/" },
+    { "name": "Facebook",  "icon": "facebook",  "href": "https://www.facebook.com/juliaxjuju/" },
+    { "name": "Linktree",  "icon": "linktree",  "href": "https://linktr.ee/juliahung" }
   ],
-  "_representation_note": "The site currently names no gallery. If Julia is represented, replace this row with the gallery name and a link."
+
+  "form": {
+    "action": null,
+    "_action_note": "null leaves the form inert — it renders and validates, but SEND goes nowhere. Formspree: set this to 'https://formspree.io/f/<form-id>'. Netlify Forms: leave it null and add data-netlify=\"true\" to the <form> in stamp.py instead. The honeypot field (_gotcha) is already in place for either.",
+    "enquiry_label": "Type of inquiry",
+    "enquiry_options": [
+      { "value": "general",    "label": "General inquiries" },
+      { "value": "exhibition", "label": "Exhibition inquiries" },
+      { "value": "commission", "label": "Commission inquiries" },
+      { "value": "press",      "label": "Press inquiries" },
+      { "value": "gallery",    "label": "Gallery" }
+    ]
+  },
+
+  "_dropped": "The redesign drops the old Studio / Representation / Commissions rows — the reference design has only the address and the marks. Studio locations (Taipei · New York) and the pointer to /commission/ now live nowhere on the site; restore them here as a .meta block under the socials if that turns out to matter."
 }

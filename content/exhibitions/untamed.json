@@ -192,5 +192,9 @@
     }
   ],
   "order": 18,
-  "source": "Recipes/9dca491f-8597-4fe9-a24a-9605f32b9f85"
+  "source": "Recipes/9dca491f-8597-4fe9-a24a-9605f32b9f85",
+  "link": {
+    "text": "View exhibition",
+    "href": "https://www.soka-art.com/en/exhibition/details/9399"
+  }
 }

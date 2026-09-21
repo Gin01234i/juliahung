@@ -40,52 +40,31 @@ def load(kind, slug):
 # Canonical copies live in PARTIALS.md. Change them in one place, rerun, and
 # every page moves together.
 
-NAV = [("/artworks/", "Works", "作品"), ("/exhibitions/", "Exhibitions", "展覽"),
-       ("/news/", "News", "消息"), ("/blog/", "Press", "媒體"),
-       ("/about/", "About", "關於"), ("/contact/", "Contact", "聯絡")]
-
-# Label column of the meta block, and the handful of standing UI words.
-UI = {
-    "Material": "媒材", "Series": "系列", "Dimensions": "尺寸", "Shown": "展出",
-    "Works": "作品", "Exhibitions": "展覽", "News": "消息", "Press": "媒體",
-    "Contact": "聯絡", "Works shown": "展出作品", "All press": "所有報導",
-    "All exhibitions": "所有展覽", "All news": "所有消息", "More": "詳見",
-    "Selected press": "精選報導", "Most recent": "最近展出", "On view": "展出中",
-    "Solo": "個展", "Group exhibition": "聯展", "Solo exhibition": "個展",
-    "Art fair": "藝術博覽會", "Art Festival": "藝術節", "Collaboration": "合作計畫",
-    "Not found": "找不到頁面", "Commission guide": "委託創作說明",
-}
+NAV = [("/artworks/", "Works"), ("/exhibitions/", "Exhibitions"),
+       ("/news/", "News"), ("/blog/", "Press"),
+       ("/about/", "About"), ("/contact/", "Contact")]
 
 
-def header(active=None, home=False):
-    mark = ('<a class="hdr__mark" href="/">Julia Hung'
-            + ('<span class="hdr__mark-zh">洪郁雯</span>' if home else "")
-            + "</a>")
+def header(active=None):
     cur = ' aria-current="page"'
     items = "\n".join(
-        f'    <a href="{href}"{cur if href == active else ""}>'
-        f'{bi_span(label, zh)}</a>'
-        for href, label, zh in NAV)
+        f'    <a href="{href}"{cur if href == active else ""}>{label}</a>'
+        for href, label in NAV)
     return f"""<header class="hdr">
-  {mark}
+  <a class="hdr__mark" href="/">Julia Hung</a>
   <nav class="hdr__nav t-meta" aria-label="Main">
 {items}
-    <span class="hdr__lang" role="group" aria-label="Language">
-      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-      <span aria-hidden="true">/</span>
-      <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
-    </span>
   </nav>
 </header>"""
 
 
 def document(*, title, desc, path, body, og_image=None, jsonld=None,
-             noindex=False, active=None, home=False, family="index"):
+             noindex=False, active=None, family="index"):
     canonical = SITE + path
     og = og_image or "/assets/img/works/untamed/2023_untamed_01-1600.jpg"
     head = [
         '<!doctype html>',
-        '<html lang="en" data-lang="en">',
+        '<html lang="en">',
         '<head>',
         '<meta charset="utf-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1">',
@@ -111,10 +90,8 @@ def document(*, title, desc, path, body, og_image=None, jsonld=None,
         head.append("</script>")
     cls = "page" + (f" page--{family}" if family != "index" else "")
     head += ["</head>", "<body>", f'<div class="{cls}">', ""]
-    return "\n".join(head + [header(active, home), "", body, "",
-                             "</div>",
-                             '<script src="/assets/js/lang.js" defer></script>',
-                             "</body>", "</html>", ""])
+    return "\n".join(head + [header(active), "", body, "",
+                             "</div>", "</body>", "</html>", ""])
 
 
 def write(path, content):
@@ -126,33 +103,14 @@ def write(path, content):
     return dest
 
 
-# --- Bilingual helpers ---------------------------------------------------- #
-
-def bi_span(en, zh):
-    if not zh:
-        return f'<span lang="en" class="is-fallback">{en}</span>'
-    return f'<span lang="en">{en}</span><span lang="zh">{zh}</span>'
-
-
-def paras(lines, cls="t-body", lang=None, limit=None):
-    if not lines:
-        return ""
-    if limit:
-        lines = lines[:limit]
-    L = f' lang="{lang}"' if lang else ""
-    return "\n".join(f'    <p class="{cls}"{L}>{esc(l)}</p>' for l in lines)
-
-
 # --- Imagery -------------------------------------------------------------- #
 
-def picture(stem, ratio, alt, caption=None, sizes="100vw", eager=False,
-            caption_zh=None):
+def picture(stem, ratio, alt, caption=None, sizes="100vw", eager=False):
     """<picture> with a WebP source and a JPEG fallback, fixed ratio, no
     rounding, caption outside the frame."""
     cap = ""
     if caption:
-        cap = (f"\n    <figcaption>"
-               f"{bi_span(esc(caption), esc(caption_zh))}</figcaption>")
+        cap = f"\n    <figcaption>{esc(caption)}</figcaption>"
     loading = "eager" if eager else "lazy"
     return f"""  <figure class="fig fig--{ratio}">
     <picture>
@@ -222,83 +180,56 @@ def work_detail(slug, prev_slug, next_slug):
     rec = load("works", slug)
     pics = imgs["works"].get(slug, [])
     title = rec["title"]
-    zh = rec.get("title_zh")
 
     meta_rows = []
-    for label, en, zhv in (
-        ("Material", rec.get("material"), rec.get("material_zh")),
-        ("Series", rec.get("series"), rec.get("series_zh")),
-        ("Dimensions", tidy_dims(rec.get("dimensions")), None),
+    for label, val in (
+        ("Material", rec.get("material")),
+        ("Series", rec.get("series")),
+        ("Dimensions", tidy_dims(rec.get("dimensions"))),
     ):
-        if en:
-            meta_rows.append(f"    <dt>{bi_span(label, UI.get(label))}</dt>\n"
-                             f"    <dd>{bi_span(esc(en), esc(zhv))}</dd>")
-    # Shown: the two languages list *different* exhibitions, not translations
-    # of one list — the Chinese record for Untamed names four shows where the
-    # English names one, and 21g has a Chinese credit and no English one. So
-    # render both, rather than translating the labels of a single list.
+        if val:
+            meta_rows.append(f"    <dt>{label}</dt>\n"
+                             f"    <dd>{esc(val)}</dd>")
+
     def shown_list(items):
         return ", ".join(
             f'<a class="lnk" href="{local_href(i["href"])}">{esc(i["text"])}</a>'
             if local_href(i["href"]) else esc(i["text"]) for i in items)
 
-    shown_en = rec.get("exhibitions") or []
-    shown_zh = rec.get("exhibitions_zh") or []
-    if shown_en or shown_zh:
-        # Whichever language stands alone has to survive the toggle.
-        only = not (shown_en and shown_zh)
-        fb = ' class="is-fallback"' if only else ""
-        parts = []
-        if shown_en:
-            parts.append(f'<span lang="en"{fb}>{shown_list(shown_en)}</span>')
-        if shown_zh:
-            parts.append(f'<span lang="zh"{fb}>{shown_list(shown_zh)}</span>')
-        meta_rows.append(f'    <dt>{bi_span("Shown", UI["Shown"])}</dt>\n'
-                         f'    <dd>{"".join(parts)}</dd>')
+    # A few records carry the credit only in the Chinese field — 21g's sole
+    # entry ("Voices") lives there. Fall back to it so the row survives.
+    shown = rec.get("exhibitions") or rec.get("exhibitions_zh") or []
+    if shown:
+        meta_rows.append(f'    <dt>Shown</dt>\n'
+                         f'    <dd>{shown_list(shown)}</dd>')
 
     note = ""
     st_en = rec.get("statement") or []
-    st_zh = rec.get("statement_zh") or []
-    lead_en, lead_zh = first_statement(st_en), first_statement(st_zh)
+    lead_en = first_statement(st_en)
     if lead_en:
-        note = (f'\n  <p class="meta__note">'
-                f"{bi_span(esc(lead_en), esc(lead_zh))}</p>")
+        note = f'\n  <p class="meta__note">{esc(lead_en)}</p>'
 
     # Image stack: one 4/3 primary, then 1/1 pairs.
-    # The Chinese gallery holds the same images in the same order with the
-    # material translated; index into it for the caption pair.
-    zh_caps = {i["media"]: i.get("caption", "")
-               for i in (rec.get("images_zh") or [])}
-
-    def cap_pair(p):
-        raw = json.load
-        en = tidy_dims(p.get("parsed", {}).get("raw")) or None
-        zh = tidy_dims(zh_caps.get(p.get("media"), "")) or None
-        return en, (zh if zh and zh != en else None)
+    def cap(p):
+        return tidy_dims(p.get("parsed", {}).get("raw")) or None
 
     stack = []
     if pics:
         p = pics[0]
-        en, zh = cap_pair(p)
-        stack.append(picture(p["stem"], "4-3", alt_for(rec, 1, "works"), en,
-                             sizes="(max-width: 900px) 100vw, 70vw", eager=True,
-                             caption_zh=zh))
+        stack.append(picture(p["stem"], "4-3", alt_for(rec, 1, "works"), cap(p),
+                             sizes="(max-width: 900px) 100vw, 70vw", eager=True))
     rest = pics[1:]
     for i in range(0, len(rest), 2):
         pair = rest[i:i + 2]
         inner = "\n".join(
             picture(p["stem"], "1-1", alt_for(rec, i + j + 2, "works"),
-                    cap_pair(p)[0], sizes="(max-width: 600px) 100vw, 35vw",
-                    caption_zh=cap_pair(p)[1])
+                    cap(p), sizes="(max-width: 600px) 100vw, 35vw")
             for j, p in enumerate(pair))
         stack.append(f'  <div class="pair">\n{inner}\n  </div>')
 
-    rest_en = [l for l in st_en if l != lead_en]
-    rest_zh = [l for l in st_zh if l != lead_zh]
     body_paras = "\n".join(
-        f'    <p class="t-body" lang="en">{esc(l)}</p>' for l in rest_en) \
-        + ("\n" if rest_en and rest_zh else "") + "\n".join(
-        f'    <p class="t-body" lang="zh">{esc(l)}</p>' for l in rest_zh)
+        f'    <p class="t-body">{esc(l)}</p>'
+        for l in st_en if l != lead_en)
 
     nav = []
     if prev_slug:
@@ -313,7 +244,7 @@ def work_detail(slug, prev_slug, next_slug):
     body = f"""<article class="s-detail detail">
 
   <div class="detail__meta stack--tight">
-    <h1 class="t-display">{bi_span(esc(title), esc(zh))}</h1>
+    <h1 class="t-display">{esc(title)}</h1>
     <p class="t-label">{esc(year_label(rec.get("year")))}</p>
   <dl class="meta">
 {chr(10).join(meta_rows)}
@@ -355,6 +286,21 @@ def work_detail(slug, prev_slug, next_slug):
         body=body, jsonld=jsonld, active="/artworks/", family="detail")
 
 
+def ext_attrs(href):
+    """Links that leave the site open in a new tab.
+
+    A visitor following a gallery's own page for a show has not finished with
+    this one. mailto: and internal paths are untouched.
+    """
+    h = (href or "").lower()
+    if not h.startswith(("http://", "https://")):
+        return ""
+    if h.startswith(("https://jujuhung.com", "https://www.jujuhung.com",
+                     "http://jujuhung.com", "http://www.jujuhung.com")):
+        return ""
+    return ' target="_blank" rel="noopener"'
+
+
 def local_href(href):
     """Rewrite an absolute jujuhung.com link to a local path, or drop it."""
     if not href:
@@ -386,32 +332,31 @@ def works_index():
         cat = next((k for k, v in CATS.items() if slug in v), "")
         p = pics[0]
         cards.append(f"""  <a class="card" href="/artworks/{slug}/" data-cat="{cat}">
-{picture(p["stem"], "", alt_for(rec, 1, "works"), sizes="(max-width: 600px) 100vw, (max-width: 900px) 46vw, 30vw")}
-    <p class="card__title">{bi_span(esc(rec["title"]), esc(rec.get("title_zh")))}</p>
+{picture(p["stem"], "", alt_for(rec, 1, "works"), sizes="(max-width: 900px) 46vw, 30vw")}
+    <p class="card__title">{esc(rec["title"])}</p>
     <p class="card__year">{esc(year_label(rec.get("year")))}</p>
   </a>""")
 
-    CAT_ZH = {"sculpture": "雕塑", "installation": "裝置", "public-art": "公共藝術"}
     filters = "\n".join(
         f'    <button type="button" data-filter="{k}">'
-        f'{bi_span(k.replace("-", " ").title(), CAT_ZH.get(k))}</button>'
+        f'{k.replace("-", " ").title()}</button>'
         for k in CATS)
     body = f"""<section class="s-index stack">
-  <h1 class="t-label">{bi_span("Works", UI["Works"])}</h1>
+  <h1 class="t-label">Works</h1>
   <div class="filters t-meta" role="group" aria-label="Filter works">
-    <button type="button" data-filter="all" aria-pressed="true">{bi_span("All", "全部")}</button>
+    <button type="button" data-filter="all" aria-pressed="true">All</button>
 {filters}
   </div>
 </section>
 
-<section class="s-index grid" id="works-grid">
+<section class="s-index grid" data-grid>
 {chr(10).join(cards)}
 </section>
 
 <script src="/assets/js/filter.js" defer></script>"""
     return document(
         title="Works — Julia Hung",
-        desc="Selected works by Julia Hung 洪郁雯 — sculpture and installation in "
+        desc="Selected works by Julia Hung — sculpture and installation in "
              "enamelled copper wire and reclaimed material, 2017 to present.",
         path="/artworks/", body=body, active="/artworks/")
 
@@ -435,57 +380,92 @@ def exhibitions_index():
          if f.endswith(".json") and not f.startswith("_")),
         key=lambda s: load("exhibitions", s).get("year") or "", reverse=True)
 
-    rows = []
+    # Same card grid as the works index. The tiles are 4/3 rather than the
+    # works square: an install view is a room, and a centre crop to square
+    # throws the room away.
+    cards = []
     for slug in slugs:
         rec = load("exhibitions", slug)
-        chip = ('<span class="chip">' + bi_span("Solo", "個展") + '</span>'
-                if rec.get("solo") else "")
-        rows.append(f"""  <a class="row" href="/exhibitions/{slug}/">
-    <span class="row__title t-row">{bi_span(esc(rec["title"]), esc(rec.get("title_zh")))}{chip}</span>
-    <span class="row__venue">{bi_span(esc(show_venue(rec)), esc((rec.get("dates_zh") or ["", ""])[-1] if len(rec.get("dates_zh") or []) > 1 else None))}</span>
-    <span class="row__year">{esc(year_range(rec))}</span>
+        pics = imgs["exhibitions"].get(slug, [])
+        if not pics:
+            continue
+        solo = bool(rec.get("solo"))
+        chip = '<span class="chip">Solo</span>' if solo else ""
+        # Anything not a solo show files under Group — the fairs, festivals
+        # and collaborations keep their own label on the exhibition page.
+        cat = "solo" if solo else "group"
+        # Venue and year take separate lines: one venue is "Soka Art · Tainan",
+        # so any middot joining them would read as part of the name.
+        cards.append(f"""  <a class="card" href="/exhibitions/{slug}/" data-cat="{cat}">
+{picture(pics[0]["stem"], "", alt_for(rec, 1, "exhibitions"), sizes="(max-width: 900px) 46vw, 30vw")}
+    <p class="card__title">{esc(rec["title"])}{chip}</p>
+    <p class="card__venue">{esc(show_venue(rec))}</p>
+    <p class="card__year">{esc(year_range(rec))}</p>
   </a>""")
 
-    body = f"""<section class="s-index stack--tight">
-  <h1 class="t-label">{bi_span("Exhibitions", UI["Exhibitions"])}</h1>
-</section>
-
-<section class="s-index">
-  <div class="rows">
-{chr(10).join(rows)}
+    body = f"""<section class="s-index stack">
+  <h1 class="t-label">Exhibitions</h1>
+  <div class="filters t-meta" role="group" aria-label="Filter exhibitions">
+    <button type="button" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" data-filter="solo">Solo</button>
+    <button type="button" data-filter="group">Group</button>
   </div>
 </section>
 
+<section class="s-index grid grid--wide" data-grid>
+{chr(10).join(cards)}
+</section>
+
 <section class="s-index">
-  <p class="t-body"><span lang="en">Earlier exhibitions are listed in the
-    <a class="lnk" href="/about/">CV</a>.</span><span lang="zh">更早的展覽收錄於
-    <a class="lnk" href="/about/">CV</a>。</span></p>
-</section>"""
+  <p class="t-body">Earlier exhibitions are listed in the
+    <a class="lnk" href="/about/">CV</a>.</p>
+</section>
+
+<script src="/assets/js/filter.js" defer></script>"""
     return document(
         title="Exhibitions — Julia Hung",
-        desc="Solo and selected group exhibitions by Julia Hung 洪郁雯, 2017 to present.",
+        desc="Solo and selected group exhibitions by Julia Hung, 2017 to present.",
         path="/exhibitions/", body=body, active="/exhibitions/")
 
 
 def exhibition_detail(slug):
     rec = load("exhibitions", slug)
     pics = imgs["exhibitions"].get(slug, [])
-    dates_en = " · ".join(rec.get("dates") or [])
-    dates_zh = " · ".join(rec.get("dates_zh") or [])
+    # dates is [year, venue] in every record — the Wix export packed the venue
+    # in beside the year. year_range takes the date half and nothing else.
+    dates_en = year_range(rec)
 
-    stack = "\n".join(
-        picture(p["stem"], "16-10", alt_for(rec, n, "exhibitions"),
-                sizes="(max-width: 900px) 100vw, 66vw", eager=(n == 1))
-        for n, p in enumerate(pics, 1))
+    # Same rhythm as a work page: one large primary, then pairs. The
+    # proportions stay landscape — an install view is a room, and the square
+    # the works grid uses would crop the room out of it.
+    stack = []
+    if pics:
+        stack.append(picture(pics[0]["stem"], "16-10",
+                             alt_for(rec, 1, "exhibitions"),
+                             sizes="(max-width: 900px) 100vw, 70vw", eager=True))
+    rest_pics = pics[1:]
+    for i in range(0, len(rest_pics), 2):
+        pair = rest_pics[i:i + 2]
+        inner = "\n".join(
+            picture(p["stem"], "4-3", alt_for(rec, i + j + 2, "exhibitions"),
+                    sizes="(max-width: 600px) 100vw, 35vw")
+            for j, p in enumerate(pair))
+        stack.append(f'  <div class="pair">\n{inner}\n  </div>')
+
+    # The text sits under the images. Exhibition texts run long — one lead
+    # paragraph of a thousand characters would not fit the meta column.
+    # The venue's own page for the show, carried over from the Wix site. The
+    # label varies by record — a festival and a fair are not "exhibitions".
+    link = rec.get("link") or {}
+    view = (f'\n    <p><a class="lnk" href="{esc(link["href"])}"'
+            f'{ext_attrs(link["href"])}>'
+            f'{esc(link["text"])} →</a></p>') if link.get("href") else ""
 
     text_en = rec.get("text") or []
-    text_zh = rec.get("text_zh") or []
-    intro = ""
-    if text_en:
-        intro = f'  <p class="t-lead">{bi_span(esc(text_en[0]), esc(text_zh[0]) if text_zh else None)}</p>'
-    rest = "\n".join(f'  <p class="t-body" lang="en">{esc(l)}</p>' for l in text_en[1:]) \
-        + ("\n" if text_en[1:] and text_zh[1:] else "") \
-        + "\n".join(f'  <p class="t-body" lang="zh">{esc(l)}</p>' for l in text_zh[1:])
+    paragraphs = "\n".join(
+        [f'    <p class="t-lead">{esc(text_en[0])}</p>']
+        + [f'    <p class="t-body">{esc(l)}</p>' for l in text_en[1:]]
+    ) if text_en else ""
 
     work_rows = []
     for w in rec.get("works") or []:
@@ -495,7 +475,7 @@ def exhibition_detail(slug):
         wslug = href.strip("/").split("/")[-1]
         wr = load("works", wslug)
         work_rows.append(f"""    <a class="row" href="{href}">
-      <span class="row__title t-row">{bi_span(esc(wr["title"]), esc(wr.get("title_zh")))}</span>
+      <span class="row__title t-row">{esc(wr["title"])}</span>
       <span class="row__venue">{esc(wr.get("material") or "")}</span>
       <span class="row__year">{esc(year_label(wr.get("year")))}</span>
     </a>""")
@@ -503,30 +483,30 @@ def exhibition_detail(slug):
     if work_rows:
         works_block = f"""
 <section class="s-detail">
-  <p class="t-label">{bi_span("Works shown", UI["Works shown"])}</p>
+  <p class="t-label">Works shown</p>
   <div class="rows">
 {chr(10).join(work_rows)}
   </div>
 </section>"""
 
-    body = f"""<article class="s-detail stack">
+    body = f"""<article class="s-detail detail">
 
-  <div class="stack--tight">
-    <p class="t-label">{bi_span(esc(show_kind(rec)), UI.get(show_kind(rec)))}</p>
-    <h1 class="t-display">{bi_span(esc(rec["title"]), esc(rec.get("title_zh")))}</h1>
-    <p class="t-body">{bi_span(esc(show_venue(rec)), esc(dates_zh.split(" · ")[-1] if dates_zh else None))}</p>
-    <p class="t-body">{bi_span(esc(dates_en), esc(dates_zh))}</p>
+  <div class="detail__meta stack--tight">
+    <p class="t-label">{esc(show_kind(rec))}</p>
+    <h1 class="t-display">{esc(rec["title"])}</h1>
+    <p class="t-body">{esc(show_venue(rec))}</p>
+    <p class="t-body">{esc(dates_en)}</p>{view}
   </div>
 
-{intro}
-{rest}
-
-{stack}
+  <div class="stack">
+{chr(10).join(stack)}
+{paragraphs}
+  </div>
 
 </article>{works_block}
 
 <nav class="nextprev t-meta" aria-label="More exhibitions">
-  <a class="lnk" href="/exhibitions/">{bi_span("All exhibitions →", UI["All exhibitions"] + " →")}</a>
+  <a class="lnk" href="/exhibitions/">All exhibitions →</a>
 </nav>"""
 
     desc = (text_en[0] if text_en else
@@ -552,19 +532,16 @@ def exhibition_detail(slug):
 
 def about():
     cv = json.load(open(f"{ROOT}/content/cv.json", encoding="utf-8"))
-    press = load_press()
 
-    # Portrait: 2/3 left. There is no portrait in the CMS, so the page falls
-    # back to the most recent install view until Julia supplies one.
-    portrait = imgs["exhibitions"].get("the-interval-between", [])
-    fig = picture(portrait[0]["stem"], "2-3",
-                  "Julia Hung's work installed at Galerie Pierre, Taichung.",
-                  sizes="(max-width: 900px) 100vw, 30vw", eager=True) \
-        if portrait else ""
+    # Portrait: 3/4 left. The CMS holds no portrait, so the file is named
+    # directly — it is the one image on the site that is of Julia, not by her.
+    fig = picture("about/2022_julia-hung-portrait", "3-4",
+                  "Portrait of Julia Hung in front of one of her works.",
+                  sizes="(max-width: 900px) 100vw, 30vw", eager=True)
 
     statement = "\n".join(
-        f'    <p class="{"t-lead" if i == 0 else "t-body"}">{esc(pgraph)}</p>'
-        for i, pgraph in enumerate(cv["statement"]))
+        f'    <p class="t-lead t-lead--sm">{esc(pgraph)}</p>'
+        for pgraph in cv["statement"])
 
     blocks = []
     for sec in cv["sections"]:
@@ -578,17 +555,11 @@ def about():
     </dl>
   </section>""")
 
-    pdf = ""
-    if cv.get("cv_pdf"):
-        pdf = (f'\n<section class="s-detail">\n'
-               f'  <a class="lnk" href="{cv["cv_pdf"]}">Download CV (PDF) →</a>\n'
-               f'</section>')
-
-    press_rows = "\n".join(f"""    <a class="row" href="/post/{esc(p["slug"])}/">
-      <span class="row__title t-row">{esc(p["title"])}</span>
-      <span class="row__venue">{esc(p["excerpt"])}</span>
-      <span class="row__year">{esc((p["published"] or "")[:4])}</span>
-    </a>""" for p in press[:6])
+    links = [(cv.get("cv_pdf"), "CV (PDF) ↓"),
+             (cv.get("press_pdf"), "Selected Press (PDF) ↓")]
+    offered = "\n".join(f'    <a class="lnk" href="{href}" download>{label}</a>'
+                        for href, label in links if href)
+    downloads = f'\n  <p class="downloads">\n{offered}\n  </p>' if offered else ""
 
     body = f"""<section class="s-index split">
   <div class="col-4">
@@ -603,28 +574,10 @@ def about():
 
 <section class="s-index stack--tight">
   <h1 class="t-display">{esc(cv["name"])}</h1>
-  <p class="t-body">{bi_span(esc(cv["born"]), esc(cv.get("born_zh")))}</p>
+  <p class="t-body">{esc(cv["born"])}</p>{downloads}
 </section>
 
-{chr(10).join(blocks)}{pdf}
-
-<hr class="rule">
-
-<section class="s-index">
-  <p class="t-label">{bi_span("Selected press", UI["Selected press"])}</p>
-  <div class="rows">
-{press_rows}
-  </div>
-  <p class="t-body mt-2"><a class="lnk" href="/blog/">{bi_span("All press →", UI["All press"] + " →")}</a></p>
-</section>
-
-<hr class="rule">
-
-<section class="s-index stack--tight">
-  <p class="t-label">{bi_span("Contact", UI["Contact"])}</p>
-  <p class="t-body"><a class="lnk" href="mailto:atelier@jujuhung.com">atelier@jujuhung.com</a></p>
-  <p class="t-body"><a class="lnk" href="/contact/">All contact details →</a></p>
-</section>"""
+{chr(10).join(blocks)}"""
 
     return document(
         title="About — Julia Hung",
@@ -642,131 +595,354 @@ def about():
 
 # --- Contact -------------------------------------------------------------- #
 
+# The three marks, drawn rather than linked: an icon font or an SVG sprite
+# would be the first external dependency on the site. They inherit
+# currentColor, so they take the same mute -> ink hover as every other link.
+SOCIAL_ICONS = {
+    "instagram":
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+        ' stroke-width="1.5" aria-hidden="true">'
+        '<rect x="3" y="3" width="18" height="18" rx="5"/>'
+        '<circle cx="12" cy="12" r="4.2"/>'
+        '<circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/>'
+        '</svg>',
+    "facebook":
+        '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">'
+        '<path d="M13.6 21v-8.2h2.7l.4-3.2h-3.1V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1'
+        'C16.6 3 15.6 3 14.5 3c-2.4 0-4 1.5-4 4.2v2.4H7.7v3.2h2.8V21h3.1z"/>'
+        '</svg>',
+    # Linktree's mark as the reference design draws it: a six-spoke asterisk.
+    "linktree":
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"'
+        ' stroke-width="1.6" stroke-linecap="round" aria-hidden="true">'
+        '<path d="M12 3.6v16.8"/><path d="M4.7 7.8l14.6 8.4"/>'
+        '<path d="M19.3 7.8 4.7 16.2"/></svg>',
+}
+
+
+def field(name, label, *, kind="text", placeholder="", required=True,
+          options=None, rows=None):
+    """One form row: a label over a rule you can type into.
+
+    Deliberately the same shape as a .meta row — label in the mute register,
+    value in ink, a hairline under it — so the form reads as part of the site
+    rather than as a widget dropped into it.
+    """
+    req = " required" if required else ""
+    if options:
+        opts = "\n".join(f'        <option value="{esc(v)}">{esc(t)}</option>'
+                         for v, t in options)
+        control = (f'      <select id="{name}" name="{name}">\n'
+                   f'{opts}\n      </select>')
+    elif rows:
+        control = f'      <textarea id="{name}" name="{name}" rows="{rows}"{req}></textarea>'
+    else:
+        ph = f' placeholder="{esc(placeholder)}"' if placeholder else ""
+        control = f'      <input id="{name}" name="{name}" type="{kind}"{ph}{req}>'
+    return (f'    <div class="field">\n'
+            f'      <label class="t-label" for="{name}">{esc(label)}</label>\n'
+            f'{control}\n'
+            f'    </div>')
+
+
+# Where SEND goes when content/contact.json has not named a destination.
+# The old page ran Wix's form app; it posted to Wix and forwarded to an
+# address kept in the Wix account, so there is nothing to carry over.
+FORM_TODO = """  <!-- TODO \u2014 this form has no destination. It renders and validates, but
+       SEND posts nowhere. Pick one and the page is finished:
+
+         Formspree  set "action" in content/contact.json to
+                    https://formspree.io/f/<form-id> and rerun stamp.py
+         Netlify    add data-netlify="true" netlify-honeypot="_gotcha" to the
+                    <form> tag in stamp.py contact() and rerun
+
+       The _gotcha honeypot below already serves either one. -->"""
+
+
 def contact():
     data = json.load(open(f"{ROOT}/content/contact.json", encoding="utf-8"))
-    rows = []
-    for f in data["fields"]:
-        val = bi_span(esc(f["en"]), esc(f.get("zh")))
-        if f.get("href"):
-            val = f'<a class="lnk" href="{esc(f["href"])}">{val}</a>'
-        rows.append(f'    <dt>{esc(f["label"])}</dt>\n    <dd>{val}</dd>')
+    email = data["email"]
+    form = data["form"]
 
-    body = f"""<section class="s-index split">
-  <div class="col-8">
-    <h1 class="t-label">{bi_span("Contact", UI["Contact"])}</h1>
+    marks = "\n".join(
+        f'      <a href="{esc(s["href"])}" aria-label="{esc(s["name"])}"'
+        f'{ext_attrs(s["href"])}>{SOCIAL_ICONS[s["icon"]]}</a>'
+        for s in data["socials"])
+
+    def indent(s):
+        return "\n".join("  " + ln for ln in s.split("\n"))
+
+    rows = [
+        f'    <div class="field-pair">\n'
+        f'{indent(field("name", "Name", placeholder="First and last"))}\n'
+        f'{indent(field("email", "Email", kind="email", placeholder="you@studio.com"))}\n'
+        f'    </div>',
+        field("enquiry", form["enquiry_label"],
+              options=[(o["value"], o["label"])
+                       for o in form["enquiry_options"]]),
+        field("message", "Message", rows=7),
+    ]
+
+    action = f' action="{esc(form["action"])}"' if form.get("action") else ""
+    todo = "" if form.get("action") else FORM_TODO + "\n"
+
+    body = f"""<section class="s-index contact">
+
+  <div class="contact__card">
+    <h1 class="vh">Contact</h1>
+    <a class="contact__email" href="mailto:{esc(email)}">{esc(email)}</a>
+    <div class="socials">
+{marks}
+    </div>
   </div>
-  <div class="col-4">
-  <dl class="meta">
+
+{todo}  <form class="form"{action} method="post">
 {chr(10).join(rows)}
-  </dl>
-  </div>
+    <div class="vh" aria-hidden="true">
+      <label for="_gotcha">Leave this field empty</label>
+      <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <div class="form__actions">
+      <button class="btn" type="submit">Send</button>
+    </div>
+  </form>
+
 </section>"""
     return document(
         title="Contact — Julia Hung",
-        desc="Contact Julia Hung 洪郁雯 — atelier@jujuhung.com. Studio in Taipei and New York.",
+        desc=f"Contact Julia Hung — {email}. Enquiries about exhibitions, "
+             "commissions, press and gallery representation.",
         path="/contact/", body=body, active="/contact/")
 
 
 # --- News ----------------------------------------------------------------- #
 
-def news():
-    data = json.load(open(f"{ROOT}/content/news.json", encoding="utf-8"))
-    rows = []
-    for it in data["items"]:
-        text = bi_span(it["en"], it.get("zh"))
-        if it.get("href"):
-            text += f' <a class="lnk" href="{esc(it["href"])}">{bi_span("More →", UI["More"] + " →")}</a>'
-        rows.append(f"""    <div class="row">
-      <span class="row__title t-row">{text}</span>
-      <span class="row__venue">{esc(it["label"])}</span>
-      <span class="row__year">{esc(it["date"])}</span>
-    </div>""")
+WORDS = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five",
+         6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten",
+         11: "Eleven", 12: "Twelve", 13: "Thirteen", 14: "Fourteen",
+         15: "Fifteen", 16: "Sixteen", 17: "Seventeen", 18: "Eighteen",
+         19: "Nineteen", 20: "Twenty"}
 
-    body = f"""<section class="s-index stack--tight">
-  <h1 class="t-label">{bi_span("News", UI["News"])}</h1>
-</section>
 
-<section class="s-index">
-  <div class="rows">
-{chr(10).join(rows)}
+def news_lead(it):
+    """The newest entry, set at reading size with a summary and its own rule
+    above it. One per page — the thing a visitor came to find out."""
+    when = f'{it["label"]} · {it["month"]} {it["year"]}' if it.get("month") \
+        else f'{it["label"]} · {it["year"]}'
+    out = [f'      <p class="t-label">{esc(when)}</p>',
+           f'      <h2 class="news-lead__title">{it["en"]}</h2>']
+    if it.get("summary_en"):
+        out.append(f'      <p class="t-body news-lead__sum">{it["summary_en"]}</p>')
+    if it.get("link"):
+        out.append(f'      <p><a class="lnk" href="{esc(it["link"]["href"])}">'
+                   f'{esc(it["link"]["text"])} →</a></p>')
+    return '    <article class="news-lead">\n' + "\n".join(out) + '\n    </article>'
+
+
+def news_row(it):
+    """Every other entry: month in the gutter, one line of text, one link."""
+    link = ""
+    if it.get("link"):
+        link = (f'\n        <p><a class="lnk" href="{esc(it["link"]["href"])}">'
+                f'{esc(it["link"]["text"])} →</a></p>')
+    return f"""    <article class="news-row">
+      <p class="news-row__when">{esc(it.get("month", "")[:3])}</p>
+      <div>
+        <p class="t-row">{it["en"]}</p>{link}
+      </div>
+    </article>"""
+
+
+def news_year(year, items):
+    """One year: a numeral, a count, an ink rule, then the entries on the left
+    and the single picture that illustrates the year on the right."""
+    note = "Upcoming" if any(i.get("upcoming") for i in items) else (
+        "One entry" if len(items) == 1
+        else f"{WORDS.get(len(items), len(items))} entries")
+
+    entries = "\n".join(news_lead(it) if it.get("lead") else news_row(it)
+                         for it in items)
+
+    fig = ""
+    shot = next((i["image"] for i in items if i.get("image")), None)
+    if shot:
+        block = picture(shot["stem"], "4-3", shot["alt"],
+                        caption=shot.get("caption"),
+                        sizes="(max-width: 900px) 100vw, 400px")
+        fig = "\n" + "\n".join("  " + ln for ln in block.split("\n"))
+
+    return f"""<section class="news-year">
+  <div class="news-year__head">
+    <p class="news-year__n">{esc(year)}</p>
+    <p class="t-label">{esc(note)}</p>
+  </div>
+  <hr class="rule rule--ink">
+  <div class="news-year__cols">
+    <div class="news-year__list">
+{entries}
+    </div>{fig}
   </div>
 </section>"""
+
+
+def news():
+    """Grouped by year, newest first, the newest entry led. Entries carry
+    their own year and month; the page does no date arithmetic, so an entry
+    reads the same in five years as it does the week it is written."""
+    data = json.load(open(f"{ROOT}/content/news.json", encoding="utf-8"))
+
+    years = []
+    for it in data["items"]:
+        if not years or years[-1][0] != it["year"]:
+            years.append((it["year"], []))
+        years[-1][1].append(it)
+
+    body = """<section class="s-index stack--tight">
+  <h1 class="t-label">News</h1>
+</section>
+
+""" + "\n\n".join(news_year(y, items) for y, items in years)
+
     return document(
         title="News — Julia Hung",
-        desc="Exhibition announcements, awards, residencies and studio news from Julia Hung 洪郁雯.",
+        desc="Exhibition announcements, awards, residencies and studio news from Julia Hung.",
         path="/news/", body=body, active="/news/")
 
 
 # --- Press ---------------------------------------------------------------- #
 
+def press_when(p):
+    """2025-09-10 -> 2025.09. The day is noise in a citation list."""
+    parts = (p.get("published") or "").split("-")
+    return ".".join(parts[:2])
+
+
+def press_row(p):
+    """Outlet and date in the gutter, headline beside them."""
+    outlet = p.get("outlet") or p["excerpt"]
+    return f"""    <a class="prow" href="/post/{esc(p["slug"])}/">
+      <div>
+        <p class="prow__outlet">{esc(outlet)}</p>
+        <p class="prow__when">{esc(press_when(p))}</p>
+      </div>
+      <p class="prow__title t-row">{esc(p["title"])}</p>
+    </a>"""
+
+
 def press_index():
     press = load_press()
-    rows = "\n".join(f"""    <a class="row" href="/post/{esc(p["slug"])}/">
-      <span class="row__title t-row">{esc(p["title"])}</span>
-      <span class="row__venue">{esc(p["excerpt"])}</span>
-      <span class="row__year">{esc((p["published"] or "")[:4])}</span>
-    </a>""" for p in press)
+    rows = "\n".join(press_row(p) for p in press)
+    count = f"{WORDS.get(len(press), len(press))} pieces"
 
-    body = f"""<section class="s-index stack--tight">
-  <h1 class="t-label">{bi_span("Press", UI["Press"])}</h1>
-  <p class="t-body"><span lang="en">Reviews, interviews and features. Each entry
-    links to a summary; full articles stay with their original publisher.</span><span lang="zh">評論、專訪與報導。每則連往摘要，全文仍留在原發布媒體。</span></p>
-</section>
-
-<section class="s-index">
-  <div class="rows">
+    body = f"""<section class="s-index">
+  <div class="press-head">
+    <h1 class="t-label">Selected Press</h1>
+    <p class="t-label">{esc(count)}</p>
+  </div>
+  <div class="rows mt-2">
 {rows}
   </div>
 </section>"""
     return document(
         title="Press — Julia Hung",
-        desc="Reviews, interviews and features on Julia Hung 洪郁雯 in Whitehot Magazine, GQ, Prestige, IW and others.",
+        desc="Reviews, interviews and features on Julia Hung in Whitehot Magazine, GQ, Prestige, IW and others.",
         path="/blog/", body=body, active="/blog/")
 
 
+MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+          "August", "September", "October", "November", "December"]
+
+
+def press_date(p):
+    """2023-06-05 -> 5 June 2023, the date style the rest of the site uses."""
+    try:
+        y, m, d = (p.get("published") or "").split("-")
+        return f"{int(d)} {MONTHS[int(m) - 1]} {y}"
+    except (ValueError, IndexError):
+        return p.get("published") or ""
+
+
+def post_links(h):
+    """Outbound links inside recovered body copy open in a new tab; links back
+    to jujuhung.com become site-relative so they stay on this site."""
+    def one(m):
+        href = re.sub(r"^https?://(?:www\.)?jujuhung\.com", "", m.group(1)) or "/"
+        return (f'<a class="lnk-inline" href="{href}"'
+                f'{ext_attrs(html.unescape(href))}>')
+    return re.sub(r'<a href="([^"]+)">', one, h)
+
+
+def post_body(blocks):
+    """Render the recovered blocks. Consecutive list items share one <ul>;
+    an image without a local derivative is dropped rather than hotlinked."""
+    out, bullets = [], []
+
+    def close_list():
+        if bullets:
+            items = "\n".join(f"      <li>{post_links(b)}</li>" for b in bullets)
+            out.append(f'    <ul class="post__list">\n{items}\n    </ul>')
+            bullets.clear()
+
+    for b in blocks:
+        if b["type"] == "li":
+            bullets.append(b["html"])
+            continue
+        close_list()
+        if b["type"] == "h":
+            out.append(f'    <h2 class="post__h">{post_links(b["html"])}</h2>')
+        elif b["type"] == "p":
+            out.append(f'    <p class="t-body">{post_links(b["html"])}</p>')
+        elif b["type"] == "img" and b.get("stem"):
+            fig = picture(b["stem"], "", b.get("alt") or "",
+                          sizes="(max-width: 900px) 100vw, 70vw")
+            if b.get("logo"):     # a masthead is a mark, not a picture
+                fig = fig.replace('class="fig fig--"', 'class="fig fig--mark"')
+            out.append(fig)
+    close_list()
+    return "\n".join(out)
+
+
 def press_stub(p):
-    """A citation page, not a reprint.
+    """The post as it stood on the Wix blog: the body copy Julia published
+    there, with its links to the publisher intact.
 
-    The Wix blog republished whole articles; the content brief is explicit that
-    this should not continue without permission. Each post keeps its URL — they
-    are indexed — but carries title, outlet, date and a short summary only.
+    An earlier pass cut these to a citation and a short summary. They were
+    restored on the site owner's instruction; the copy and the outbound links
+    are the publisher's and are reproduced as they were.
     """
-    # A citation, not an excerpt. The content brief is explicit that lifting
-    # large passages from a publisher is the thing to avoid, so this is capped
-    # short enough to read as a pointer. Julia can replace it with her own
-    # one-line summary in content/press.json.
-    summary = re.sub(r"\s+", " ", p.get("summary") or p.get("plain") or "").strip()
-    if len(summary) > 180:
-        cut = summary[:180]
-        summary = cut[:max(cut.rfind("。"), cut.rfind("."), cut.rfind(" "))].strip() + "…"
-
-    if p.get("source_url"):
-        src = (f'\n    <p><a class="lnk" href="{esc(p["source_url"])}" '
-               f'rel="noopener">{bi_span("Read at " + esc(p["excerpt"]) + " →", "閱讀原文 →")}</a></p>')
+    blocks = p.get("body") or []
+    if blocks:
+        inner = post_body(blocks)
     else:
-        src = ('\n    <p class="t-body">'
-               + bi_span(f"Published by {esc(p['excerpt'])}. "
-                         "The full article stays with its publisher.",
-                         f"原文刊載於 {esc(p['excerpt'])}，全文請見原發布媒體。")
-               + "</p>")
+        # One post is missing from the archive; it keeps the citation form.
+        summary = re.sub(r"\s+", " ", p.get("summary") or p.get("plain") or "").strip()
+        inner = (f'    <p class="t-lead">{esc(summary[:300])}</p>\n'
+                 f'    <p class="t-body">Published by {esc(p["excerpt"])}.</p>')
 
-    body = f"""<article class="s-detail split">
-  <div class="col-8 stack--tight">
-    <p class="t-label">{esc(p["excerpt"])}</p>
+    first = next((re.sub(r"<[^>]+>", "", b["html"])
+                  for b in blocks if b["type"] == "p"), "")
+    desc = (first or p.get("plain") or p["title"]).strip()
+
+    body = f"""<article class="s-detail detail">
+
+  <div class="detail__meta stack--tight">
+    <p class="t-label">{esc(p.get("outlet") or p["excerpt"])}</p>
     <h1 class="t-display">{esc(p["title"])}</h1>
-    <p class="t-body">{esc(p["published"])}</p>
+    <p class="t-body">{esc(press_date(p))}</p>
   </div>
-  <div class="col-8 stack">
-    <p class="t-lead">{esc(summary)}</p>{src}
+
+  <div class="stack post">
+{inner}
   </div>
+
 </article>
 
 <nav class="nextprev t-meta" aria-label="More press">
-  <a class="lnk" href="/blog/">{bi_span("All press →", UI["All press"] + " →")}</a>
+  <a class="lnk" href="/blog/">All press →</a>
 </nav>"""
     return document(
         title=f'{p["title"]} — Julia Hung',
-        desc=(summary or p["title"])[:300],
+        desc=desc[:300],
         path=f'/post/{p["slug"]}/', body=body, active="/blog/", family="detail",
         jsonld={
             "@context": "https://schema.org", "@type": "NewsArticle",
@@ -844,10 +1020,10 @@ def empty_category():
     body = """<section class="s-index stack--tight">
   <h1 class="t-label">Curator's Pick</h1>
   <p class="t-body">This category has no entries.</p>
-  <p><a class="lnk" href="/blog/">{bi_span("All press →", UI["All press"] + " →")}</a></p>
+  <p><a class="lnk" href="/blog/">All press →</a></p>
 </section>"""
     doc = document(title="Curator's Pick — Julia Hung",
-                   desc="Press index for Julia Hung 洪郁雯.",
+                   desc="Press index for Julia Hung.",
                    path="/blog/categories/curator-s-pick/",
                    body=body, noindex=True, active="/blog/")
     # Point the consolidated signal at the real list.
@@ -895,20 +1071,18 @@ def home():
     label = "Most recent"
 
     lines = "\n".join(
-        f'    <p class="t-body">{bi_span(it["en"], it.get("zh"))}</p>'
-        for it in news_items)
+        f'    <p class="t-body">{it["en"]}</p>' for it in news_items)
 
     body = f"""<section class="split split--bottom">
 {picture(pics[0]["stem"], "16-10", alt_for(rec, 1, "exhibitions"),
          sizes="(max-width: 900px) 100vw, 66vw", eager=True).replace(
              'class="fig fig--16-10"', 'class="fig fig--16-10 col-8"')}
   <div class="col-4 stack--tight">
-    <p class="t-label">{bi_span(label, UI[label])}</p>
-    <h1 class="t-display">{bi_span(esc(rec["title"]), esc(rec.get("title_zh")))}</h1>
-    <p class="t-body">{bi_span(esc(show_venue(rec)), esc((rec.get("dates_zh") or [""])[-1]))}</p>
-    <p class="t-body">{bi_span("20 December 2025 – 13 February 2026",
-                               "2025.12.20 – 2026.02.13")}</p>
-    <p><a class="lnk" href="/exhibitions/{lead_slug}/">{bi_span("Exhibition →", "展覽 →")}</a></p>
+    <p class="t-label">{label}</p>
+    <h1 class="t-display">{esc(rec["title"])}</h1>
+    <p class="t-body">{esc(show_venue(rec))}</p>
+    <p class="t-body">20 December 2025 – 13 February 2026</p>
+    <p><a class="lnk" href="/exhibitions/{lead_slug}/">Exhibition →</a></p>
   </div>
 </section>
 
@@ -916,27 +1090,24 @@ def home():
 
 <section class="split">
   <div class="col-8">
-    <p class="t-lead">{bi_span(
-        "Julia Hung works with enamelled copper wire, discarded plastics and "
-        "ordinary objects, using techniques drawn from domestic labour — "
-        "cooking, ironing, weaving — to build biomorphic forms that hold a "
-        "material somewhere between solid and fluid.",
-        "洪郁雯以彩漆銅線、廢棄塑料與日常物件創作，援引烹煮、熨燙、編織等家務勞動的技術，"
-        "構築介於固態與流動之間的生物形態。")}</p>
+    <p class="t-lead">Julia Hung works with enamelled copper wire, discarded
+      plastics and ordinary objects, using techniques drawn from domestic
+      labour — cooking, ironing, weaving — to build biomorphic forms that hold
+      a material somewhere between solid and fluid.</p>
   </div>
   <div class="col-4 stack--tight">
-    <p class="t-label">{bi_span("News", UI["News"])}</p>
+    <p class="t-label">News</p>
 {lines}
-    <p><a class="lnk" href="/news/">{bi_span("All news →", UI["All news"] + " →")}</a></p>
+    <p><a class="lnk" href="/news/">All news →</a></p>
   </div>
 </section>"""
 
     return document(
-        title="Julia Hung 洪郁雯",
-        desc="Julia Hung 洪郁雯 (b. 1986, Taipei) makes installations and "
+        title="Julia Hung",
+        desc="Julia Hung (b. 1986, Taipei) makes installations and "
              "sculptures in enamelled copper wire and reclaimed material, "
              "working between Taipei and New York.",
-        path="/", body=body, family="home", home=True,
+        path="/", body=body, family="home",
         og_image=f'/assets/img/{pics[0]["stem"]}-1600.jpg' if pics else None,
         jsonld={
             "@context": "https://schema.org", "@type": "Person",

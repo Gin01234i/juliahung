@@ -132,5 +132,9 @@
     }
   ],
   "order": 28,
-  "source": "Recipes/945880f9-95fc-4fe5-992d-d6db84d2a192"
+  "source": "Recipes/945880f9-95fc-4fe5-992d-d6db84d2a192",
+  "link": {
+    "text": "View exhibition",
+    "href": "https://www.tkgplus.com/en/exhibitions/139/"
+  }
 }

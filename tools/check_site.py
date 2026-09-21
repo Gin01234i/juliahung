@@ -17,6 +17,11 @@ pages = sorted(set(
     [f for f in glob.glob("**/index.html", recursive=True)
      if not f.startswith("_archive")] + ["404.html"]))
 
+# The alternative home page carries its own overlaid header by design — it is
+# a second direction for / , not a page in the Register family. It is the one
+# page exempt from the header-identity check below.
+NO_SHARED_HEADER = {"stage/index.html"}
+
 fail = 0
 
 
@@ -40,15 +45,16 @@ fail += bool(broken)
 # 2. header drift — the whole maintenance model depends on this
 hashes = collections.defaultdict(list)
 for f in pages:
+    if f in NO_SHARED_HEADER:
+        continue
     m = re.search(r'<header class="hdr">.*?</header>',
                   open(f, encoding="utf-8").read(), re.S)
     if not m:
         print(f"  NO HEADER {f}")
         fail += 1
         continue
-    # Two variants are intentional: the active nav item, and 洪郁雯 on home.
+    # One variant is intentional: the active nav item.
     n = re.sub(r' aria-current="page"', "", m.group(0))
-    n = n.replace('<span class="hdr__mark-zh">洪郁雯</span>', "")
     hashes[hashlib.md5(n.encode()).hexdigest()[:8]].append(f)
 print(f"header identity    {'OK' if len(hashes) == 1 else str(len(hashes)) + ' VARIANTS'}")
 if len(hashes) > 1:

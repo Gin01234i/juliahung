@@ -1,12 +1,12 @@
-/* Works index filter.
+/* Index filter — works and exhibitions.
  *
  * Meta-case text, no pills, no animation — the filter only sets hidden on
- * cards. With JavaScript off every work shows, which is the correct default.
+ * cards. With JavaScript off every card shows, which is the correct default.
  */
 (function () {
   "use strict";
 
-  var grid = document.getElementById("works-grid");
+  var grid = document.querySelector("[data-grid]");
   if (!grid) return;
   var buttons = document.querySelectorAll("[data-filter]");
 

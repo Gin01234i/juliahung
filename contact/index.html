@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact — Julia Hung</title>
-<meta name="description" content="Contact Julia Hung 洪郁雯 — atelier@jujuhung.com. Studio in Taipei and New York.">
+<meta name="description" content="Contact Julia Hung — atelier@jujuhung.com. Enquiries about exhibitions, commissions, press and gallery representation.">
 <link rel="canonical" href="https://www.jujuhung.com/contact/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Julia Hung">
 <meta property="og:title" content="Contact — Julia Hung">
-<meta property="og:description" content="Contact Julia Hung 洪郁雯 — atelier@jujuhung.com. Studio in Taipei and New York.">
+<meta property="og:description" content="Contact Julia Hung — atelier@jujuhung.com. Enquiries about exhibitions, commissions, press and gallery representation.">
 <meta property="og:url" content="https://www.jujuhung.com/contact/">
 <meta property="og:image" content="https://www.jujuhung.com/assets/img/works/untamed/2023_untamed_01-1600.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,41 +21,72 @@
 <header class="hdr">
   <a class="hdr__mark" href="/">Julia Hung</a>
   <nav class="hdr__nav t-meta" aria-label="Main">
-    <a href="/artworks/"><span lang="en">Works</span><span lang="zh">作品</span></a>
-    <a href="/exhibitions/"><span lang="en">Exhibitions</span><span lang="zh">展覽</span></a>
-    <a href="/news/"><span lang="en">News</span><span lang="zh">消息</span></a>
-    <a href="/blog/"><span lang="en">Press</span><span lang="zh">媒體</span></a>
-    <a href="/about/"><span lang="en">About</span><span lang="zh">關於</span></a>
-    <a href="/contact/" aria-current="page"><span lang="en">Contact</span><span lang="zh">聯絡</span></a>
-    <span class="hdr__lang" role="group" aria-label="Language">
-      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-      <span aria-hidden="true">/</span>
-      <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
-    </span>
+    <a href="/artworks/">Works</a>
+    <a href="/exhibitions/">Exhibitions</a>
+    <a href="/news/">News</a>
+    <a href="/blog/">Press</a>
+    <a href="/about/">About</a>
+    <a href="/contact/" aria-current="page">Contact</a>
   </nav>
 </header>
 
-<section class="s-index split">
-  <div class="col-8">
-    <h1 class="t-label"><span lang="en">Contact</span><span lang="zh">聯絡</span></h1>
+<section class="s-index contact">
+
+  <div class="contact__card">
+    <h1 class="vh">Contact</h1>
+    <a class="contact__email" href="mailto:atelier@jujuhung.com">atelier@jujuhung.com</a>
+    <div class="socials">
+      <a href="https://www.instagram.com/jujuhung/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/juliaxjuju/" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.6 21v-8.2h2.7l.4-3.2h-3.1V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1C16.6 3 15.6 3 14.5 3c-2.4 0-4 1.5-4 4.2v2.4H7.7v3.2h2.8V21h3.1z"/></svg></a>
+      <a href="https://linktr.ee/juliahung" aria-label="Linktree" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 3.6v16.8"/><path d="M4.7 7.8l14.6 8.4"/><path d="M19.3 7.8 4.7 16.2"/></svg></a>
+    </div>
   </div>
-  <div class="col-4">
-  <dl class="meta">
-    <dt>Email</dt>
-    <dd><a class="lnk" href="mailto:atelier@jujuhung.com"><span lang="en" class="is-fallback">atelier@jujuhung.com</span></a></dd>
-    <dt>Studio</dt>
-    <dd><span lang="en">Taipei, Taiwan · New York, USA</span><span lang="zh">台北 · 紐約</span></dd>
-    <dt>Representation</dt>
-    <dd><span lang="en">Enquiries via the studio</span><span lang="zh">請逕洽工作室</span></dd>
-    <dt>Instagram</dt>
-    <dd><a class="lnk" href="https://www.instagram.com/juju.hung/"><span lang="en" class="is-fallback">@juju.hung</span></a></dd>
-    <dt>Commissions</dt>
-    <dd><span lang="en">Commission guide on request</span><span lang="zh">委託創作說明請來信索取</span></dd>
-  </dl>
-  </div>
+
+  <!-- TODO — this form has no destination. It renders and validates, but
+       SEND posts nowhere. Pick one and the page is finished:
+
+         Formspree  set "action" in content/contact.json to
+                    https://formspree.io/f/<form-id> and rerun stamp.py
+         Netlify    add data-netlify="true" netlify-honeypot="_gotcha" to the
+                    <form> tag in stamp.py contact() and rerun
+
+       The _gotcha honeypot below already serves either one. -->
+  <form class="form" method="post">
+    <div class="field-pair">
+      <div class="field">
+        <label class="t-label" for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="First and last" required>
+      </div>
+      <div class="field">
+        <label class="t-label" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@studio.com" required>
+      </div>
+    </div>
+    <div class="field">
+      <label class="t-label" for="enquiry">Type of inquiry</label>
+      <select id="enquiry" name="enquiry">
+        <option value="general">General inquiries</option>
+        <option value="exhibition">Exhibition inquiries</option>
+        <option value="commission">Commission inquiries</option>
+        <option value="press">Press inquiries</option>
+        <option value="gallery">Gallery</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="t-label" for="message">Message</label>
+      <textarea id="message" name="message" rows="7" required></textarea>
+    </div>
+    <div class="vh" aria-hidden="true">
+      <label for="_gotcha">Leave this field empty</label>
+      <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <div class="form__actions">
+      <button class="btn" type="submit">Send</button>
+    </div>
+  </form>
+
 </section>
 
 </div>
-<script src="/assets/js/lang.js" defer></script>
 </body>
 </html>

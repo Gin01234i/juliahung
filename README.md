@@ -18,7 +18,8 @@ That is the whole toolchain. The repo root *is* the site.
 ## Layout
 
 ```
-index.html                     Home
+index.html                     Home — Direction 1A "Register"
+stage/                         Home, alternative — "Stage", one work at a time
 artworks/                      Works index + 14 work pages
 exhibitions/                   Exhibitions index + 13 exhibition pages
 about/  news/  contact/        About + CV, News, Contact
@@ -27,8 +28,8 @@ post/<slug>/                   18 press citation pages (URLs kept from Wix)
 commission/                    Commission guide — unlisted, noindex
 404.html  robots.txt  sitemap.xml  CNAME
 
-assets/css/site.css            the only stylesheet — the spec, in one file
-assets/js/lang.js              ~30 lines; sets data-lang, nothing else
+assets/css/site.css            the stylesheet — the spec, in one file
+assets/css/stage.css           the alternative home only; loaded by nothing else
 assets/js/filter.js            works-index filter
 assets/img/<kind>/<slug>/      web derivatives, 800 and 1600px, jpg + webp
 
@@ -37,6 +38,27 @@ tools/                         authoring and checking scripts
 seo/                           URL map and migration notes
 _archive/                      full-resolution originals (gitignored)
 ```
+
+## Two home pages
+
+There are two directions for the home page, and a switch in the bottom-right
+corner of each moves between them:
+
+- `/` — **Register.** The 1A spec: recent exhibition, statement, news.
+- `/stage/` — **Stage.** One exhibition or work, full bleed, the header and
+  the caption laid over the picture. No statement, no news. It is `noindex`
+  and canonicals to `/`, so it does not compete with the home page in search.
+
+Stage is deliberately quarantined: its own stylesheet, its own overlaid
+header, nothing shared but the image derivatives. To change what it shows,
+edit the one block in `stage/index.html` marked `THE FEATURE` — picture,
+label, titles, where-and-when line, link, credit. Nothing else on that page
+is specific to what is featured.
+
+When a direction is chosen, the loser and the switch both go: the switch is
+the `<nav class="switch">` on both pages, the block at the foot of
+`site.css`, and the block at the foot of `stage.css`. If Stage wins, move
+`stage/index.html` to the root and drop its `noindex`.
 
 ## Editing
 
@@ -57,18 +79,13 @@ The two places worth knowing:
 - `content/cv.json`, `content/news.json`, `content/contact.json` — the
   hand-written copy.
 
-## Bilingual
+## Language
 
-English is the default. `<html data-lang="en">` is hard-coded, and the
-switching is pure CSS:
-
-```html
-<h1><span lang="en">Untamed</span><span lang="zh">「初始狀態」系列</span></h1>
-```
-
-`lang.js` only flips `data-lang` and remembers the choice. With JavaScript
-disabled the page renders in English and nothing breaks. A record with no
-Chinese has no `lang="zh"` span and falls back automatically.
+The site is English only. `content/*.json` still carries the Chinese fields
+(`title_zh`, `statement_zh`, `text_zh`, …) from the Wix export; `stamp.py`
+ignores them. The press pages are the one exception, and not a translation:
+articles published in Chinese keep their own titles and summaries, because
+that is what those articles are called.
 
 ## Checks
 
@@ -98,14 +115,14 @@ not because they need rerunning.
 
 ## Still needed from Julia
 
-1. **A portrait** for the About page — it currently falls back to an install view.
-2. **`Julia_Hung_CV_2026-08.pdf`** in `assets/docs/`, then set `cv_pdf` in
-   `content/cv.json`.
-3. **Sign-off on the 14-work cut** in `content/selection.json`.
-4. **Source URLs for the press entries** — the Wix blog reprinted articles and
+1. **Sign-off on the 14-work cut** in `content/selection.json`.
+2. **Source URLs for the press entries** — the Wix blog reprinted articles and
    stored no link back. Fill `source_url` in `content/press.json`.
-5. **Whether any work is public art** — the spec wants that filter; the CMS has
+3. **Whether any work is public art** — the spec wants that filter; the CMS has
    no such field, so only Sculpture and Installation are offered.
+4. **A lighter Selected Press PDF.** `assets/docs/Julia_Hung_Selected_Press_2026-09.pdf`
+   is the file from the old site, 42 MB for 29 pages. It works, but it is the
+   heaviest thing in the repo by far.
 
 ## Not done here
 

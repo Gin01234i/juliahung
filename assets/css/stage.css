@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Julia Hung — alternative home, "Stage"
+   One exhibition or work, full bleed, chrome laid over the image. This is a
+   second direction for the home page only; every other page on the site is
+   still Direction 1A "Register" and still loads assets/css/site.css alone.
+   Self-contained on purpose — nothing here leaks into the rest of the site.
+   ========================================================================== */
+
+:root {
+  --stage-ground: #0B0B0B;     /* behind the image, so a letterbox reads as intent */
+  --stage-ink:    #FFFFFF;
+  --stage-soft:   rgba(255, 255, 255, 0.72);   /* metadata over the image */
+  --stage-faint:  rgba(255, 255, 255, 0.34);   /* rules and inactive links  */
+
+  --sans: "Helvetica Neue", Helvetica, Arial, "Noto Sans TC",
+          "PingFang TC", "Microsoft JhengHei", sans-serif;
+
+  --stage-pad-x: clamp(20px, 4vw, 64px);
+  --stage-pad-y: clamp(24px, 3.4vw, 48px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--stage-ground);
+  color: var(--stage-soft);
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, p, figure, dl, dd { margin: 0; }
+img { display: block; border: 0; }
+a { color: inherit; text-decoration: none; transition: color 120ms linear, border-color 120ms linear; }
+:focus-visible { outline: 1px solid var(--stage-ink); outline-offset: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
+
+/* --- The frame ----------------------------------------------------------- */
+/* One screen: image beneath, three bands of text above it. svh keeps the foot
+   above the address bar on a handset; vh is the fallback for older engines. */
+
+.stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-height: 100svh;
+  /* the extra 20px at the foot is the line the layout switch sits on */
+  padding: var(--stage-pad-y) var(--stage-pad-x) calc(var(--stage-pad-y) + 20px);
+  overflow: hidden;
+}
+
+.stage__media { position: absolute; inset: 0; z-index: 0; }
+.stage__media img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+
+/* Two scrims, not one overall darkening: the middle of the picture is left
+   exactly as photographed. Each is tall enough to carry its band of text. */
+.stage__media::before,
+.stage__media::after {
+  content: ""; position: absolute; left: 0; right: 0; pointer-events: none;
+}
+.stage__media::before {
+  top: 0; height: 34%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0));
+}
+.stage__media::after {
+  bottom: 0; height: 52%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
+}
+
+.stage > *:not(.stage__media) { position: relative; z-index: 1; }
+
+/* --- Head ---------------------------------------------------------------- */
+
+.stage__hdr {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* The wordmark is set exactly as on the Register home, so the two directions
+   open at the same scale. It scales with the viewport so it never crowds the
+   nav on the way down to 600px, below which the nav takes its own row. */
+.stage__mark {
+  font-size: clamp(24px, 3.4vw, 34px);
+  line-height: 1.1; letter-spacing: -0.005em;
+  font-weight: 500;
+  color: var(--stage-ink);
+}
+
+.stage__nav {
+  display: flex; align-items: baseline; gap: clamp(14px, 2vw, 32px);
+  flex-wrap: wrap; justify-content: flex-end;
+  flex: 1 1 auto; min-width: 0;
+  font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase;
+}
+.stage__nav a { color: var(--stage-soft); white-space: nowrap; }
+.stage__nav a:hover { color: var(--stage-ink); }
+
+/* --- Foot ---------------------------------------------------------------- */
+/* Left: what you are looking at and where. Right: what is pictured. */
+
+.stage__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 80px);
+  flex-wrap: wrap;
+}
+
+.stage__lede { max-width: 42ch; }
+
+.stage__label {
+  font-size: 11px; line-height: 1.4; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--stage-soft);
+}
+
+.stage__title {
+  margin-top: 14px;
+  font-size: clamp(32px, 4.6vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: var(--stage-ink);
+}
+.stage__title span {            /* the Chinese title, one step down */
+  display: block;
+  margin-top: 6px;
+  font-size: clamp(15px, 1.5vw, 19px);
+  letter-spacing: 0.02em;
+  color: var(--stage-soft);
+}
+
+.stage__where { margin-top: 14px; color: var(--stage-soft); }
+
+.stage__go {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 12px; line-height: 1.4; letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--stage-ink);
+  border-bottom: 1px solid var(--stage-faint);
+  padding-bottom: 2px;
+}
+.stage__go:hover { border-bottom-color: var(--stage-ink); }
+
+/* The credit, set against a rule that runs to the right edge of the text. */
+.stage__credit {
+  max-width: 44ch;
+  padding-top: 12px;
+  border-top: 1px solid var(--stage-faint);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.stage__credit dt {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--stage-faint);
+  margin-bottom: 6px;
+}
+.stage__credit dd { margin: 0; color: var(--stage-soft); }
+.stage__credit a { border-bottom: 1px solid transparent; }
+.stage__credit a:hover { color: var(--stage-ink); border-bottom-color: var(--stage-faint); }
+
+/* --- Responsive ---------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  /* The two foot blocks stop sitting side by side; the credit goes under the
+     title and keeps its rule. */
+  .stage__foot { flex-direction: column; align-items: stretch; gap: 28px; }
+  .stage__lede, .stage__credit { max-width: none; }
+  .stage__media::after { height: 66%; }
+}
+
+@media (max-width: 600px) {
+  .stage__hdr { row-gap: 14px; }
+  .stage__nav {
+    flex: 1 0 100%;
+    justify-content: flex-start;
+    gap: 12px;
+    font-size: 11px; letter-spacing: 0.06em;
+  }
+  .stage__title { margin-top: 10px; }
+}
+
+/* --- Layout switch ------------------------------------------------------- */
+/* Preview control. It exists to compare the two home pages while a direction
+   is being chosen; delete it, and its twin in site.css, once one wins. */
+
+.switch {
+  position: fixed;
+  right: var(--stage-pad-x);
+  bottom: 10px;
+  z-index: 2;
+  display: flex; gap: 12px; align-items: baseline;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--stage-faint);
+}
+.switch a { color: var(--stage-faint); }
+.switch a:hover { color: var(--stage-ink); }
+.switch [aria-current="page"] { color: var(--stage-soft); }

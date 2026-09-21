@@ -256,5 +256,9 @@
     }
   ],
   "order": 15,
-  "source": "Recipes/bc5d3114-9c0a-4932-8d33-ce820273812a"
+  "source": "Recipes/bc5d3114-9c0a-4932-8d33-ce820273812a",
+  "link": {
+    "text": "View exhibition",
+    "href": "https://andfellowsgroups.com/artistsjuliahung/"
+  }
 }

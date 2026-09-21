@@ -6,30 +6,26 @@ change the navigation, change it here and in every page, or rerun
 `python3 tools/stamp.py`.
 
 `tools/check_site.py` fails if any page's header drifts from the others, which
-is the practical safety net.
+is the practical safety net. One page is exempt and named in that script:
+`stage/index.html`, the alternative home, carries its own header laid over the
+image. A nav change has to be made there by hand as well — it is the only
+place the six links are duplicated outside this partial.
 
 ## Header
 
-Two variants are intentional and only these two:
-
-1. The current page's nav link carries `aria-current="page"`.
-2. The home page adds `<span class="hdr__mark-zh">洪郁雯</span>` inside the wordmark.
+One variant is intentional: the current page's nav link carries
+`aria-current="page"`.
 
 ```html
 <header class="hdr">
   <a class="hdr__mark" href="/">Julia Hung</a>
   <nav class="hdr__nav t-meta" aria-label="Main">
-    <a href="/artworks/"><span lang="en">Works</span><span lang="zh">作品</span></a>
-    <a href="/exhibitions/"><span lang="en">Exhibitions</span><span lang="zh">展覽</span></a>
-    <a href="/news/"><span lang="en">News</span><span lang="zh">消息</span></a>
-    <a href="/blog/"><span lang="en">Press</span><span lang="zh">媒體</span></a>
-    <a href="/about/"><span lang="en">About</span><span lang="zh">關於</span></a>
-    <a href="/contact/"><span lang="en">Contact</span><span lang="zh">聯絡</span></a>
-    <span class="hdr__lang" role="group" aria-label="Language">
-      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-      <span aria-hidden="true">/</span>
-      <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
-    </span>
+    <a href="/artworks/">Works</a>
+    <a href="/exhibitions/">Exhibitions</a>
+    <a href="/news/">News</a>
+    <a href="/blog/">Press</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
   </nav>
 </header>
 ```
@@ -54,7 +50,6 @@ Every page ends the same way:
 
 ```html
 </div>
-<script src="/assets/js/lang.js" defer></script>
 </body>
 </html>
 ```

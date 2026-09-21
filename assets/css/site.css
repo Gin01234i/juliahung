@@ -79,6 +79,9 @@ a { color: inherit; text-decoration: none; }
   font-size: 19px; line-height: 1.55; letter-spacing: -0.005em;
   color: var(--ink); max-width: 640px;
 }
+.t-lead--sm {         /* the same voice, set smaller: about-page bio */
+  font-size: 15px; line-height: 1.6;
+}
 .t-row {              /* titles inside an index */
   font-size: 17px; line-height: 1.3; color: var(--ink);
 }
@@ -94,10 +97,6 @@ a { color: inherit; text-decoration: none; }
   font-size: 11px; line-height: 1.4; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--mute);
 }
-
-/* Chinese never gets the Latin letter-spacing; it reads as gaps. */
-:lang(zh) { letter-spacing: 0; }
-.t-meta:lang(zh), .t-label:lang(zh) { letter-spacing: 0.04em; }
 
 /* --- Page frame ---------------------------------------------------------- */
 
@@ -139,15 +138,6 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.1; letter-spacing: -0.005em;
   font-weight: 500; color: var(--ink);
 }
-/* 洪郁雯 sits beneath the wordmark on the home page only. */
-.hdr__mark-zh {
-  display: block;
-  font-size: clamp(13px, 1.5vw, 16px);
-  line-height: 1.3; letter-spacing: 0.04em;
-  font-weight: 400; color: var(--mute);
-  margin-top: 6px;
-}
-
 /* min-width:0 lets the nav shrink below its content width so wrapping can
    actually happen; without it a flex item refuses and the page overflows. */
 .hdr__nav {
@@ -162,15 +152,6 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--ink);
   padding-bottom: 2px;          /* underline sits 2px below the baseline */
 }
-
-.hdr__lang { display: flex; align-items: baseline; gap: 6px; color: var(--mute); }
-.hdr__lang button {
-  appearance: none; background: none; border: 0; padding: 0; cursor: pointer;
-  font: inherit; letter-spacing: inherit; text-transform: inherit;
-  color: var(--mute);
-}
-.hdr__lang button:hover { color: var(--ink); }
-.hdr__lang button[aria-pressed="true"] { color: var(--ink); }
 
 /* --- Index row ----------------------------------------------------------- */
 /* Title 3fr, venue 3fr, year 120px right. The whole row is the hit area. */
@@ -190,6 +171,51 @@ a { color: inherit; text-decoration: none; }
 .row__title { color: var(--ink); }
 .row__venue { font-size: 13px; line-height: 1.7; }
 .row__year  { text-align: right; font-size: 13px; line-height: 1.7; }
+
+/* --- Recovered post body -------------------------------------------------- */
+/* Body copy carried over from the Wix blog: headings, paragraphs, lists and
+   the publisher's own links, set in the site's register rather than Wix's. */
+
+.post > * + * { margin-top: 16px; }
+.post__h {
+  margin-top: 32px;
+  font-size: 17px; line-height: 1.4; font-weight: 500; color: var(--ink);
+  max-width: 70ch;
+}
+.post__list { margin: 0; padding-left: 20px; max-width: 70ch; }
+.post__list li { font-size: 13px; line-height: 1.7; color: var(--body); }
+.post .fig { margin-top: 24px; }
+.post .fig img { width: 100%; height: auto; }
+.post .fig--mark { max-width: 220px; }   /* a masthead, printed at its size */
+.lnk-inline {                 /* inline in a sentence, so it keeps its case */
+  color: var(--ink);
+  border-bottom: 1px solid var(--mute);
+}
+.lnk-inline:hover { border-bottom-color: var(--ink); }
+
+/* --- Press row ----------------------------------------------------------- */
+/* Outlet over date in the gutter, headline at reading size beside them. */
+
+.press-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: var(--gutter);
+}
+
+.prow {
+  display: grid;
+  grid-template-columns: var(--meta-col) 1fr;
+  gap: var(--gutter);
+  padding: 24px 0;
+  border-bottom: 1px solid var(--hairline);
+  color: var(--body);
+}
+.prow:hover { background: var(--hover); }
+.prow__outlet { font-size: 13px; line-height: 1.6; color: var(--ink); }
+.prow__when {                 /* tabular, so the dates align down the column */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px; line-height: 1.6; color: var(--mute);
+}
+.prow__title { max-width: 60ch; }
 
 /* "Solo" sets as a label chip after the title, not a pill. */
 .chip {
@@ -226,6 +252,7 @@ a { color: inherit; text-decoration: none; }
 .fig--4-3   img { aspect-ratio: 4 / 3;   object-fit: cover; }
 .fig--1-1   img { aspect-ratio: 1 / 1;   object-fit: cover; }
 .fig--2-3   img { aspect-ratio: 2 / 3;   object-fit: cover; }
+.fig--3-4   img { aspect-ratio: 3 / 4;   object-fit: cover; }
 
 .fig figcaption {
   margin-top: 8px;
@@ -245,6 +272,12 @@ a { color: inherit; text-decoration: none; }
 }
 .lnk:hover { color: var(--ink); border-bottom-color: var(--ink); }
 
+/* Two PDFs offered at the head of the CV: the same link, set in a row. */
+.downloads {
+  display: flex; flex-wrap: wrap; gap: 24px;
+  margin-top: 16px;
+}
+
 /* Next/prev sits at the foot of a detail page, right-aligned, named. */
 .nextprev {
   display: flex; justify-content: space-between; gap: var(--gutter);
@@ -254,12 +287,19 @@ a { color: inherit; text-decoration: none; }
 }
 .nextprev > :only-child { margin-left: auto; }
 
-/* --- Works grid ---------------------------------------------------------- */
-/* The one place a grid is allowed: three columns, natural ratio. */
+/* --- Card grid ------------------------------------------------------------ */
+/* The one place a grid is allowed: three columns, one uniform tile. Works are
+   square; exhibitions take --wide, because an install view is a room and a
+   square centre crop throws the room away. */
 
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px var(--gutter); }
-.grid .fig img { aspect-ratio: auto; object-fit: contain; }
+.grid .fig img {
+  width: 100%; height: auto;
+  aspect-ratio: 1 / 1; object-fit: cover; object-position: center;
+}
+.grid--wide .fig img { aspect-ratio: 4 / 3; }
 .card__title { margin-top: 12px; font-size: 17px; line-height: 1.3; color: var(--ink); }
+.card__venue { font-size: 13px; line-height: 1.7; color: var(--body); }
 .card__year  { font-size: 13px; line-height: 1.7; color: var(--mute); }
 
 /* Filters set as meta-case text, no pills. */
@@ -270,6 +310,53 @@ a { color: inherit; text-decoration: none; }
   color: var(--mute);
 }
 .filters button:hover, .filters button[aria-pressed="true"] { color: var(--ink); }
+
+/* --- News ---------------------------------------------------------------- */
+/* Grouped by year. The numeral and its count open the group, an ink rule
+   closes the heading, and the year's entries and the one picture that
+   illustrates them sit under it in two columns. */
+
+.news-year__head { display: flex; align-items: baseline; gap: 16px; }
+.news-year__n {
+  font-size: 28px; line-height: 1.1; letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.news-year .rule--ink { margin-top: 10px; }
+
+/* 400px is the picture; the text column takes what is left. */
+.news-year__cols {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 48px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+/* The newest entry, set at reading size. */
+.news-lead__title {
+  margin-top: 12px;
+  font-size: 22px; line-height: 1.35; letter-spacing: -0.005em;
+  font-weight: 400; color: var(--ink);
+  max-width: 34ch;
+}
+.news-lead__sum { margin-top: 14px; max-width: 46ch; }
+.news-lead .lnk { display: inline-block; margin-top: 18px; }
+
+/* Every other entry: month in the gutter, hairline under each. */
+.news-row {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+.news-row:first-child { padding-top: 0; }
+.news-lead + .news-row { padding-top: 24px; border-top: 1px solid var(--hairline); }
+.news-row__when {
+  font-size: 12px; line-height: 1.5; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--mute);
+}
+.news-row .lnk { display: inline-block; margin-top: 8px; }
 
 /* --- Section rhythm ------------------------------------------------------ */
 /* Section gaps are a property of the page family, not of which two elements
@@ -303,18 +390,116 @@ a { color: inherit; text-decoration: none; }
 .cv dd { font-size: 13px; line-height: 1.7; color: var(--body); }
 .cv dd + dd { margin-left: 0; }
 
-/* --- Bilingual ----------------------------------------------------------- */
-/* JS only flips data-lang on <html>; the switch itself is CSS, so the page
-   is correct before any script runs and correct if none ever does. */
+/* --- Contact ------------------------------------------------------------- */
+/* Address and marks left, enquiry form right. The form is the only place on
+   the site a visitor can type, so it borrows the register rather than
+   inventing one: every field is a label over a hairline — a .meta row made
+   writable — and an ink rule opens the block exactly as one opens an index. */
 
-html[data-lang="en"] [lang="zh"],
-html[data-lang="zh"] [lang="en"] { display: none; }
+.contact {
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+  gap: 72px;
+  align-items: start;
+}
 
-/* A record with only one language falls back rather than rendering empty.
-   Needed in both directions: a few works carry a Chinese exhibition credit
-   and no English one. */
-html[data-lang="zh"] [lang="en"].is-fallback,
-html[data-lang="en"] [lang="zh"].is-fallback { display: revert; }
+/* The address is the largest type on the page: above .t-display, below the
+   wordmark, which stays the largest thing on the site. Its rule is the width
+   of the address, not of the column, so it reads as an underline. */
+.contact__email {
+  display: inline-block;
+  font-size: clamp(21px, 2.4vw, 28px);
+  line-height: 1.2; letter-spacing: -0.005em;
+  color: var(--ink);
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 10px;
+}
+.contact__email:hover { border-bottom-color: var(--ink); }
+
+/* The marks sit in the body register, not the mute one the nav uses: they
+   are the address's companions rather than a second navigation. */
+.socials { display: flex; gap: 46px; margin-top: 44px; }
+.socials a { display: block; color: var(--body); }
+.socials a:hover { color: var(--ink); }
+.socials svg { display: block; width: 20px; height: 20px; }
+
+/* --- Form ---------------------------------------------------------------- */
+
+.form { border-top: 1px solid var(--ink); padding-top: 28px; }
+.form > * + * { margin-top: 28px; }
+
+.field-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+.field input, .field select, .field textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 0 0 9px;
+  border: 0;
+  border-bottom: 1px solid var(--hairline);
+  border-radius: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 15px; line-height: 1.6;
+  color: var(--ink);
+  transition: border-color 120ms linear;
+}
+.field input::placeholder, .field textarea::placeholder {
+  color: var(--mute); opacity: 1;      /* Firefox dims placeholders by default */
+}
+.field input:hover,  .field select:hover,  .field textarea:hover,
+.field input:focus,  .field select:focus,  .field textarea:focus {
+  border-bottom-color: var(--ink);
+}
+
+/* The one affordance the reference design leaves out. A select that looks
+   exactly like a text field is a trap, so it keeps a caret — mute, 9px, and
+   invisible until you go looking for it. */
+.field select {
+  appearance: none; -webkit-appearance: none;
+  padding-right: 20px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3E%3Cpath d='M.8.8 4.5 4.5 8.2.8' fill='none' stroke='%238A8780' stroke-width='1.1'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1px top 9px;
+  background-size: 9px 6px;
+}
+
+/* The message closes the form on an ink rule, answering the one above it. */
+.field textarea {
+  min-height: 168px;
+  resize: vertical;
+  border-bottom-color: var(--ink);
+}
+
+.form__actions { display: flex; justify-content: flex-end; margin-top: 40px; }
+
+/* The only filled element anywhere on the site: ink block, paper text,
+   square corners. Colour is still the only thing that moves. */
+.btn {
+  appearance: none;
+  border: 0; border-radius: 0;
+  padding: 16px 38px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 12px; line-height: 1.4; letter-spacing: 0.10em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 120ms linear;
+}
+.btn:hover { background: var(--body); }
+
+/* Off the screen, still in the accessibility tree: the page heading the
+   design has no room for, and the honeypot a spam bot fills in and a person
+   never sees. */
+.vh {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip-path: inset(50%);
+  overflow: hidden; white-space: nowrap;
+}
 
 /* --- Responsive ---------------------------------------------------------- */
 
@@ -327,10 +512,18 @@ html[data-lang="en"] [lang="zh"].is-fallback { display: revert; }
   .split > .col-8, .split > .col-4 { grid-column: 1 / -1; }
 
   /* Index rows drop the venue under the title; the year stays right. */
+  .prow { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
   .row { grid-template-columns: 1fr 120px; row-gap: 4px; }
   .row__title { grid-column: 1; }
   .row__venue { grid-column: 1; grid-row: 2; }
   .row__year  { grid-column: 2; grid-row: 1; }
+
+  /* The year's picture drops below its entries. */
+  .news-year__cols { grid-template-columns: 1fr; gap: 32px; }
+  .news-lead__title { font-size: 20px; }
+
+  /* Address over form, and the form takes the full measure. */
+  .contact { grid-template-columns: 1fr; gap: 48px; }
 
   .grid   { grid-template-columns: repeat(2, 1fr); }
   .detail { grid-template-columns: 1fr; gap: 32px; }
@@ -338,27 +531,78 @@ html[data-lang="en"] [lang="zh"].is-fallback { display: revert; }
 }
 
 @media (max-width: 600px) {
-  .grid { grid-template-columns: 1fr; }
+  /* The works grid holds two columns all the way down — smaller tiles, but
+     the shape of the index stays readable. */
+  .grid { gap: 28px 16px; }
+  .grid .card__title { font-size: 15px; }
   .pair { grid-template-columns: 1fr; }
 
   /* Nav stays a line of text items at 11px — it never becomes a hamburger.
-     Below this width it takes its own row and wraps rather than shrinking. */
+     Below this width it takes its own row under the wordmark. */
   .hdr { row-gap: 16px; }
   .hdr__nav {
     flex: 1 0 100%;
     justify-content: flex-start;
     gap: 14px; font-size: 11px; letter-spacing: 0.08em;
   }
-  .hdr__lang { margin-left: auto; }
 
   /* The year column no longer needs a fixed 120px once the venue has moved
      to its own line. */
   .row { grid-template-columns: 1fr auto; column-gap: 16px; }
+
+  /* Name and email stop sharing a line; SEND takes the full width rather
+     than sitting as a small block against the right edge. */
+  .field-pair { grid-template-columns: 1fr; gap: 28px; }
+  .btn { width: 100%; }
+
+  /* The month moves above its entry rather than holding a 56px gutter. */
+  .news-row { grid-template-columns: 1fr; row-gap: 4px; }
+}
+
+/* Handset widths: the six nav items measure 366px at 11px/0.08em/14px, so they
+   stop fitting one line below roughly 430px. Rather than let them wrap, the row
+   holds: the page padding tightens, the type scales down to a 9px floor, the
+   tracking eases to 0.06em, and space-between spends whatever width is left on
+   the gaps. At 320px — the narrowest phone worth serving — the six labels
+   measure 242px inside 280px of content width, leaving 7px between each. */
+
+@media (max-width: 430px) {
+  :root { --pad: 20px; }
+
+  .hdr__nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 6px;
+    font-size: clamp(9px, 2.6vw, 11px);
+    letter-spacing: 0.06em;
+  }
+  .hdr__nav a { white-space: nowrap; }
 }
 
 /* --- Print --------------------------------------------------------------- */
 
 @media print {
-  .hdr__nav, .hdr__lang, .nextprev, .filters { display: none; }
+  .hdr__nav, .nextprev, .filters { display: none; }
   a { border: 0; }
 }
+
+/* --- Layout switch ------------------------------------------------------- */
+/* Not part of the 1A spec. A preview control on the home page only, so the
+   two home directions — this one and /stage/ — can be compared in a click.
+   Delete this block, its twin at the foot of stage.css, and the <nav class=
+   "switch"> on both home pages once a direction is chosen. */
+
+.switch {
+  position: fixed;
+  right: var(--pad);
+  bottom: 10px;
+  z-index: 2;
+  display: flex; gap: 12px; align-items: baseline;
+  padding: 4px 0 4px 12px;
+  background: var(--paper);
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--mute);
+}
+.switch a { color: var(--mute); }
+.switch a:hover { color: var(--ink); }
+.switch [aria-current="page"] { color: var(--body); }

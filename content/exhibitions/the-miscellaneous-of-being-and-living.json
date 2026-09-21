@@ -458,5 +458,9 @@
     }
   ],
   "order": 6,
-  "source": "Recipes/00000000-0000-0000-0000-000000000003"
+  "source": "Recipes/00000000-0000-0000-0000-000000000003",
+  "link": {
+    "text": "View exhibition",
+    "href": "https://www.artcenter.ntpc.gov.tw/xmdoc/cont?xsmsid=0H276560829804689588&sid=0K365536094034791096"
+  }
 }

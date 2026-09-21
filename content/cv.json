@@ -84,6 +84,7 @@
       ]
     }
   ],
-  "cv_pdf": null,
-  "_cv_pdf_note": "Drop Julia_Hung_CV_2026-08.pdf into assets/docs/ and set this to /assets/docs/Julia_Hung_CV_2026-08.pdf to light up the download link."
+  "cv_pdf": "/assets/docs/Julia_Hung_CV_2026-09.pdf",
+  "press_pdf": "/assets/docs/Julia_Hung_Selected_Press_2026-09.pdf",
+  "_pdf_note": "Both PDFs live in assets/docs/ and are linked from the head of the CV on /about/. Replace the file and bump the YYYY-MM in its name when a new edition is issued."
 }

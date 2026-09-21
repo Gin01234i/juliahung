@@ -171,5 +171,9 @@
     }
   ],
   "order": 26,
-  "source": "Recipes/f29f591d-3b11-4541-a489-a5b92b5b48f1"
+  "source": "Recipes/f29f591d-3b11-4541-a489-a5b92b5b48f1",
+  "link": {
+    "text": "View exhibition",
+    "href": "https://www.riverart.com.tw/exhibitions/19-airy-disk/"
+  }
 }
