@@ -3,16 +3,16 @@
   "title": "Mystic",
   "title_zh": "「玄」系列",
   "year": "2024",
+  "cover_stem": "works/mystic/2024_mystic_02",
   "material": "Enamelled copper wire, Video Projection",
   "material_zh": "彩漆銅線",
   "series": null,
   "series_zh": null,
   "dimensions": "Dimensions variable",
   "statement": [
-    "Through woven copper wire, projected light, and shadow, Mystic ⽞ (Xuan) explores unstable states between presence  and  absence.  The  work",
-    "continuously appears and dissolves, allowing visibility and invisibility to emerge as interdependent conditions shaped through perception.",
-    "Julia Hung's organic and drawing-like copper wire weaving series \"Mystic 玄 (Xuan)\" explores the fluidity between the visible and invisible, and between being and nothingness."
+    "Through woven copper wire, projected light, and shadow, Mystic ⽞ (Xuan) explores unstable states between presence and absence. The work continuously appears and dissolves, allowing visibility and invisibility to emerge as interdependent conditions shaped through perception."
   ],
+  "statement_position": "meta",
   "statement_zh": [
     "洪郁雯以有機繪畫性的銅線編織系列「Mystic 玄」，來探討了顯性和隱性、存在與虛無間的流動性。",
     "在道家思想中，「無」與「有」說法不同，其實來源相同而名稱各異，為「玄」。有和無看似相反，其實相生互換，猶如白隱於白，顯於黑，反之亦然。",

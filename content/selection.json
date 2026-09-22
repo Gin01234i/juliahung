@@ -1,10 +1,7 @@
 {
   "_comment": [
-    "The 1A spec cuts 26 series to 12-14. This is that cut - the single place",
-    "it is defined. Changing a slug here changes the Works index, the sitemap",
-    "and which images get derived; nothing else needs editing.",
-    "Needs Julia's sign-off. Dropped slugs still have live indexed URLs -",
-    "see seo/url-map.csv for where each should redirect at cutover."
+    "All English-language works from the legacy Works page, in its visual order.",
+    "Changing a slug here changes the Works index, sitemap, and image derivation."
   ],
   "works_featured": [
     "beingasawoman",
@@ -14,23 +11,22 @@
     "21g",
     "untamed",
     "bloom",
+    "essence",
     "deja-vu",
     "infinite",
     "debris",
     "artificial-phenomena",
     "an-unusual-knot",
+    "aquachroma",
     "will-looped",
+    "inter-symbiosis",
+    "dreamy-tide",
+    "biomimicry",
+    "gge-rof-doom-eht-ni",
     "in-the-mood-for-egg"
   ],
-  "works_dropped": {
-    "essence": "/artworks/artificial-phenomena/",
-    "aquachroma": "/artworks/an-unusual-knot/",
-    "inter-symbiosis": "/artworks/will-looped/",
-    "dreamy-tide": "/artworks/will-looped/",
-    "biomimicry": "/artworks/will-looped/",
-    "gge-rof-doom-eht-ni": "/artworks/in-the-mood-for-egg/"
-  },
-  "max_images_work": 5,
+  "works_dropped": {},
+  "max_images_work": 1000,
   "max_images_exhibition": 6,
   "categories": {
     "sculpture": [
@@ -38,17 +34,23 @@
       "wispsnwhispers",
       "untamed",
       "deja-vu",
+      "essence",
       "infinite",
       "debris",
       "artificial-phenomena",
-      "an-unusual-knot"
+      "an-unusual-knot",
+      "inter-symbiosis",
+      "biomimicry"
     ],
     "installation": [
       "mystic",
       "indefinitepink",
       "21g",
       "bloom",
+      "aquachroma",
       "will-looped",
+      "dreamy-tide",
+      "gge-rof-doom-eht-ni",
       "in-the-mood-for-egg"
     ]
   },
@@ -58,5 +60,5 @@
     "/artwork/wonders-and-wonderers": "/artworks/"
   },
   "_orphans_note": "seo/url-map.csv marks these two KEEP+301 because they hold unique content on the retired /artwork/ tree. They exist only in the Chinese CMS collection, were never copied to the English one, and are outside the 14-work cut - so they redirect like the other dropped works rather than being rebuilt. Lost and Found (2021) was shown in The Miscellaneous of Being and Living.",
-  "_dropped_note": "Dropped by the 1A cut. Each is a live indexed URL today; these are the 301 targets for cutover. Values are paths, not slugs."
+  "_dropped_note": "No English-language works from the legacy Works page are dropped."
 }

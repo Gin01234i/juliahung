@@ -3,7 +3,7 @@
   "title": "Biomimicry",
   "title_zh": "仿生",
   "year": "2018",
-  "material": "Mixed media",
+  "material": "Mixed media (used plastic bag, resin, wire)",
   "material_zh": "複合媒材",
   "series": "Biomimicry",
   "series_zh": "All Solo!",
@@ -24,6 +24,7 @@
       "href": "https://www.jujuhung.com/exhibitions/the-miscellaneous-of-being-and-living"
     }
   ],
+  "shown_layout": "lines",
   "exhibitions_zh": [
     {
       "text": "生與活的那些事兒",

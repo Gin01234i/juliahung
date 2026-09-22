@@ -58,7 +58,7 @@ paths keep working at the root.
 ```
 index.html                     Home — Direction 1A "Register"
 stage/                         Home, alternative — "Stage", one work at a time
-artworks/                      Works index + 14 work pages
+artworks/                      Works index + 20 work pages
 exhibitions/                   Exhibitions index + 13 exhibition pages
 about/  news/  contact/        About + CV, News, Contact
 blog/                          Press index
@@ -112,8 +112,8 @@ repetitive pages. Useful for a batch change; unnecessary for a one-off fix.
 
 The two places worth knowing:
 
-- `content/selection.json` — which 14 works are featured, how they are
-  categorised, and where the dropped ones should redirect.
+- `content/selection.json` — the 20 legacy works, their display order, and
+  their categories.
 - `content/cv.json`, `content/news.json`, `content/contact.json` — the
   hand-written copy.
 
@@ -154,12 +154,11 @@ not because they need rerunning.
 
 ## Still needed from Julia
 
-1. **Sign-off on the 14-work cut** in `content/selection.json`.
-2. **Source URLs for the press entries** — the Wix blog reprinted articles and
+1. **Source URLs for the press entries** — the Wix blog reprinted articles and
    stored no link back. Fill `source_url` in `content/press.json`.
-3. **Whether any work is public art** — the spec wants that filter; the CMS has
+2. **Whether any work is public art** — the spec wants that filter; the CMS has
    no such field, so only Sculpture and Installation are offered.
-4. **A lighter Selected Press PDF.** `assets/docs/Julia_Hung_Selected_Press_2026-09.pdf`
+3. **A lighter Selected Press PDF.** `assets/docs/Julia_Hung_Selected_Press_2026-09.pdf`
    is the file from the old site, 42 MB for 29 pages. It works, but it is the
    heaviest thing in the repo by far.
 

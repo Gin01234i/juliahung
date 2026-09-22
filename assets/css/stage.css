@@ -167,7 +167,8 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
   color: var(--stage-faint);
   margin-bottom: 6px;
 }
-.stage__credit dd { margin: 0; color: var(--stage-soft); }
+.stage__credit dd,
+.stage__credit p { margin: 0; color: var(--stage-soft); }
 .stage__credit a { border-bottom: 1px solid transparent; }
 .stage__credit a:hover { color: var(--stage-ink); border-bottom-color: var(--stage-faint); }
 

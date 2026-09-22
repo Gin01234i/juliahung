@@ -46,20 +46,20 @@ path,path_decoded,type,action,destination_or_note,post_redesign,redirect_to
 /artworks,/artworks,index (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/21g,/artworks/21g,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/an-unusual-knot,/artworks/an-unusual-knot,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
-/artworks/aquachroma,/artworks/aquachroma,artwork detail (LIVE),KEEP,migrate 1:1,DROPPED BY 1A CUT,/artworks/an-unusual-knot/
+/artworks/aquachroma,/artworks/aquachroma,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/artificial-phenomena,/artworks/artificial-phenomena,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/beingasawoman,/artworks/beingasawoman,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
-/artworks/biomimicry,/artworks/biomimicry,artwork detail (LIVE),KEEP,migrate 1:1,DROPPED BY 1A CUT,/artworks/will-looped/
+/artworks/biomimicry,/artworks/biomimicry,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/bloom,/artworks/bloom,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/debris,/artworks/debris,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/deja-vu,/artworks/deja-vu,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
-/artworks/dreamy-tide,/artworks/dreamy-tide,artwork detail (LIVE),KEEP,migrate 1:1,DROPPED BY 1A CUT,/artworks/will-looped/
-/artworks/essence,/artworks/essence,artwork detail (LIVE),KEEP,migrate 1:1,DROPPED BY 1A CUT,/artworks/artificial-phenomena/
-/artworks/gge-rof-doom-eht-ni,/artworks/gge-rof-doom-eht-ni,artwork detail (LIVE),KEEP,migrate 1:1,DROPPED BY 1A CUT,/artworks/in-the-mood-for-egg/
+/artworks/dreamy-tide,/artworks/dreamy-tide,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
+/artworks/essence,/artworks/essence,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
+/artworks/gge-rof-doom-eht-ni,/artworks/gge-rof-doom-eht-ni,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/in-the-mood-for-egg,/artworks/in-the-mood-for-egg,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/indefinitepink,/artworks/indefinitepink,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/infinite,/artworks/infinite,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
-/artworks/inter-symbiosis,/artworks/inter-symbiosis,artwork detail (LIVE),KEEP,migrate 1:1,DROPPED BY 1A CUT,/artworks/will-looped/
+/artworks/inter-symbiosis,/artworks/inter-symbiosis,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/mystic,/artworks/mystic,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/untamed,/artworks/untamed,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,
 /artworks/will-looped,/artworks/will-looped,artwork detail (LIVE),KEEP,migrate 1:1,BUILT,

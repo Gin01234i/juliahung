@@ -3,6 +3,7 @@
   "title": "Aquachroma",
   "title_zh": "「水之彩」系列",
   "year": "2021",
+  "cover_stem": "works/aquachroma/2021_aquachroma_02",
   "material": "Enamelled copper wire",
   "material_zh": "彩漆銅線",
   "series": "Aquachroma series",
@@ -12,6 +13,7 @@
     "Commissioned for Ji-An Japanese Restaurant",
     "A commissioned, site-specific triptych tracing states of striving, flow, and return. From left to right, the forms suggest ascent, sustained ease, and cyclical movement. Fish-like structures, built through repeated gestures in copper wire, move between effort and ease, individuality and connection—reflecting a continuous process of becoming in which paths unfold and converge."
   ],
+  "statement_position": "meta",
   "statement_zh": [
     "「水之彩」系列收藏並展示於濟安鮨 日本料理",
     "「水之彩」蘊含著水中的繽紛色彩，以抽象的美感展現，令觀者陶醉其中。",

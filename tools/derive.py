@@ -74,6 +74,9 @@ def process(kind, slugs, limit, force):
             continue
         rec = json.load(open(path, encoding="utf-8"))
         year = safe_year(rec)
+        cover = rec.get("cover_image") or {}
+        if cover.get("media"):
+            derive(cover["media"], f"{kind}/{slug}/{year}_{slug}_cover", force)
         picked = []
         for n, img in enumerate((rec.get("images") or [])[:limit], 1):
             stem = f"{kind}/{slug}/{year}_{slug}_{n:02d}"

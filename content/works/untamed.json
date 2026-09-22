@@ -3,6 +3,10 @@
   "title": "Untamed",
   "title_zh": "「初始狀態」系列",
   "year": "2023",
+  "cover_stem": "works/untamed/2023_untamed_cover",
+  "cover_image": {
+    "media": "5d7252_34a3304ce9ba44e5a3a6bf95b6c2017d~mv2.jpg"
+  },
   "material": "Enamelled copper wire",
   "material_zh": "彩漆銅線",
   "series": "Untamed series",

@@ -35,6 +35,9 @@ def inventory():
         if kind not in ("works", "exhibitions"):
             continue
         rec = json.load(open(f, encoding="utf-8"))
+        cover = rec.get("cover_image") or {}
+        if cover.get("media"):
+            owners.setdefault(cover["media"], []).append(f"{kind}/{rec['slug']}")
         for key in ("images", "images_zh"):
             for img in rec.get(key) or []:
                 owners.setdefault(img["media"], []).append(f"{kind}/{rec['slug']}")

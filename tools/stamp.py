@@ -170,7 +170,7 @@ def tidy_dims(d):
     """Normalise hand-typed dimensions: "H26 xW22 xD21 cm" -> "H26 × W22 × D21 cm"."""
     if not d:
         return d
-    d = re.sub(r"\s*[xX×]\s*", " × ", d)
+    d = re.sub(r"(?<=\d)\s*[xX×]\s*(?=[HWDhwd]?\d)", " × ", d)
     d = re.sub(r"([HWDhwd])\s+(\d)", r"\1\2", d)   # "H 26" -> "H26"
     return re.sub(r"\s{2,}", " ", d).strip()
 
@@ -191,6 +191,11 @@ def work_detail(slug, prev_slug, next_slug):
     pics = imgs["works"].get(slug, [])
     title = rec["title"]
 
+    def work_copy(text):
+        """Escape prose while italicising references to this artwork title."""
+        safe_title = esc(title)
+        return esc(text).replace(safe_title, f"<em>{safe_title}</em>")
+
     meta_rows = []
     for label, val in (
         ("Material", rec.get("material")),
@@ -198,11 +203,13 @@ def work_detail(slug, prev_slug, next_slug):
         ("Dimensions", tidy_dims(rec.get("dimensions"))),
     ):
         if val:
+            rendered = work_copy(val) if label == "Series" else esc(val)
             meta_rows.append(f"    <dt>{label}</dt>\n"
-                             f"    <dd>{esc(val)}</dd>")
+                             f"    <dd>{rendered}</dd>")
 
     def shown_list(items):
-        return ", ".join(
+        separator = "<br>" if rec.get("shown_layout") == "lines" else ", "
+        return separator.join(
             f'<a class="lnk" href="{local_href(i["href"])}">{esc(i["text"])}</a>'
             if local_href(i["href"]) else esc(i["text"]) for i in items)
 
@@ -216,11 +223,18 @@ def work_detail(slug, prev_slug, next_slug):
     note = ""
     st_en = rec.get("statement") or []
     lead_en = first_statement(st_en)
-    if lead_en:
-        note = f'\n  <p class="meta__note">{esc(lead_en)}</p>'
+    all_copy_in_meta = rec.get("statement_position") == "meta"
+    if all_copy_in_meta:
+        note = "".join(
+            f'\n  <p class="meta__note">{work_copy(line)}</p>'
+            for line in st_en)
+    elif lead_en:
+        note = f'\n  <p class="meta__note">{work_copy(lead_en)}</p>'
 
     # Image stack: one 4/3 primary, then 1/1 pairs.
     def cap(p):
+        if rec.get("show_captions") is False:
+            return None
         return tidy_dims(p.get("parsed", {}).get("raw")) or None
 
     stack = []
@@ -237,24 +251,24 @@ def work_detail(slug, prev_slug, next_slug):
             for j, p in enumerate(pair))
         stack.append(f'  <div class="pair">\n{inner}\n  </div>')
 
-    body_paras = "\n".join(
-        f'    <p class="t-body">{esc(l)}</p>'
+    body_paras = "" if all_copy_in_meta else "\n".join(
+        f'    <p class="t-body">{work_copy(l)}</p>'
         for l in st_en if l != lead_en)
 
     nav = []
     if prev_slug:
         pr = load("works", prev_slug)
         nav.append(f'  <a class="lnk" href="/artworks/{prev_slug}/">'
-                   f'← {esc(pr["title"])}</a>')
+                   f'← <em>{esc(pr["title"])}</em></a>')
     if next_slug:
         nx = load("works", next_slug)
         nav.append(f'  <a class="lnk" href="/artworks/{next_slug}/">'
-                   f'{esc(nx["title"])} →</a>')
+                   f'<em>{esc(nx["title"])}</em> →</a>')
 
     body = f"""<article class="s-detail detail">
 
   <div class="detail__meta stack--tight">
-    <h1 class="t-display">{esc(title)}</h1>
+    <h1 class="t-display"><em>{esc(title)}</em></h1>
     <p class="t-label">{esc(year_label(rec.get("year")))}</p>
   <dl class="meta">
 {chr(10).join(meta_rows)}
@@ -341,9 +355,10 @@ def works_index():
             continue
         cat = next((k for k, v in CATS.items() if slug in v), "")
         p = pics[0]
+        cover_stem = rec.get("cover_stem") or p["stem"]
         cards.append(f"""  <a class="card" href="/artworks/{slug}/" data-cat="{cat}">
-{picture(p["stem"], "", alt_for(rec, 1, "works"), sizes="(max-width: 900px) 46vw, 30vw")}
-    <p class="card__title">{esc(rec["title"])}</p>
+{picture(cover_stem, "", alt_for(rec, 1, "works"), sizes="(max-width: 900px) 46vw, 30vw")}
+    <p class="card__title"><em>{esc(rec["title"])}</em></p>
     <p class="card__year">{esc(year_label(rec.get("year")))}</p>
   </a>""")
 
@@ -352,7 +367,7 @@ def works_index():
         f'{k.replace("-", " ").title()}</button>'
         for k in CATS)
     body = f"""<section class="s-index stack">
-  <h1 class="t-label">Works</h1>
+  <h1 class="t-label">Selected Works</h1>
   <div class="filters t-meta" role="group" aria-label="Filter works">
     <button type="button" data-filter="all" aria-pressed="true">All</button>
 {filters}
@@ -414,7 +429,7 @@ def exhibitions_index():
   </a>""")
 
     body = f"""<section class="s-index stack">
-  <h1 class="t-label">Exhibitions</h1>
+  <h1 class="t-label">Selected Exhibitions</h1>
   <div class="filters t-meta" role="group" aria-label="Filter exhibitions">
     <button type="button" data-filter="all" aria-pressed="true">All</button>
     <button type="button" data-filter="solo">Solo</button>
