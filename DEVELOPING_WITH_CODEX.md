@@ -1,135 +1,281 @@
-# Developing this website with Codex
+# Developing this website with Codex (macOS)
 
-This guide is for collaborators who want to update the website without needing
-to know much about HTML, Python, or Git. Codex can make the changes and run the
-commands; your role is to describe the desired result, review it in a browser,
-and approve what gets published.
+This guide is for collaborators on a Mac who want to update the website without
+knowing HTML, Python, or Git. Codex makes the changes and runs the commands;
+your job is to describe the result you want, look at it in a browser, and
+approve what gets published.
 
-## First-time setup
+The day-to-day work happens in the **Codex desktop app**. You describe the
+change in plain English, Codex does it and shows you what it did, and you
+approve it.
 
-If the project is already open in Codex and `git status` works, skip to
-[Before you start](#before-you-start).
+Terminal — the black-and-white app where you type commands — appears once,
+during first-time setup, to install the tools Codex needs. After that you can
+leave it closed. Where this guide does show a command, copy it exactly, press
+Return, and read what comes back; you do not need to understand it.
 
-### 1. Get access
+Everything below is written for macOS only.
 
-Ask the repository owner to add your GitHub account as a collaborator on
-`Gin01234i/juliahung`. Accept the invitation from GitHub before trying to push.
+---
 
-You will need accounts for:
+# Part 1 — First-time setup
 
-- [GitHub](https://github.com/) to download and publish the website.
-- ChatGPT/Codex to work on the local files. Follow the
-  [official Codex documentation](https://developers.openai.com/codex/) to
-  install Codex and sign in.
+Do this once, on the Mac you will be working on. Budget about 45 minutes, most
+of it waiting for downloads.
 
-You do not need an OpenAI API key for this workflow.
+Here is what you are setting up and why:
 
-### 2. Install Git
+| Piece | What it is for |
+| --- | --- |
+| A GitHub account | Where the website lives and from where it is published. |
+| The Codex app | Where you work: it edits the files and runs the commands. |
+| Terminal | Used once, for the installs below. Already on your Mac. |
+| Git | Tracks changes to the website files and moves them to and from GitHub. |
+| Python 3 | Runs the local preview server and the site-checking scripts. |
+| Homebrew | An installer that fetches the tool below. |
+| GitHub CLI (`gh`) | Signs your Mac in to GitHub, so Codex can pull and push. |
+| A copy of the site | A folder named `juliahung` in your Documents folder. |
 
-Download Git from [git-scm.com](https://git-scm.com/downloads) and use the
-standard installation options. On macOS, entering `git --version` in Terminal
-may also offer to install Apple's command-line developer tools, which include
-Git.
+## 1. Get a GitHub account and access to the repository
 
-After installation, open Terminal and check:
+Do this first: the invitation has to come from another person, and you cannot
+download the website until you have accepted it.
+
+1. If you do not have an account, sign up at
+   [github.com/signup](https://github.com/signup) and verify your email.
+2. Send your GitHub username to the repository owner and ask to be added as a
+   collaborator on `Gin01234i/juliahung`.
+3. You will get an email invitation. **Accept it** — the invitation also shows
+   up at <https://github.com/Gin01234i/juliahung/invitations>.
+
+While you wait for the invitation, carry on with the rest of the setup.
+
+## 2. Install the Codex app
+
+Download the Codex app for macOS from the
+[official Codex documentation](https://developers.openai.com/codex/), drag it
+into your **Applications** folder, and open it.
+
+Sign in with your ChatGPT account when prompted. You do **not** need an OpenAI
+API key for this workflow.
+
+Leave the app open; you will point it at the website folder in step 9.
+
+## 3. Open Terminal (the only part of setup that needs it)
+
+Press **Command-Space**, type `Terminal`, and press **Return**. (It also lives
+in **Applications → Utilities → Terminal**.)
+
+A window opens with a line of text ending in `%`. That is the prompt; it is
+waiting for you.
+
+Three things worth knowing:
+
+- Type or paste one command, then press **Return** to run it. Paste with
+  **Command-V**, as in any other Mac app.
+- When a command asks for your Mac login password, **nothing appears as you
+  type** — no dots, no stars. That is normal. Type it and press Return.
+- To copy a command out of this guide, select it and press **Command-C**. Do
+  not include the surrounding text.
+
+Keep this window open through step 8.
+
+## 4. Install Apple's developer tools (this gives you Git and Python 3)
+
+In Terminal, run:
+
+```bash
+xcode-select --install
+```
+
+A dialog appears asking whether to install the command line developer tools.
+Click **Install**, agree to the licence, and wait — it is a large download and
+can take ten minutes or more.
+
+If instead you see `command line tools are already installed`, you already have
+them. Move on.
+
+When it finishes, check both tools:
 
 ```bash
 git --version
+python3 --version
 ```
 
-It should print a version number rather than an error.
+You should see something like `git version 2.39.5` and `Python 3.9.6`. Any
+version numbers are fine, as long as Python starts with a `3`. If either
+command prints `command not found`, see
+[Troubleshooting](#troubleshooting) at the end.
 
-Set the name and email that will appear on your commits. Use the email attached
-to your GitHub account:
+This project needs no Python packages, no Node, and no build tools.
+
+## 5. Tell Git who you are
+
+Every change you save is stamped with a name and an email. Use the email
+attached to your GitHub account. Run these two commands, substituting your own
+details:
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 ```
 
-### 3. Install Python 3
-
-Download Python 3 from [python.org](https://www.python.org/downloads/). On
-Windows, select **Add Python to PATH** in the installer. Then check:
+Nothing is printed. That is success. To confirm:
 
 ```bash
-python3 --version
+git config --global --list
 ```
 
-On Windows, use `py -3 --version` if `python3` is not recognized. The command
-should report Python 3. This project uses Python only for its local web server
-and site-checking tools; there are no packages to install.
+## 6. Install Homebrew
 
-### 4. Set up GitHub authentication
-
-GitHub does not accept your account password from `git push`. The easiest
-command-line setup is [GitHub CLI](https://cli.github.com/):
-
-1. Install GitHub CLI for your operating system.
-2. Open Terminal and run `gh auth login`.
-3. Choose **GitHub.com**, **HTTPS**, and **Login with a web browser**.
-4. Run `gh auth setup-git` after login.
-
-Confirm the connection:
+Homebrew installs the sign-in tool in the next step. Paste this single long
+command into Terminal and press Return:
 
 ```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+It explains what it will do and waits; press **Return** to continue. It then
+asks for your Mac login password (remember: invisible as you type).
+
+When it finishes, read the last few lines of output. On Apple Silicon Macs
+(M1 and later) it asks you to run two more commands. If it does, run these:
+
+```bash
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+Check it worked:
+
+```bash
+brew --version
+```
+
+It should print a version number.
+
+## 7. Sign your Mac in to GitHub
+
+GitHub will not accept your account password from the command line, so this
+step sets up proper authentication once. It is what later lets Codex pull and
+push on your behalf.
+
+Install GitHub CLI:
+
+```bash
+brew install gh
+```
+
+Then start the sign-in:
+
+```bash
+gh auth login
+```
+
+It asks a short series of questions. Use the arrow keys and Return to answer:
+
+1. **What account do you want to log into?** → `GitHub.com`
+2. **What is your preferred protocol for Git operations?** → `HTTPS`
+3. **Authenticate Git with your GitHub credentials?** → `Yes`
+4. **How would you like to authenticate?** → `Login with a web browser`
+
+It then shows a one-time code such as `ABCD-1234`. Copy it, press Return, and
+your browser opens GitHub. Paste the code, sign in if asked, and click
+**Authorize**. Return to Terminal, which should report a green checkmark and
+your username.
+
+Then make sure Git itself uses that sign-in:
+
+```bash
+gh auth setup-git
 gh auth status
 ```
 
-Never paste an access token, password, or private key into a Codex prompt or a
-file in this repository.
+`gh auth status` should say you are logged in to github.com as your username.
 
-### 5. Download the website
+> **Never** paste an access token, password, recovery code, or private key into
+> a Codex prompt or into a file in this repository. The sign-in above is the
+> only credential setup you need.
 
-Choose a folder where you keep projects, then clone the repository:
+## 8. Download the website
+
+This is the point where the invitation from step 1 has to be accepted. If it
+has not arrived yet, chase it before going further.
+
+Pick a folder to keep the site in — Documents is a fine choice — and copy it
+down from GitHub:
 
 ```bash
 cd ~/Documents
 git clone https://github.com/Gin01234i/juliahung.git
-cd juliahung
 ```
 
-On Windows, you can choose a folder in File Explorer, right-click it, select
-**Open in Terminal**, and run the last two commands. If the repository is
-private, complete the browser sign-in when prompted.
+That creates `~/Documents/juliahung`, holding the whole website. To see it in
+Finder:
 
-You only clone once. On later days, open this existing `juliahung` folder and
-pull the latest changes instead of cloning another copy.
+```bash
+open ~/Documents/juliahung
+```
 
-### 6. Open the repository in Codex
+**You only clone once.** From now on you open that same folder in the Codex app
+and pull the latest changes; do not clone a second copy.
 
-Open Codex, sign in, and choose the local `juliahung` folder as the workspace.
-Start a task and ask:
+You are done with Terminal. You can close that window.
+
+## 9. Open the folder in the Codex app
+
+Switch to the Codex app and open `~/Documents/juliahung` as the folder — the
+app's own **Open Folder** control, or dragging the folder from Finder onto the
+app, both work. Everything Codex does from now on happens inside that folder.
+
+Then type your first request:
 
 > Check the repository setup. Confirm that Git and Python are available, show
 > me the current branch and status, and run the site checks. Do not change any
 > files yet.
 
-If those checks pass, setup is complete. Codex may ask permission before using
-the network, modifying Git history, or pushing; review the requested action and
-approve it only when it matches your task.
+Codex asks permission before it runs a command, reaches the network, or changes
+a file. Read what it is asking for and approve it only when it matches what you
+asked for.
 
-## Before you start
+If those checks pass, setup is complete.
 
-You need:
+---
 
-- Codex with this repository open.
-- Python 3, which is included with the development setup used for this site.
-- Access to the GitHub repository so you can pull and push changes.
+# Part 2 — Everyday use
 
-Open the `juliahung` repository in Codex. Before starting a change, ask:
+Everything in this part happens in the Codex app.
+
+## Starting a session
+
+1. Open the Codex app.
+2. Make sure the folder it is working in is `~/Documents/juliahung` — the app
+   remembers recent folders, so this is usually one click.
+3. Before changing anything, ask:
 
 > Check whether my local copy is clean and pull the latest version from GitHub.
 > Do not discard any uncommitted work.
 
-Codex should report the current branch and warn you if local work could conflict
-with the pull. Never ask it to discard changes unless you are certain they are
-no longer needed.
+Codex should report the current branch and warn you if local work could
+conflict with the pull. Never ask it to discard changes unless you are certain
+they are no longer needed.
+
+## How Codex asks permission
+
+Codex works on the files in that folder and asks before doing anything beyond
+that — running a command, using the network, pushing to GitHub. Each request
+tells you what it wants to do.
+
+- If it matches what you asked for, approve it.
+- If it does not, decline and ask Codex to explain why it wanted to.
+
+Do not switch the app into a mode that stops asking. The approval step is your
+chance to catch a misunderstanding before it reaches the website.
 
 ## Make a change
 
-Describe the result in everyday language. Include the page, the old content,
-and the desired new content when possible. For example:
+Describe the result in everyday language. Name the page, the old content, and
+the new content where you can:
 
 > On the About page, change the first paragraph to: “…” Keep the existing
 > typography and spacing. Show me the files changed and run the site checks.
@@ -137,7 +283,7 @@ and the desired new content when possible. For example:
 Other useful requests:
 
 > Add this exhibition to the Exhibitions page using the existing design. Use
-> the attached images in the order provided.
+> the images I put in the folder, in the order I list them.
 
 > Replace the contact email address everywhere it appears. Preserve the current
 > layout and test all affected links.
@@ -147,35 +293,40 @@ Other useful requests:
 Ask Codex to explain anything you do not understand. It should not require you
 to translate your request into code.
 
-## Preview changes locally
+### Working with images
 
-A local preview lets you review the website before publishing it. In Codex,
-ask:
+Codex can only use files it can see. Copy the image files into the `juliahung`
+folder in Finder first — a new folder inside it is fine — then tell Codex their
+names and what each one is. For example:
 
-> Start a local server for this website and tell me which address to open.
+> I have put three photographs in `incoming/` named `hall-01.jpg`,
+> `hall-02.jpg` and `hall-03.jpg`. Add them to the new exhibition page in that
+> order, make the web-sized versions the way the other pages do it, and write
+> image descriptions for each.
 
-The underlying command, run from the repository folder, is:
+You can also drag a screenshot into the chat to show Codex what you mean, but a
+picture pasted into the chat is a reference, not a file the website can use.
 
-```bash
-python3 -m http.server 8000
-```
+## Preview it on your own Mac
 
-Open <http://localhost:8000> in a browser. Keep the terminal running while you
-review the site. Refresh the browser after each change. To stop the server,
-return to its terminal and press `Control-C`.
+A local preview lets you see the website before anyone else does. Ask:
 
-To reproduce the GitHub Pages review address more closely, serve the directory
-that contains the repository:
+> Start a local preview server for this website and tell me which address to
+> open.
 
-```bash
-cd ..
-python3 -m http.server 8000
-```
+Codex starts the server and gives you an address, normally
+<http://localhost:8000>. Open it in your browser, and refresh the page after
+each change.
 
-Then open <http://localhost:8000/juliahung/>. This checks that links and images
-work when the site is under `/juliahung/`, as they are on GitHub Pages.
+To check the site the way GitHub will serve it, under a `/juliahung/` path, ask:
 
-The server is only visible on your computer and does not publish anything.
+> Serve the folder above the repository instead, so I can check the site at
+> /juliahung/.
+
+Then open <http://localhost:8000/juliahung/>.
+
+When you are finished reviewing, ask Codex to stop the preview server. The
+server is visible only on your Mac; previewing publishes nothing.
 
 ## Check the work
 
@@ -184,35 +335,25 @@ Before committing, ask Codex:
 > Review the diff, run all relevant site checks, and summarize anything that
 > could affect another page. Do not commit yet.
 
-The main automated checks are:
+The two checks that matter are `check_site.py` — internal links, shared
+navigation, old Wix references, image descriptions — and `relativize.py
+--check`, which verifies that the same site works both at the GitHub Pages
+`/juliahung/` path and at `jujuhung.com`. There is a third, `check_urls.py`,
+which needs the preview server running; ask for it when links or page addresses
+were part of the change.
 
-```bash
-python3 tools/check_site.py
-python3 tools/relativize.py --check
-```
-
-`check_site.py` checks internal links, shared navigation, old Wix references,
-and image descriptions. `relativize.py --check` verifies that the same site can
-work both at the GitHub Pages `/juliahung/` path and later at `jujuhung.com`.
-
-For the broader URL check, keep the local server running and use:
-
-```bash
-python3 tools/check_urls.py
-```
-
-Automated checks are helpful, but also inspect the changed pages on both a wide
-desktop window and a narrow mobile-sized window.
+Automated checks help, but also look at the changed pages yourself — once in a
+wide desktop window, once in a narrow phone-sized one.
 
 ## Pull, commit, and push
 
-These three Git operations have different purposes:
+Three Git operations, with three different jobs:
 
 - **Pull** downloads other people's latest changes from GitHub.
-- **Commit** saves a named snapshot in your local repository.
-- **Push** uploads local commits to GitHub and starts the Pages deployment.
+- **Commit** saves a named snapshot on your Mac.
+- **Push** uploads your commits to GitHub and starts publishing.
 
-Use this sequence:
+The order:
 
 1. Pull before beginning the change.
 2. Make and preview the change.
@@ -226,44 +367,81 @@ A complete request to Codex can be:
 > we discussed, preview and test it, show me a summary, then commit it with a
 > clear message and push it to `origin/main`.
 
-The equivalent commands are:
+Two things to insist on when you approve the commit: that it includes **only**
+the files belonging to this change, and that it includes no passwords, API
+keys, private contact details, or full-resolution originals from `_archive/`.
 
-```bash
-git pull --ff-only origin main
-git status
-git diff
-python3 tools/check_site.py
-python3 tools/relativize.py --check
-git add <only the files that belong to this change>
-git commit -m "Describe the change clearly"
-git push origin main
-```
-
-Avoid `git add .` unless you have reviewed every changed file. It can include
-unrelated work by accident. Do not commit passwords, API keys, private contact
-details, or full-resolution source files from `_archive/`.
-
-If Git reports a conflict, authentication error, or rejected push, stop and ask
-Codex to explain the exact problem. Do not use `git reset --hard` or force-push
-as a quick fix; both can destroy other people's work.
+If Codex reports a conflict, an authentication error, or a rejected push, stop
+and ask it to explain the exact problem. Do not approve `git reset --hard` or a
+force-push as a quick fix; both can destroy other people's work.
 
 ## After pushing
 
-GitHub Pages needs a short time to deploy. Open the repository's **Actions** tab
-on GitHub and wait for the Pages workflow to turn green. Then review:
+GitHub Pages takes a short while to deploy. Open the repository's **Actions**
+tab on GitHub and wait for the Pages workflow to turn green. Then review:
 
 <https://gin01234i.github.io/juliahung/>
 
-Use a private browser window or force-refresh if an old stylesheet or image is
-cached. A successful push only proves that deployment ran; check the updated
-page itself before considering the change complete.
+Use a private browser window, or force-refresh with **Command-Shift-R**, if an
+old stylesheet or image is cached. A successful push only proves that the
+deployment ran — check the updated page itself before calling it done.
 
 ## A safe everyday prompt
 
-This prompt covers the normal workflow:
+This one prompt covers the normal workflow:
 
 > Update [page or content] so that [desired result]. Preserve the existing
 > visual style. First pull the latest changes without discarding local work.
-> After editing, run the site and relative-path checks and tell me how to preview
-> the affected page locally. Show me the diff summary before committing. Once I
-> approve it, commit only the relevant files and push to `origin/main`.
+> After editing, run the site and relative-path checks and tell me how to
+> preview the affected page locally. Show me the diff summary before
+> committing. Once I approve it, commit only the relevant files and push to
+> `origin/main`.
+
+---
+
+# Troubleshooting
+
+| What you see | What to do |
+| --- | --- |
+| Codex says `command not found: git` or `python3` | Step 4 did not complete. Open Terminal, run `xcode-select --install`, and let it finish. |
+| `command not found: brew` in Terminal | Run the two `echo`/`eval` commands at the end of step 6, then close and reopen Terminal. |
+| `Repository not found` when cloning | You have not accepted the collaborator invitation (step 1), or you are signed in to GitHub as a different account. |
+| `Authentication failed`, or Codex is asked for a GitHub password | The sign-in from step 7 is missing or expired. Open Terminal and run `gh auth login`, then `gh auth setup-git`. |
+| `! [rejected]` on push | Someone else pushed first. Ask Codex to pull the latest `main` and reconcile — never force-push. |
+| `Address already in use` when starting the preview | A preview server is already running. Use the address you already have, or ask Codex to stop the old server first. |
+| The preview address shows nothing | The server was stopped, or Codex is serving a different folder. Ask it which folder it is serving and on which port. |
+| The browser shows an old version of the page | Force-refresh with Command-Shift-R, or open a private window. |
+
+When in doubt, copy the exact error text into the Codex chat and ask what it
+means before doing anything else.
+
+# What Codex is running for you
+
+You never need to type these, but they are what Codex does on your behalf, and
+knowing them makes its summaries easier to read.
+
+```bash
+python3 -m http.server 8000        # the local preview at localhost:8000
+python3 tools/check_site.py        # links, header drift, Wix refs, alt text
+python3 tools/relativize.py --check  # paths work at /juliahung/ and at the domain
+python3 tools/check_urls.py        # every kept URL resolves (needs the server)
+
+git pull --ff-only origin main     # bring down other people's changes
+git status                         # what has changed locally
+git diff                           # the changes themselves, line by line
+git add <files>                    # stage only this change's files
+git commit -m "Describe the change clearly"
+git push origin main               # publish
+```
+
+# Glossary
+
+- **Terminal** — the Mac app where you type commands; used once, during setup.
+- **Repository (repo)** — the folder holding the website and its full history.
+- **Clone** — download a copy of the repository for the first time.
+- **Pull** — fetch other people's latest changes into your copy.
+- **Commit** — save a named snapshot of your changes locally.
+- **Push** — upload your commits to GitHub, which publishes the site.
+- **Diff** — the list of exactly what changed, line by line.
+- **Branch** — a line of work. This project uses one, called `main`.
+- **GitHub Pages** — the GitHub service that serves these files as a website.
