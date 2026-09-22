@@ -20,10 +20,8 @@ pages = sorted(set(
     [f for f in glob.glob("**/index.html", recursive=True)
      if not f.startswith("_archive")] + ["404.html"]))
 
-# The alternative home page carries its own overlaid header by design — it is
-# a second direction for / , not a page in the Register family. It is the one
-# page exempt from the header-identity check below.
-NO_SHARED_HEADER = {"stage/index.html"}
+# The Stage home page carries its own overlaid header by design.
+NO_SHARED_HEADER = {"index.html"}
 
 fail = 0
 

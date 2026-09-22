@@ -57,8 +57,7 @@ paths keep working at the root.
 ## Layout
 
 ```
-index.html                     Home — Direction 1A "Register"
-stage/                         Home, alternative — "Stage", one work at a time
+index.html                     Home — "Stage", one work at a time
 artworks/                      Works index + 20 work pages
 exhibitions/                   Exhibitions index + 13 exhibition pages
 about/  news/  contact/        About + CV, News, Contact
@@ -68,7 +67,7 @@ commission/                    Commission guide — unlisted, noindex
 404.html  robots.txt  sitemap.xml
 
 assets/css/site.css            the stylesheet — the spec, in one file
-assets/css/stage.css           the alternative home only; loaded by nothing else
+assets/css/stage.css           the Stage home only; loaded by nothing else
 assets/js/filter.js            works-index filter
 assets/img/<kind>/<slug>/      web derivatives, 800 and 1600px, jpg + webp
 
@@ -78,26 +77,12 @@ seo/                           URL map and migration notes
 _archive/                      full-resolution originals (gitignored)
 ```
 
-## Two home pages
+## Home page
 
-There are two directions for the home page, and a switch in the bottom-right
-corner of each moves between them:
-
-- `/` — **Register.** The 1A spec: recent exhibition, statement, news.
-- `/stage/` — **Stage.** One exhibition or work, full bleed, the header and
-  the caption laid over the picture. No statement, no news. It is `noindex`
-  and canonicals to `/`, so it does not compete with the home page in search.
-
-Stage is deliberately quarantined: its own stylesheet, its own overlaid
-header, nothing shared but the image derivatives. To change what it shows,
-edit the one block in `stage/index.html` marked `THE FEATURE` — picture,
-label, titles, where-and-when line, link, credit. Nothing else on that page
-is specific to what is featured.
-
-When a direction is chosen, the loser and the switch both go: the switch is
-the `<nav class="switch">` on both pages, the block at the foot of
-`site.css`, and the block at the foot of `stage.css`. If Stage wins, move
-`stage/index.html` to the root and drop its `noindex`.
+The home page uses **Stage**: one exhibition or work, full bleed, with the
+header and caption laid over the picture. It uses `assets/css/stage.css`.
+To change the feature, edit the block in `index.html` marked `THE FEATURE`
+— picture, label, titles, where-and-when line, link, and credit.
 
 ## Editing
 

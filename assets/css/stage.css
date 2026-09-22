@@ -1,7 +1,7 @@
 /* ==========================================================================
-   Julia Hung — alternative home, "Stage"
+   Julia Hung — home, "Stage"
    One exhibition or work, full bleed, chrome laid over the image. This is a
-   second direction for the home page only; every other page on the site is
+   design for the home page only; every other page on the site is
    still Direction 1A "Register" and still loads assets/css/site.css alone.
    Self-contained on purpose — nothing here leaks into the rest of the site.
    ========================================================================== */
@@ -53,8 +53,7 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
   justify-content: space-between;
   min-height: 100vh;
   min-height: 100svh;
-  /* the extra 20px at the foot is the line the layout switch sits on */
-  padding: var(--stage-pad-y) var(--stage-pad-x) calc(var(--stage-pad-y) + 20px);
+  padding: var(--stage-pad-y) var(--stage-pad-x) var(--stage-pad-y);
   overflow: hidden;
 }
 
@@ -192,20 +191,3 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
   }
   .stage__title { margin-top: 10px; }
 }
-
-/* --- Layout switch ------------------------------------------------------- */
-/* Preview control. It exists to compare the two home pages while a direction
-   is being chosen; delete it, and its twin in site.css, once one wins. */
-
-.switch {
-  position: fixed;
-  right: var(--stage-pad-x);
-  bottom: 10px;
-  z-index: 2;
-  display: flex; gap: 12px; align-items: baseline;
-  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--stage-faint);
-}
-.switch a { color: var(--stage-faint); }
-.switch a:hover { color: var(--stage-ink); }
-.switch [aria-current="page"] { color: var(--stage-soft); }

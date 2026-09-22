@@ -122,11 +122,13 @@ def picture(stem, ratio, alt, caption=None, sizes="100vw", eager=False):
     if caption:
         cap = f"\n    <figcaption>{esc(caption)}</figcaption>"
     loading = "eager" if eager else "lazy"
+    webp = ""
+    if all(os.path.exists(f"{ROOT}/assets/img/{stem}-{w}.webp") for w in (800, 1600)):
+        webp = f'''      <source type="image/webp" sizes="{sizes}"
+              srcset="/assets/img/{stem}-800.webp 800w, /assets/img/{stem}-1600.webp 1600w">\n'''
     return f"""  <figure class="fig fig--{ratio}">
     <picture>
-      <source type="image/webp" sizes="{sizes}"
-              srcset="/assets/img/{stem}-800.webp 800w, /assets/img/{stem}-1600.webp 1600w">
-      <img src="/assets/img/{stem}-1600.jpg"
+{webp}      <img src="/assets/img/{stem}-1600.jpg"
            srcset="/assets/img/{stem}-800.jpg 800w, /assets/img/{stem}-1600.jpg 1600w"
            sizes="{sizes}" alt="{esc(alt)}" loading="{loading}" decoding="async">
     </picture>{cap}
