@@ -3,6 +3,9 @@
 Static site for Julia Hung 洪郁雯. Plain HTML and CSS — no build step, no
 dependencies, no framework. Deploys to GitHub Pages by pushing.
 
+For a beginner-friendly editing, preview, and publishing workflow, see
+[`DEVELOPING_WITH_CODEX.md`](./DEVELOPING_WITH_CODEX.md).
+
 
 ## Running it
 
