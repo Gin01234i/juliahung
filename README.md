@@ -3,9 +3,6 @@
 Static site for Julia Hung 洪郁雯. Plain HTML and CSS — no build step, no
 dependencies, no framework. Deploys to GitHub Pages by pushing.
 
-Built to the **Direction 1A "Register"** specification: text-first, one ink on
-one paper, no accent colour, no dark mode, and no motion except colour. The
-work is the only saturated thing on the page.
 
 ## Running it
 
@@ -14,6 +11,44 @@ python3 -m http.server 8000     # then open http://localhost:8000
 ```
 
 That is the whole toolchain. The repo root *is* the site.
+
+## Two addresses
+
+The site has to serve from two roots at once:
+
+- `https://<user>.github.io/juliahung/` — the review copy, on a project path
+- `https://jujuhung.com/` — the live site, at the domain root
+
+So no page links to `/assets/css/site.css`: under the project path that
+resolves to github.io's own root and 404s. Every internal path is relative to
+the page holding it — `../../assets/css/site.css` two directories down,
+`assets/css/site.css` at the root — which is correct under both, with no build
+step, no `<base>` tag and no JavaScript.
+
+```bash
+python3 tools/relativize.py --check    # nothing root-absolute has crept back in
+```
+
+`tools/stamp.py` writes root-absolute paths and relativizes on the way out, so
+the source stays readable. Paste a `/`-rooted path into a page by hand and
+rerun `tools/relativize.py`; it rewrites in place and is safe to run twice.
+
+Absolute `https://www.jujuhung.com/…` URLs are *not* rewritten, on purpose:
+`canonical`, `og:url`, `og:image`, the JSON-LD and `sitemap.xml` name the
+production page. That is also what keeps the review copy out of search —
+every page on github.io canonicals to the domain.
+
+`404.html` is the exception. GitHub Pages serves it for any missing path, so
+"relative" there means whatever the visitor typed; it resolves the site root
+in a three-line inline script instead — one path segment on a `github.io`
+host, `/` everywhere else. Editing its header is a separate step; see
+[`PARTIALS.md`](./PARTIALS.md).
+
+### Going live
+
+Nothing in the tree needs changing. Put the custom domain back (a `CNAME`
+file holding `jujuhung.com`, or the Pages setting), and the same relative
+paths keep working at the root.
 
 ## Layout
 
@@ -64,9 +99,9 @@ the `<nav class="switch">` on both pages, the block at the foot of
 
 **By hand.** Open the `index.html` you want and edit it. Nothing will overwrite
 it unless you rerun `tools/stamp.py`. If you touch the header or nav, read
-[`PARTIALS.md`](./PARTIALS.md) first — the header is byte-identical across all
-55 pages so that one `sed` can update them all, and `tools/check_site.py`
-fails if that drifts.
+[`PARTIALS.md`](./PARTIALS.md) first — the header is identical across all 55
+pages but for its `../` depth, so that one `sed` can update them all, and
+`tools/check_site.py` fails if that drifts.
 
 **Through the content files.** `content/*.json` holds the records the pages
 were stamped from. Edit those and run `python3 tools/stamp.py` to rewrite the
@@ -108,6 +143,7 @@ None of these are needed to serve or edit the site.
 | `fetch_media.py` | Downloads all 333 originals at full resolution |
 | `derive.py` | Makes the 800/1600px jpg + webp derivatives |
 | `stamp.py` | Writes the repetitive pages from `content/` |
+| `relativize.py` | Makes every internal path relative to its page |
 | `check_site.py`, `check_urls.py` | The checks above |
 
 The scrape and fetch steps are done; they exist so the archive is reproducible,

@@ -11,6 +11,9 @@ Usage:  python3 tools/check_site.py
 import collections, glob, hashlib, os, re, sys, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+from relativize import absolutize            # noqa: E402
+
 os.chdir(ROOT)
 
 pages = sorted(set(
@@ -25,18 +28,37 @@ NO_SHARED_HEADER = {"stage/index.html"}
 fail = 0
 
 
-def resolve(href):
+# Pages carry page-relative links (see tools/relativize.py), so a link only
+# means something once it is read back as a site path from the page holding
+# it. 404.html is the exception: it resolves its root in the browser, and its
+# links are relative to that, which is the site root by definition.
+EXTERNAL = ("http://", "https://", "//", "mailto:", "tel:", "#", "data:")
+
+
+def site_path(page, href):
     p = urllib.parse.unquote(href).split("#")[0].split("?")[0]
-    if p in ("", "/"):
+    if not p or p.startswith(EXTERNAL):
+        return None
+    return absolutize(p, "index.html" if page == "404.html" else page)
+
+
+def resolve(path):
+    p = path.strip("/")
+    if not p:
         return "index.html"
-    p = p.strip("/")
     return p if os.path.isfile(p) else f"{p}/index.html"
 
 
 # 1. internal links
-broken = [(f, h) for f in pages
-          for h in re.findall(r'href="(/[^"]*)"', open(f, encoding="utf-8").read())
-          if not os.path.exists(resolve(h))]
+SCRIPT = re.compile(r"<script\b.*?</script>", re.S)
+broken = []
+for f in pages:
+    # Skip script bodies: 404.html writes a <base href> from JavaScript.
+    markup = SCRIPT.sub("", open(f, encoding="utf-8").read())
+    for h in re.findall(r'href="([^"]*)"', markup):
+        p = site_path(f, h)
+        if p and not os.path.exists(resolve(p)):
+            broken.append((f, h))
 print(f"internal links     {'OK' if not broken else str(len(broken)) + ' BROKEN'}")
 for f, h in broken[:20]:
     print(f"  {f} -> {h}")
@@ -53,8 +75,12 @@ for f in pages:
         print(f"  NO HEADER {f}")
         fail += 1
         continue
-    # One variant is intentional: the active nav item.
+    # Two variants are intentional: the active nav item, and the ../ depth
+    # each page needs to reach the same six pages. Read the links back as
+    # site paths and both pages' headers say the same thing.
     n = re.sub(r' aria-current="page"', "", m.group(0))
+    n = re.sub(r'href="([^"]*)"',
+               lambda mm: f'href="{site_path(f, mm.group(1)) or mm.group(1)}"', n)
     hashes[hashlib.md5(n.encode()).hexdigest()[:8]].append(f)
 print(f"header identity    {'OK' if len(hashes) == 1 else str(len(hashes)) + ' VARIANTS'}")
 if len(hashes) > 1:
