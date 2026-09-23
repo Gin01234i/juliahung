@@ -7,7 +7,12 @@
    ========================================================================== */
 
 :root {
-  --stage-ground: #0B0B0B;     /* behind the image, so a letterbox reads as intent */
+  /* Behind the picture. Matched to the top edge of the picture as it actually
+     renders — the photograph's grey with the top scrim over it, sampled at
+     #343638 — so wherever the ground shows next to the image, the seam does
+     not read as a change of colour. This stylesheet is the home page's alone,
+     so nothing else on the site takes this ground. */
+  --stage-ground: #343638;
   --stage-ink:    #FFFFFF;
   --stage-soft:   rgba(255, 255, 255, 0.72);   /* metadata over the image */
   --stage-faint:  rgba(255, 255, 255, 0.34);   /* rules and inactive links  */
@@ -15,8 +20,15 @@
   --sans: "Helvetica Neue", Helvetica, Arial, "Noto Sans TC",
           "PingFang TC", "Microsoft JhengHei", sans-serif;
 
-  --stage-pad-x: clamp(20px, 4vw, 64px);
-  --stage-pad-y: clamp(24px, 3.4vw, 48px);
+  /* Mirrored from site.css. This stylesheet is standalone — the home page does
+     not load site.css — so the four measurements that place the header have to
+     be repeated here. They are what puts the wordmark and the nav on exactly
+     the line they hold on every other page. Change them there, change them
+     here: nothing checks that they agree. */
+  --max:   1180px;      /* content column, padding included (border-box) */
+  --top:   44px;        /* a page opens 44px below the top edge            */
+  --pad:   56px;        /* page padding, desktop                           */
+  --tail:  64px;        /* and ends 64px after its last element            */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -53,7 +65,7 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
   justify-content: space-between;
   min-height: 100vh;
   min-height: 100svh;
-  padding: var(--stage-pad-y) var(--stage-pad-x) var(--stage-pad-y);
+  padding: var(--top) 0 var(--tail);
   overflow: hidden;
 }
 
@@ -79,6 +91,17 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
 
 /* --- Head ---------------------------------------------------------------- */
 
+/* The header and the foot sit in the same centred column as .page does on
+   every other page. max-width includes the padding, so the wordmark starts at
+   the same x here as it does there rather than at the edge of the screen. */
+.stage__hdr,
+.stage__foot {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
 .stage__hdr {
   display: flex;
   align-items: baseline;
@@ -98,10 +121,11 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
 }
 
 .stage__nav {
-  display: flex; align-items: baseline; gap: clamp(14px, 2vw, 32px);
+  display: flex; align-items: baseline; gap: 24px;
   flex-wrap: wrap; justify-content: flex-end;
   flex: 1 1 auto; min-width: 0;
-  font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase;
+  font-size: 12px; line-height: 1.4; letter-spacing: 0.10em;
+  text-transform: uppercase;
 }
 .stage__nav a { color: var(--stage-soft); white-space: nowrap; }
 .stage__nav a:hover { color: var(--stage-ink); }
@@ -173,6 +197,8 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
 
 /* --- Responsive ---------------------------------------------------------- */
 
+@media (max-width: 900px) { :root { --pad: 24px; } }
+
 @media (max-width: 860px) {
   /* The two foot blocks stop sitting side by side; the credit goes under the
      title and keeps its rule. */
@@ -182,12 +208,31 @@ a { color: inherit; text-decoration: none; transition: color 120ms linear, borde
 }
 
 @media (max-width: 600px) {
-  .stage__hdr { row-gap: 14px; }
+  .stage__hdr { row-gap: 16px; }
   .stage__nav {
     flex: 1 0 100%;
     justify-content: flex-start;
-    gap: 12px;
-    font-size: 11px; letter-spacing: 0.06em;
+    gap: 14px;
+    font-size: 11px; letter-spacing: 0.08em;
   }
   .stage__title { margin-top: 10px; }
+  body .stage {
+    height: 110svh;
+  }
+}
+
+/* Below roughly 430px the six labels stop fitting one line. Rather than let
+   them wrap — which is what this page used to do while every other page held
+   the row — the padding tightens, the type scales to a 9px floor, the tracking
+   eases, and space-between spends what is left on the gaps. */
+@media (max-width: 430px) {
+  :root { --pad: 20px; }
+
+  .stage__nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 6px;
+    font-size: clamp(9px, 2.6vw, 11px);
+    letter-spacing: 0.06em;
+  }
 }
