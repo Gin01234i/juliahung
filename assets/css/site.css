@@ -117,7 +117,6 @@ a { color: inherit; text-decoration: none; }
 }
 .split > .col-8 { grid-column: span 8; }
 .split > .col-4 { grid-column: span 4; }
-.split--bottom  { align-items: end; }
 
 /* --- Header -------------------------------------------------------------- */
 /* Wordmark left, nav right, baseline-aligned. Not sticky, no border. */
@@ -181,11 +180,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 17px; line-height: 1.4; font-weight: 500; color: var(--ink);
   max-width: 70ch;
 }
-.post__list { margin: 0; padding-left: 20px; max-width: 70ch; }
-.post__list li { font-size: 13px; line-height: 1.7; color: var(--body); }
 .post .fig { margin-top: 24px; }
 .post .fig img { width: 100%; height: auto; }
-.post .fig--mark { max-width: 220px; }   /* a masthead, printed at its size */
 .lnk-inline {                 /* inline in a sentence, so it keeps its case */
   color: var(--ink);
   border-bottom: 1px solid var(--mute);
@@ -250,7 +246,6 @@ a { color: inherit; text-decoration: none; }
 .fig--16-10 img { aspect-ratio: 16 / 10; object-fit: cover; }
 .fig--4-3   img { aspect-ratio: 4 / 3;   object-fit: cover; }
 .fig--1-1   img { aspect-ratio: 1 / 1;   object-fit: cover; }
-.fig--2-3   img { aspect-ratio: 2 / 3;   object-fit: cover; }
 .fig--3-4   img { aspect-ratio: 3 / 4;   object-fit: cover; }
 
 .video-embed { position: relative; aspect-ratio: 4 / 3; background: var(--hover); }
@@ -344,22 +339,6 @@ a { color: inherit; text-decoration: none; }
 .news-lead__sum { margin-top: 14px; max-width: 46ch; }
 .news-lead .lnk { display: inline-block; margin-top: 18px; }
 
-/* Every other entry: month in the gutter, hairline under each. */
-.news-row {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 0 24px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--hairline);
-}
-.news-row:first-child { padding-top: 0; }
-.news-lead + .news-row { padding-top: 24px; border-top: 1px solid var(--hairline); }
-.news-row__when {
-  font-size: 12px; line-height: 1.5; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--mute);
-}
-.news-row .lnk { display: inline-block; margin-top: 8px; }
-
 /* --- Section rhythm ------------------------------------------------------ */
 /* Section gaps are a property of the page family, not of which two elements
    happen to be adjacent: 80px on home, 64px on index pages, 56px on detail.
@@ -367,7 +346,6 @@ a { color: inherit; text-decoration: none; }
    around a rule or a heading block. */
 
 .page            { --gap: var(--gap-index); }
-.page--home      { --gap: var(--gap-home); }
 .page--detail    { --gap: var(--gap-detail); }
 
 .page > * + *    { margin-top: var(--gap); }
@@ -376,7 +354,6 @@ a { color: inherit; text-decoration: none; }
 .stack > * + * { margin-top: 24px; }
 .mt-2 { margin-top: 16px; }
 .stack--tight > * + * { margin-top: 8px; }
-.stack--loose > * + * { margin-top: 56px; }
 
 /* --- Work detail --------------------------------------------------------- */
 /* 260px meta column, sticky from the second screen, then the image stack. */
@@ -568,9 +545,6 @@ a { color: inherit; text-decoration: none; }
   .field-pair { grid-template-columns: 1fr; gap: 28px; }
   .form__actions { flex-direction: column; align-items: stretch; gap: 20px; }
   .btn { width: 100%; }
-
-  /* The month moves above its entry rather than holding a 56px gutter. */
-  .news-row { grid-template-columns: 1fr; row-gap: 4px; }
 }
 
 /* Handset widths: the six nav items measure 366px at 11px/0.08em/14px, so they

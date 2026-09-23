@@ -2,8 +2,7 @@
 
 Every page carries the same header markup. Nothing enforces that at runtime —
 the site is plain static HTML — so this file is the reference copy. If you
-change the navigation, change it here and in every page, or rerun
-`python3 tools/stamp.py`.
+change the navigation, change it here and in every page.
 
 `tools/check_site.py` fails if any page's header drifts from the others, which
 is the practical safety net. One page is exempt and named in that script:
@@ -13,8 +12,8 @@ place the six links are duplicated outside this partial.
 
 ## Header
 
-This is the header as it is written in `tools/stamp.py`, with root-absolute
-paths:
+This is the header every page carries, written here with root-absolute paths
+for legibility:
 
 ```html
 <header class="hdr">
@@ -42,19 +41,17 @@ Two variants are therefore intentional: the `../` depth, and the current
 page's nav link carrying `aria-current="page"`. `tools/check_site.py` reads
 the links back as site paths before comparing, so it still sees one header.
 
-## Changing the navigation by hand
+## Changing the navigation
 
-Change `NAV` in `tools/stamp.py` and rerun it — that is the one-pass route,
-and it keeps the relative depths right by construction.
-
-By hand, the `../` prefix has to be carried through. Capture it:
+There is no generator to regenerate the pages from, so a nav change is one
+`sed` across the tree. The `../` prefix has to be carried through; capture it:
 
 ```bash
 # from the repo root
 grep -rl '<nav class="hdr__nav' --include=index.html . | \
   xargs sed -i '' -E 's|<a href="((\.\./)*)about/">|<a href="\1new-page/">New</a>\
     <a href="\1about/">|'
-python3 tools/check_site.py     # confirms all 55 headers still match
+python3 tools/check_site.py     # confirms all 45 headers still match
 ```
 
 The `sed` only works because the header is identical everywhere but for that

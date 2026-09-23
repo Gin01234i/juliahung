@@ -33,9 +33,9 @@ step, no `<base>` tag and no JavaScript.
 python3 tools/relativize.py --check    # nothing root-absolute has crept back in
 ```
 
-`tools/stamp.py` writes root-absolute paths and relativizes on the way out, so
-the source stays readable. Paste a `/`-rooted path into a page by hand and
-rerun `tools/relativize.py`; it rewrites in place and is safe to run twice.
+Paste a `/`-rooted path into a page by hand and rerun `tools/relativize.py`;
+it rewrites in place, is safe to run twice, and `--check` fails the build if
+one has crept back in.
 
 Absolute `https://www.jujuhung.com/…` URLs are *not* rewritten, on purpose:
 `canonical`, `og:url`, `og:image`, the JSON-LD and `sitemap.xml` name the
@@ -62,17 +62,19 @@ artworks/                      Works index + 20 work pages
 exhibitions/                   Exhibitions index + 13 exhibition pages
 about/  news/  contact/        About + CV, News, Contact
 blog/                          Press index
-post/<slug>/                   18 press citation pages (URLs kept from Wix)
+post/<slug>/                   3 press pages (URLs kept from Wix); the other
+                               15 entries link straight to the publisher
 commission/                    Commission guide — unlisted, noindex
 404.html  robots.txt  sitemap.xml
 
 assets/css/site.css            the stylesheet — the spec, in one file
 assets/css/stage.css           the Stage home only; loaded by nothing else
-assets/js/filter.js            works-index filter
+assets/js/filter.js            works and exhibitions index filters
+assets/js/contact.js           composes the contact form's mailto:
 assets/img/<kind>/<slug>/      web derivatives, 800 and 1600px, jpg + webp
 
-content/                       authoring source (JSON) — not read at runtime
-tools/                         authoring and checking scripts
+content/                       Wix-era records (JSON) — reference, not source
+tools/                         the checks, plus derive.py for new images
 seo/                           URL map and migration notes
 _archive/                      full-resolution originals (gitignored)
 ```
@@ -86,28 +88,30 @@ To change the feature, edit the block in `index.html` marked `THE FEATURE`
 
 ## Editing
 
-**By hand.** Open the `index.html` you want and edit it. Nothing will overwrite
-it unless you rerun `tools/stamp.py`. If you touch the header or nav, read
-[`PARTIALS.md`](./PARTIALS.md) first — the header is identical across all 55
-pages but for its `../` depth, so that one `sed` can update them all, and
-`tools/check_site.py` fails if that drifts.
+Open the `index.html` you want and edit it. The committed HTML *is* the
+source — there is no generator behind it and nothing will overwrite what you
+write. If you touch the header or nav, read [`PARTIALS.md`](./PARTIALS.md)
+first — the header is identical across all 45 pages but for its `../` depth,
+so that one `sed` can update them all, and `tools/check_site.py` fails if that
+drifts.
 
-**Through the content files.** `content/*.json` holds the records the pages
-were stamped from. Edit those and run `python3 tools/stamp.py` to rewrite the
-repetitive pages. Useful for a batch change; unnecessary for a one-off fix.
+A page generator, `tools/stamp.py`, wrote these pages once from `content/`.
+It was removed after the pages were edited past what it could reproduce:
+re-running it would have restored worse meta descriptions, a mangled heading
+and an old typo over the fixes made since. It is in the git history if the
+templates are ever wanted for reference —
+`git log --diff-filter=D -- tools/stamp.py`.
 
-The two places worth knowing:
-
-- `content/selection.json` — the 20 legacy works, their display order, and
-  their categories.
-- `content/cv.json`, `content/news.json`, `content/contact.json` — the
-  hand-written copy.
+What is left in `content/` is therefore reference data, not source, with two
+exceptions `tools/derive.py` still reads: `content/selection.json` (the 20
+works, their display order and categories) and the per-record files under
+`content/works/` and `content/exhibitions/`.
 
 ## Language
 
 The site is English only. `content/*.json` still carries the Chinese fields
-(`title_zh`, `statement_zh`, `text_zh`, …) from the Wix export; `stamp.py`
-ignores them. The press pages are the one exception, and not a translation:
+(`title_zh`, `statement_zh`, `text_zh`, …) from the Wix export; no page
+uses them. The press pages are the one exception, and not a translation:
 articles published in Chinese keep their own titles and summaries, because
 that is what those articles are called.
 
@@ -126,25 +130,23 @@ None of these are needed to serve or edit the site.
 
 | Script | What it does |
 | --- | --- |
-| `scrape.py` | Archives the live Wix pages to `_archive/html/` |
-| `extract_cms.py` | Pulls the embedded Wix CMS records out of that HTML |
-| `normalize.py` | Joins the EN and 中文 collections into `content/works/` etc. |
-| `fetch_media.py` | Downloads all 333 originals at full resolution |
-| `derive.py` | Makes the 800/1600px jpg + webp derivatives |
-| `stamp.py` | Writes the repetitive pages from `content/` |
+| `derive.py` | Makes the 800/1600px jpg + webp derivatives. Needs Pillow |
 | `relativize.py` | Makes every internal path relative to its page |
+| `gen_redirects.py` | Writes `_redirects` from `seo/url-map.csv`. Only useful if the site ends up behind Cloudflare or on Netlify — GitHub Pages ignores the file |
 | `check_site.py`, `check_urls.py` | The checks above |
 
-The scrape and fetch steps are done; they exist so the archive is reproducible,
-not because they need rerunning.
+The migration scripts that pulled the site off Wix — `scrape.py`,
+`extract_cms.py`, `normalize.py`, `fetch_media.py` — were removed once the
+archive was complete. They are in the git history if the chain ever has to run
+again; `git log --diff-filter=D -- tools/` finds the commit. With
+`normalize.py` gone, `content/cms/` (the raw Wix collections) is read by
+nothing and is kept only as the record the normalised files came from.
 
 ## Still needed from Julia
 
-1. **Source URLs for the press entries** — the Wix blog reprinted articles and
-   stored no link back. Fill `source_url` in `content/press.json`.
-2. **Whether any work is public art** — the spec wants that filter; the CMS has
+1. **Whether any work is public art** — the spec wants that filter; the CMS has
    no such field, so only Sculpture and Installation are offered.
-3. **A lighter Selected Press PDF.** `assets/docs/Julia_Hung_Selected_Press_2026-09.pdf`
+2. **A lighter Selected Press PDF.** `assets/docs/Julia_Hung_Selected_Press_2026-09.pdf`
    is the file from the old site, 42 MB for 29 pages. It works, but it is the
    heaviest thing in the repo by far.
 
