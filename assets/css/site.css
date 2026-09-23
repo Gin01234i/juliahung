@@ -154,13 +154,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* --- Index row ----------------------------------------------------------- */
-/* Title 3fr, venue 3fr, year 120px right. The whole row is the hit area. */
+/* Work title and year; the whole row is the hit area. */
 
 .rows { border-top: 1px solid var(--ink); }   /* ink rule opens the group */
 
 .row {
   display: grid;
-  grid-template-columns: 3fr 3fr 120px;
+  grid-template-columns: 1fr 120px;
   gap: var(--gutter);
   align-items: baseline;
   padding: 16px 0;
@@ -169,7 +169,6 @@ a { color: inherit; text-decoration: none; }
 }
 .row:hover { background: var(--hover); }
 .row__title { color: var(--ink); }
-.row__venue { font-size: 13px; line-height: 1.7; }
 .row__year  { text-align: right; font-size: 13px; line-height: 1.7; }
 
 /* --- Recovered post body -------------------------------------------------- */
@@ -253,6 +252,9 @@ a { color: inherit; text-decoration: none; }
 .fig--1-1   img { aspect-ratio: 1 / 1;   object-fit: cover; }
 .fig--2-3   img { aspect-ratio: 2 / 3;   object-fit: cover; }
 .fig--3-4   img { aspect-ratio: 3 / 4;   object-fit: cover; }
+
+.video-embed { position: relative; aspect-ratio: 4 / 3; background: var(--hover); }
+.video-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 .fig figcaption {
   margin-top: 8px;
@@ -523,11 +525,10 @@ a { color: inherit; text-decoration: none; }
   /* 8/4 splits stack, image first. */
   .split > .col-8, .split > .col-4 { grid-column: 1 / -1; }
 
-  /* Index rows drop the venue under the title; the year stays right. */
+  /* The year stays aligned to the right of the work title. */
   .prow { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
   .row { grid-template-columns: 1fr 120px; row-gap: 4px; }
   .row__title { grid-column: 1; }
-  .row__venue { grid-column: 1; grid-row: 2; }
   .row__year  { grid-column: 2; grid-row: 1; }
 
   /* The year's picture drops below its entries. */

@@ -487,10 +487,21 @@ def exhibition_detail(slug):
             f'{esc(link["text"])} →</a></p>') if link.get("href") else ""
 
     text_en = rec.get("text") or []
-    paragraphs = "\n".join(
-        [f'    <p class="t-lead">{esc(text_en[0])}</p>']
-        + [f'    <p class="t-body">{esc(l)}</p>' for l in text_en[1:]]
-    ) if text_en else ""
+    text_styles = rec.get("text_styles") or {}
+    paragraphs_list = []
+    for index, line in enumerate(text_en):
+        rendered = esc(line)
+        style = text_styles.get(str(index))
+        if style == "heading":
+            paragraphs_list.append(
+                f'    <h2 class="t-row"><strong>{rendered}</strong></h2>')
+        elif style == "heading-strong-em":
+            paragraphs_list.append(
+                f'    <h2 class="t-row"><strong><em>{rendered}</em></strong></h2>')
+        else:
+            klass = "t-lead" if index == 0 and style != "body" else "t-body"
+            paragraphs_list.append(f'    <p class="{klass}">{rendered}</p>')
+    paragraphs = "\n".join(paragraphs_list)
 
     work_rows = []
     for w in rec.get("works") or []:
@@ -501,7 +512,6 @@ def exhibition_detail(slug):
         wr = load("works", wslug)
         work_rows.append(f"""    <a class="row" href="{href}">
       <span class="row__title t-row">{esc(wr["title"])}</span>
-      <span class="row__venue">{esc(wr.get("material") or "")}</span>
       <span class="row__year">{esc(year_label(wr.get("year")))}</span>
     </a>""")
     works_block = ""

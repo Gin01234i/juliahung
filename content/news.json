@@ -4,8 +4,7 @@
     "Fields: year, month (full name, optional), label, en, zh.",
     "  lead:      true on the newest entry — sets it at reading size with a",
     "             summary. One per page.",
-    "  upcoming:  true anywhere in a year makes that year read UPCOMING",
-    "             instead of a count. No date arithmetic happens anywhere.",
+    "  status:    Optional display status for the year, such as On view.",
     "  link:      {text, href} — the arrow is added by the template.",
     "  image:     {stem, alt, caption} — the first image in a year group is",
     "             the picture for that year. stem is the path under",
@@ -16,30 +15,18 @@
   "items": [
     {
       "year": "2026",
-      "month": "March",
+      "date": "10 Sep 2026 – 28 Oct 2026",
       "label": "Exhibition",
       "lead": true,
-      "upcoming": true,
+      "status": "On view",
       "en": "<em>Secret Forms</em> opens at Galerie Georges-Philippe &amp; Nathalie Vallois, New York.",
       "zh": "《Secret Forms》於紐約 Galerie Georges-Philippe &amp; Nathalie Vallois 展出。",
       "summary_en": "Hung's first presentation in the United States, bringing together new woven copper sculptures made during the Asian Cultural Council fellowship.",
       "summary_zh": "洪郁雯於美國的首次個展，展出亞洲文化協會獎助期間創作的編織銅線新作。",
       "image": {
-        "stem": "works/untamed/2023_untamed_01",
-        "alt": "Untamed, woven enamelled copper wire in pink, blue and yellow.",
-        "caption": "Untamed, 2023 — enamelled copper wire"
-      }
-    },
-    {
-      "year": "2024",
-      "month": "November",
-      "label": "Award",
-      "en": "Awarded the Asian Cultural Council New York Fellowship.",
-      "zh": "獲亞洲文化協會紐約獎助。",
-      "image": {
-        "stem": "works/indefinitepink/2024_indefinitepink_01",
-        "alt": "Indefinite Pink, an installation of pink thread bound in resin.",
-        "caption": "Indefinite Pink, 2024 — mixed media, 4 × 4 × 6 m"
+        "stem": "works/wispsnwhispers/2025_wispsnwhispers_07",
+        "alt": "Wisps and Whispers 07, a woven enameled copper-wire sculpture.",
+        "caption": "Wisps and Whispers 07, 2025, Enameled copper wire, 79 x 71 x 59 in"
       }
     }
   ]
