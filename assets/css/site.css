@@ -210,7 +210,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--body);
 }
 .prow:hover { background: var(--hover); }
-.prow__outlet { font-size: 13px; line-height: 1.6; color: var(--ink); }
+.prow__outlet { font-size: 14px; line-height: 1.6; color: var(--ink); }
 .prow__when {                 /* tabular, so the dates align down the column */
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 12px; line-height: 1.6; color: var(--mute);

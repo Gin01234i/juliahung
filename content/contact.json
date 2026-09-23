@@ -18,7 +18,8 @@
       { "value": "exhibition", "label": "Exhibition inquiries" },
       { "value": "commission", "label": "Commission inquiries" },
       { "value": "press",      "label": "Press inquiries" },
-      { "value": "gallery",    "label": "Gallery" }
+      { "value": "gallery",    "label": "Gallery" },
+      { "value": "other",      "label": "Other" }
     ]
   },
 
