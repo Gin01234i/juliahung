@@ -122,11 +122,13 @@ def picture(stem, ratio, alt, caption=None, sizes="100vw", eager=False):
     if caption:
         cap = f"\n    <figcaption>{esc(caption)}</figcaption>"
     loading = "eager" if eager else "lazy"
+    webp = ""
+    if all(os.path.exists(f"{ROOT}/assets/img/{stem}-{w}.webp") for w in (800, 1600)):
+        webp = f'''      <source type="image/webp" sizes="{sizes}"
+              srcset="/assets/img/{stem}-800.webp 800w, /assets/img/{stem}-1600.webp 1600w">\n'''
     return f"""  <figure class="fig fig--{ratio}">
     <picture>
-      <source type="image/webp" sizes="{sizes}"
-              srcset="/assets/img/{stem}-800.webp 800w, /assets/img/{stem}-1600.webp 1600w">
-      <img src="/assets/img/{stem}-1600.jpg"
+{webp}      <img src="/assets/img/{stem}-1600.jpg"
            srcset="/assets/img/{stem}-800.jpg 800w, /assets/img/{stem}-1600.jpg 1600w"
            sizes="{sizes}" alt="{esc(alt)}" loading="{loading}" decoding="async">
     </picture>{cap}
@@ -781,9 +783,10 @@ def news_row(it):
 def news_year(year, items):
     """One year: a numeral, a count, an ink rule, then the entries on the left
     and the single picture that illustrates the year on the right."""
-    note = "Upcoming" if any(i.get("upcoming") for i in items) else (
+    note = next((i["status"] for i in items if i.get("status")), None) or (
+        "Upcoming" if any(i.get("upcoming") for i in items) else (
         "One entry" if len(items) == 1
-        else f"{WORDS.get(len(items), len(items))} entries")
+        else f"{WORDS.get(len(items), len(items))} entries"))
 
     entries = "\n".join(news_lead(it) if it.get("lead") else news_row(it)
                          for it in items)

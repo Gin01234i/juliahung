@@ -7,7 +7,7 @@ change the navigation, change it here and in every page, or rerun
 
 `tools/check_site.py` fails if any page's header drifts from the others, which
 is the practical safety net. One page is exempt and named in that script:
-`stage/index.html`, the alternative home, carries its own header laid over the
+`index.html`, the Stage home, carries its own header laid over the
 image. A nav change has to be made there by hand as well — it is the only
 place the six links are duplicated outside this partial.
 
