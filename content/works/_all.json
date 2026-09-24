@@ -2642,215 +2642,86 @@
     "video": null,
     "images": [
       {
-        "media": "2116cb_0629dd8350d742e1a75ca4492cfb95cf~mv2.jpg",
-        "width": 2400,
+        "media": "2116cb_f64f037294a14ad68d426dd72efafe6d~mv2.jpg",
+        "width": 3000,
         "height": 3000,
-        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-        "title": "Spring (Left) \nSummer (Right)",
+        "caption": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+        "title": "Spring (Left)\nSummer (Right)",
         "filename": "",
         "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
+          "raw": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel mirror, screw",
+          "dims": "H178 x W90 x D90 cm",
           "year": "2022"
         }
       },
       {
-        "media": "2116cb_b9c5293f8ad34fd4925f768ff5481c98~mv2.jpg",
-        "width": 2400,
+        "media": "2116cb_a666124a92b94e39bda3d220e6825215~mv2.jpg",
+        "width": 3000,
         "height": 3000,
-        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+        "caption": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
         "title": "Summer (Left)\nAutumn (Right)",
         "filename": "",
         "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
+          "raw": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel mirror, screw",
+          "dims": "H178 x W90 x D90 cm",
           "year": "2022"
         }
       },
       {
-        "media": "2116cb_3497b4ffa45a48c38c48c6ed7ce052d2~mv2.jpg",
-        "width": 2400,
+        "media": "2116cb_9361cb9eb32f4b6caa0778580c73bde0~mv2.jpg",
+        "width": 3000,
         "height": 3000,
-        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
+        "caption": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
         "title": "Autumn (Left)\nWinter (Right)",
         "filename": "",
         "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
+          "raw": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel mirror, screw",
+          "dims": "H178 x W90 x D90 cm",
           "year": "2022"
         }
       },
       {
-        "media": "2116cb_96047ecdb13c4a6e98b2d418eb2b2a9b~mv2.jpg",
-        "width": 2400,
-        "height": 3000,
-        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-        "title": "Winter (Left)\nSpring (Right)",
-        "filename": "",
-        "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
-          "year": "2022"
-        }
-      },
-      {
-        "media": "2116cb_5f6d5cc7d28d4d3bbf97667823118159~mv2.jpg",
-        "width": 4160,
-        "height": 6240,
-        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-        "title": "Spring",
-        "filename": "",
-        "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
-          "year": "2022"
-        }
-      },
-      {
-        "media": "2116cb_3bbd68fcd5884f1aaa825f23a988ee12~mv2.jpg",
-        "width": 4160,
-        "height": 6240,
-        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-        "title": "Summer",
-        "filename": "",
-        "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
-          "year": "2022"
-        }
-      },
-      {
-        "media": "2116cb_a3f85d5214674e32b9aaa2f787e23352~mv2.jpg",
-        "width": 4160,
-        "height": 6240,
-        "caption": "Enamelled copper wire, stainless steel plate and screw,  H178x W90x D90 cm, 2022",
-        "title": "Autumn",
-        "filename": "",
-        "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
-          "year": "2022"
-        }
-      },
-      {
-        "media": "2116cb_803887ff8e364ab1a53b09b190c9849c~mv2.jpg",
-        "width": 4160,
-        "height": 6240,
-        "caption": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-        "title": "Winter",
-        "filename": "",
-        "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
-          "year": "2022"
-        }
-      },
-      {
-        "media": "ccce62_61cf30babb354bf3a2ff91a2d13dc8ca~mv2.jpg",
+        "media": "2116cb_7220ace1c90e4962bc9090c8c44dfe28~mv2.jpg",
         "width": 3000,
-        "height": 2000,
-        "caption": "Fall (Left)\nWinter (Right)",
-        "title": "Infinite (detail)",
-        "filename": "",
-        "parsed": {
-          "raw": "Fall (Left), Winter (Right)",
-          "material": "Fall (Left), Winter (Right)"
-        }
-      },
-      {
-        "media": "ccce62_d3beaaf63c5d47399fbd2fbded12eee2~mv2.jpg",
-        "width": 2000,
         "height": 3000,
-        "caption": "Spring (Left)\nSummer (Right)",
-        "title": "Infinite (detail)",
+        "caption": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+        "title": "Winter (Left)\nSppring (Right)",
         "filename": "",
         "parsed": {
-          "raw": "Spring (Left), Summer (Right)",
-          "material": "Spring (Left), Summer (Right)"
-        }
-      },
-      {
-        "media": "ccce62_4128ba6cabd144e3ab906cc1c9b7a3cc~mv2.jpg",
-        "width": 2000,
-        "height": 3000,
-        "caption": "Autumn (Left)\nWinter (Right)",
-        "title": "Infinite (detail)",
-        "filename": "",
-        "parsed": {
-          "raw": "Autumn (Left), Winter (Right)",
-          "material": "Autumn (Left), Winter (Right)"
-        }
-      },
-      {
-        "media": "ccce62_84ac2faae4894908bf30067c43df8f50~mv2.jpg",
-        "width": 2000,
-        "height": 3000,
-        "caption": "",
-        "title": "Spring (detail)",
-        "filename": "",
-        "parsed": {}
-      },
-      {
-        "media": "2116cb_2750b9d278644bb99f4b8b717776ef37~mv2.png",
-        "width": 2738,
-        "height": 1540,
-        "caption": "Enamelled copper wire, stainless steel plate and screw,  H178x W90x D90 cm, 2022",
-        "title": "Spring",
-        "filename": "",
-        "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
+          "raw": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel mirror, screw",
+          "dims": "H178 x W90 x D90 cm",
           "year": "2022"
         }
       },
       {
-        "media": "2116cb_02fc1fc166094e2387127a1cd8d43916~mv2.png",
-        "width": 2715,
-        "height": 1527,
-        "caption": "Enamelled copper wire, stainless steel plate and screw,  H178x W90x D90 cm, 2022",
-        "title": "Summer",
+        "media": "2116cb_a5db675a626149abb5fa52894feaf9cc~mv2.jpg",
+        "width": 2163,
+        "height": 1442,
+        "caption": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+        "title": "(Detail)",
         "filename": "",
         "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
+          "raw": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90 cm, 2022",
+          "material": "Enamelled copper wire, stainless steel mirror, screw",
+          "dims": "H178 x W90 x D90 cm",
           "year": "2022"
         }
       },
       {
-        "media": "2116cb_71ecd3df9dfe452d80d81c072d76001e~mv2.jpg",
-        "width": 2702,
-        "height": 1519,
-        "caption": "Enamelled copper wire, stainless steel plate and screw,  H178x W90x D90 cm, 2022",
-        "title": "Autumn",
+        "media": "2116cb_83be4dcf2dd24853af8aeb11cb4a486b~mv2.jpg",
+        "width": 2204,
+        "height": 1470,
+        "caption": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90, 2022",
+        "title": "(Detail)",
         "filename": "",
         "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
-          "year": "2022"
-        }
-      },
-      {
-        "media": "2116cb_3c3ff0bd2f45455e8b4c556b62f266f2~mv2.png",
-        "width": 2771,
-        "height": 1558,
-        "caption": "Enamelled copper wire, stainless steel plate and screw,  H178x W90x D90 cm, 2022",
-        "title": "Winter",
-        "filename": "",
-        "parsed": {
-          "raw": "Enamelled copper wire, stainless steel plate and screw, H178x W90x D90 cm, 2022",
-          "material": "Enamelled copper wire, stainless steel plate and screw",
-          "dims": "H178x W90x D90 cm",
+          "raw": "Enamelled copper wire, stainless steel mirror, screw, H178 x W90 x D90, 2022",
+          "material": "Enamelled copper wire, stainless steel mirror, screw",
+          "dims": "H178 x W90 x D90",
           "year": "2022"
         }
       }
