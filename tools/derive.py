@@ -78,7 +78,8 @@ def process(kind, slugs, limit, force):
         if cover.get("media"):
             derive(cover["media"], f"{kind}/{slug}/{year}_{slug}_cover", force)
         picked = []
-        for n, img in enumerate((rec.get("images") or [])[:limit], 1):
+        image_limit = rec.get("image_limit", limit)
+        for n, img in enumerate((rec.get("images") or [])[:image_limit], 1):
             stem = f"{kind}/{slug}/{year}_{slug}_{n:02d}"
             if derive(img["media"], stem, force):
                 picked.append(dict(

@@ -46,6 +46,11 @@
     "In the Déjà Vu series, Julia Hung extends her ongoing inquiry into free will. Guided by intuition, she weaves flexible copper wire into delicate, web-like sculptures that seem to drift between states—expanding, collapsing, and re-forming.",
     "These works exist in the liminal space between freedom and constraint, linear and cyclical time, fate and agency—inviting viewers to encounter the moments where memory and foresight collide, challenging our assumptions about causality, temporality, and the autonomy of choice."
   ],
+  "text_styles": {
+    "10": "heading-strong-em",
+    "15": "heading-strong-em",
+    "21": "heading-strong-em"
+  },
   "text_zh": [
     "臻品35週年特展",
     "李晏禎、紀嘉華策展",
@@ -108,7 +113,7 @@
       "media": "813b18_9bc699bb43dc4bbb88af20fe79b42ea1~mv2.jpg",
       "width": 2048,
       "height": 1367,
-      "caption": "2025\nEnamelled copper wire\nH35x W21x D15 cm",
+      "caption": "Being as a Woman, 2025",
       "title": "Being as a Woman",
       "filename": "2025_Being as a Woman_Julia Hung_enamelled copper wire_H35x W21x D15cm_1-2.jpg"
     },
@@ -116,7 +121,7 @@
       "media": "5d7252_78cd8e3797904349892088e9946c256a~mv2.jpg",
       "width": 7360,
       "height": 4912,
-      "caption": "2025\nEnamelled copper wire\nH35x W21x D15 cm",
+      "caption": "Being as a Woman, 2025",
       "title": "Being as a Woman",
       "filename": "20251114-Julia-046.jpg"
     },
@@ -124,7 +129,7 @@
       "media": "813b18_6b2be2e8fe274ac08462b6b0e98ffc01~mv2.jpg",
       "width": 2400,
       "height": 3000,
-      "caption": "2025\nEnamelled copper wire\nH125 x W102 x D30 cm",
+      "caption": "Wisps and Whispers 06, 2025",
       "title": "Wisps and Whispers 06",
       "filename": "2025_Wisps and Whispers 05_JuliaHung_enamelled copper wire_H148 x W55 x D45 cm_2.jpg"
     },
@@ -132,7 +137,7 @@
       "media": "813b18_e3e1111d5874417e8a08ea8c4bf823f5~mv2.jpg",
       "width": 2000,
       "height": 1999,
-      "caption": "2025\nEnamelled copper wire\nH125 x W102 x D30 cm",
+      "caption": "Wisps and Whispers 06, 2025",
       "title": "Wisps and Whispers 06",
       "filename": "2000x2000_2025_Wisps and Whispers 05 載夢05_Julia Hung_彩漆銅線_H148 x W55 x D45 cm_GR_04.jpg"
     },
@@ -140,7 +145,7 @@
       "media": "813b18_2b95dd854ff14754ae76a3e323ba401e~mv2.jpg",
       "width": 1000,
       "height": 1000,
-      "caption": "2023\nEnamelled copper wire\nH27 x W23 x D22 cm",
+      "caption": "Déjà Vu03, 2023",
       "title": "Déjà Vu03",
       "filename": "resize_dejavu03_1.jpg"
     },
@@ -148,7 +153,7 @@
       "media": "813b18_594426101129441ea5357d6415ba01a3~mv2.png",
       "width": 1000,
       "height": 667,
-      "caption": "Enamelled copper wire\nH27 x W23 x D22 cm\n2023",
+      "caption": "Déjà Vu03, 2023",
       "title": "Déjà Vu03",
       "filename": "resize_dejavu03_3.png"
     }

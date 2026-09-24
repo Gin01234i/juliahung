@@ -18,9 +18,13 @@
   "categories": [
     "Solo exhibitions"
   ],
+  "image_limit": 12,
   "text": [
     "For her solo exhibition Will Looped, Taiwanese artist Julia Hung shifts her gaze inward to question the notion of free will while contemplating the originality of art. Hung often examines social issues in her works, but the pandemic of COVID-19 has confronted her with the changeable nature of life. To find an inner balance, the artist meditates and ponders on the essence of life and art while crocheting enameled copper wire into permeable organic forms. A new body of jewel-like suspension sculptures visualizes her contemplation on the linearity of time and the causality of free will, and reconciling freedom and limitation. Her transcendent world invites viewers to meditate and face uncertainties in life."
   ],
+  "text_styles": {
+    "0": "body"
+  },
   "text_zh": [
     "在作品探索初期，藝術家面臨著COVID-19疫情所帶來的變動和無常，主題也從對外在社會問題的探討，轉向內在自省，重新思索生命和藝術的本質，與其對於自身及社會的關聯。經由探索及實驗不同媒介的可能性，反思藝術的原創性和身為人的自由意志，試以不同的角度尋找內心的平衡點。",
     "或許自由意志這個概念，會如迴圈般的沒有解答，但只要有一點點的差異性，就可以塑造出不一樣的我們。無論自由意志是否真實存在，或許是種有用的信仰，也許還無法全面理解，但可以從中感受，讓觀者進入抽象的想像空間沈思，坦然面對生命中的不確定性。",

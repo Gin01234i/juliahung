@@ -7,6 +7,7 @@
   "kind": null,
   "solo": true,
   "year": "2021",
+  "image_limit": 25,
   "dates": [
     "2021",
     "New Taipei City Arts Center, New Taipei City"
@@ -22,6 +23,9 @@
     "Aristotle believes “nature does nothing in vain”. Artist Julia Hung believes every person has his or her own strength and existential meaning. Hung presents lively organic sculptures to bring forward her belief in animism and today’s existential issues. Made by post-consumer wastes that carry human memory, this exhibition confronts us with the urgent social issues and environmental crises of our contemporary life. It questions the ideology of our consumerist culture. Hung collects used plastic bags, clothing, aluminum cans, and miscellaneous waste, and turns them into vibrant organic sculptures. She creatively combines her learning in fashion design and the crochet technique taught by her grandmother to give wastes a new life.",
     "This exhibition demonstrates a range of Hung’s artworks through different series. It stimulates viewers to reexamine what is really needed in life."
   ],
+  "text_styles": {
+    "0": "body"
+  },
   "text_zh": [
     "如果萬物有靈, 你想成為什麼？ 生活中, 會做出一樣的選擇嗎？",
     "生與活有何不同, 你覺得呢？",
