@@ -75,6 +75,13 @@ a { color: inherit; text-decoration: none; }
   font-size: 24px; line-height: 1.2; letter-spacing: -0.01em;
   font-weight: 400; color: var(--ink);
 }
+.work-title__series {
+  margin-left: 0.45em;
+  font-size: 0.68em;
+  font-style: normal;
+  letter-spacing: 0;
+  color: var(--mute);
+}
 .t-lead {             /* home statement, exhibition intro */
   font-size: 19px; line-height: 1.55; letter-spacing: -0.005em;
   color: var(--ink); max-width: 640px;
@@ -89,6 +96,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 13px; line-height: 1.7; color: var(--body);
   max-width: 70ch;
 }
+.poem { line-height: 1.45; }
 .t-meta {             /* navigation, links, next/prev */
   font-size: 12px; line-height: 1.4; letter-spacing: 0.10em;
   text-transform: uppercase;
@@ -225,8 +233,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* --- Meta block ---------------------------------------------------------- */
-/* Label / value pairs, fixed label column. Order: Material, Series,
-   Dimensions, Shown. Closed by a hairline and a short written note. */
+/* Label / value pairs, fixed label column. Order: Material, Dimensions,
+   Shown. Closed by a hairline and a short written note. */
 
 .meta { display: grid; grid-template-columns: var(--label-col) 1fr; gap: 0 16px; }
 .meta dt {
@@ -262,6 +270,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase; color: var(--mute);
 }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gutter); }
+.fig--half { width: calc((100% - var(--gutter)) / 2); }
 
 /* --- Links --------------------------------------------------------------- */
 
@@ -549,6 +558,7 @@ a { color: inherit; text-decoration: none; }
   .grid { gap: 28px 16px; }
   .grid .card__title { font-size: 15px; }
   .pair { grid-template-columns: 1fr; }
+  .fig--half { width: 100%; }
 
   /* Nav stays a line of text items at 11px — it never becomes a hamburger.
      Below this width it takes its own row under the wordmark. */

@@ -19,6 +19,8 @@ SITE = "https://www.jujuhung.com"
 
 sel = json.load(open(f"{ROOT}/content/selection.json", encoding="utf-8"))
 imgs = json.load(open(f"{ROOT}/content/images.json", encoding="utf-8"))
+EXHIBITION_CAPTIONS = json.load(open(
+    f"{ROOT}/content/exhibition_captions.json", encoding="utf-8"))
 FEATURED = sel["works_featured"]
 CATS = sel["categories"]
 
@@ -115,18 +117,21 @@ def write(path, content):
 
 # --- Imagery -------------------------------------------------------------- #
 
-def picture(stem, ratio, alt, caption=None, sizes="100vw", eager=False):
+def picture(stem, ratio, alt, caption=None, sizes="100vw", eager=False,
+            extra_class=""):
     """<picture> with a WebP source and a JPEG fallback, fixed ratio, no
     rounding, caption outside the frame."""
     cap = ""
     if caption:
-        cap = f"\n    <figcaption>{esc(caption)}</figcaption>"
+        clean_caption = "\n".join(line.rstrip() for line in caption.strip().splitlines())
+        cap = f"\n    <figcaption>{esc(clean_caption)}</figcaption>"
     loading = "eager" if eager else "lazy"
     webp = ""
     if all(os.path.exists(f"{ROOT}/assets/img/{stem}-{w}.webp") for w in (800, 1600)):
         webp = f'''      <source type="image/webp" sizes="{sizes}"
               srcset="/assets/img/{stem}-800.webp 800w, /assets/img/{stem}-1600.webp 1600w">\n'''
-    return f"""  <figure class="fig fig--{ratio}">
+    extra = f" {extra_class}" if extra_class else ""
+    return f"""  <figure class="fig fig--{ratio}{extra}">
     <picture>
 {webp}      <img src="/assets/img/{stem}-1600.jpg"
            srcset="/assets/img/{stem}-800.jpg 800w, /assets/img/{stem}-1600.jpg 1600w"
@@ -201,13 +206,11 @@ def work_detail(slug, prev_slug, next_slug):
     meta_rows = []
     for label, val in (
         ("Material", rec.get("material")),
-        ("Series", rec.get("series")),
         ("Dimensions", tidy_dims(rec.get("dimensions"))),
     ):
         if val:
-            rendered = work_copy(val) if label == "Series" else esc(val)
             meta_rows.append(f"    <dt>{label}</dt>\n"
-                             f"    <dd>{rendered}</dd>")
+                             f"    <dd>{esc(val)}</dd>")
 
     def shown_list(items):
         separator = "<br>" if rec.get("shown_layout") == "lines" else ", "
@@ -233,25 +236,48 @@ def work_detail(slug, prev_slug, next_slug):
     elif lead_en:
         note = f'\n  <p class="meta__note">{work_copy(lead_en)}</p>'
 
-    # Image stack: one 4/3 primary, then 1/1 pairs.
-    def cap(p):
-        if rec.get("show_captions") is False:
+    # Image stack: one 4/3 primary, then 1/1 pairs. Only series pages carry
+    # captions, assembled consistently from the legacy per-image metadata.
+    source_images = rec.get("images") or []
+
+    def series_caption(index, pic):
+        if not rec.get("series"):
             return None
-        return tidy_dims(p.get("parsed", {}).get("raw")) or None
+        source = source_images[index] if index < len(source_images) else {}
+        parsed = source.get("parsed") or pic.get("parsed") or {}
+        image_title = source.get("title") or title
+        image_title = " / ".join(
+            re.sub(r"\s+", " ", line).strip()
+            for line in image_title.splitlines() if line.strip())
+        complete_metadata = all(parsed.get(k) for k in ("material", "dims", "year"))
+        material = (parsed.get("material") if complete_metadata
+                    else rec.get("material"))
+        dimensions = tidy_dims(parsed.get("dims") if complete_metadata
+                               else rec.get("dimensions"))
+        image_year = (parsed.get("year") if complete_metadata
+                      else year_label(rec.get("year")))
+        return ", ".join(
+            esc_part for esc_part in (image_title, material, dimensions, image_year)
+            if esc_part)
 
     stack = []
     if pics:
         p = pics[0]
-        stack.append(picture(p["stem"], "4-3", alt_for(rec, 1, "works"), cap(p),
+        stack.append(picture(p["stem"], "4-3", alt_for(rec, 1, "works"),
+                             series_caption(0, p),
                              sizes="(max-width: 900px) 100vw, 70vw", eager=True))
     rest = pics[1:]
     for i in range(0, len(rest), 2):
         pair = rest[i:i + 2]
         inner = "\n".join(
             picture(p["stem"], "1-1", alt_for(rec, i + j + 2, "works"),
-                    cap(p), sizes="(max-width: 600px) 100vw, 35vw")
+                    series_caption(i + j + 1, p),
+                    sizes="(max-width: 600px) 100vw, 35vw")
             for j, p in enumerate(pair))
-        stack.append(f'  <div class="pair">\n{inner}\n  </div>')
+        if len(pair) == 1:
+            stack.append(inner)
+        else:
+            stack.append(f'  <div class="pair">\n{inner}\n  </div>')
 
     body_paras = "" if all_copy_in_meta else "\n".join(
         f'    <p class="t-body">{work_copy(l)}</p>'
@@ -267,10 +293,13 @@ def work_detail(slug, prev_slug, next_slug):
         nav.append(f'  <a class="lnk" href="/artworks/{next_slug}/">'
                    f'<em>{esc(nx["title"])}</em> →</a>')
 
+    series_label = (' <span class="work-title__series">series</span>'
+                    if rec.get("series") else "")
+
     body = f"""<article class="s-detail detail">
 
   <div class="detail__meta stack--tight">
-    <h1 class="t-display"><em>{esc(title)}</em></h1>
+    <h1 class="t-display work-title"><em>{esc(title)}</em>{series_label}</h1>
     <p class="t-label">{esc(year_label(rec.get("year")))}</p>
   <dl class="meta">
 {chr(10).join(meta_rows)}
@@ -457,7 +486,18 @@ def exhibitions_index():
 
 def exhibition_detail(slug):
     rec = load("exhibitions", slug)
-    pics = imgs["exhibitions"].get(slug, [])
+    pics = list(imgs["exhibitions"].get(slug, []))
+    image_limit = rec.get("image_limit", len(pics))
+    image_year = re.sub(r"[^0-9]", "", rec.get("year") or "nd")[:4] or "nd"
+    for n, image in enumerate((rec.get("images") or [])[len(pics):image_limit],
+                              len(pics) + 1):
+        pics.append({
+            "stem": f"exhibitions/{slug}/{image_year}_{slug}_{n:02d}",
+            "width": image.get("width"),
+            "height": image.get("height"),
+            "caption": image.get("caption", ""),
+        })
+    captions = EXHIBITION_CAPTIONS.get(slug, [])
     # dates is [year, venue] in every record — the Wix export packed the venue
     # in beside the year. year_range takes the date half and nothing else.
     dates_en = year_range(rec)
@@ -469,15 +509,23 @@ def exhibition_detail(slug):
     if pics:
         stack.append(picture(pics[0]["stem"], "16-10",
                              alt_for(rec, 1, "exhibitions"),
+                             caption=captions[0] if captions else None,
                              sizes="(max-width: 900px) 100vw, 70vw", eager=True))
     rest_pics = pics[1:]
     for i in range(0, len(rest_pics), 2):
         pair = rest_pics[i:i + 2]
+        single = len(pair) == 1
         inner = "\n".join(
             picture(p["stem"], "4-3", alt_for(rec, i + j + 2, "exhibitions"),
-                    sizes="(max-width: 600px) 100vw, 35vw")
+                    caption=(captions[i + j + 1]
+                             if i + j + 1 < len(captions) else None),
+                    sizes="(max-width: 600px) 100vw, 35vw",
+                    extra_class="fig--half" if single else "")
             for j, p in enumerate(pair))
-        stack.append(f'  <div class="pair">\n{inner}\n  </div>')
+        if single:
+            stack.append(inner)
+        else:
+            stack.append(f'  <div class="pair">\n{inner}\n  </div>')
 
     # The text sits under the images. Exhibition texts run long — one lead
     # paragraph of a thousand characters would not fit the meta column.
@@ -490,8 +538,34 @@ def exhibition_detail(slug):
 
     text_en = rec.get("text") or []
     text_styles = rec.get("text_styles") or {}
+    poem_starts = {
+        int(start): int(end)
+        for start, end in (rec.get("poem_ranges") or [])
+    }
+    poem_continuations = {
+        poem_index
+        for start, end in poem_starts.items()
+        for poem_index in range(start + 1, end + 1)
+    }
+    body_italic_terms = list(rec.get("body_italic_terms") or [])
+    for work in rec.get("works") or []:
+        href = local_href(work.get("href"))
+        if href:
+            work_title = load("works", href.strip("/").split("/")[-1]).get("title")
+            if work_title and work_title not in body_italic_terms:
+                body_italic_terms.append(work_title)
+    body_italic_terms.sort(key=len, reverse=True)
     paragraphs_list = []
     for index, line in enumerate(text_en):
+        if index in poem_continuations:
+            continue
+        if index in poem_starts:
+            poem = "<br>\n".join(
+                esc(poem_line)
+                for poem_line in text_en[index:poem_starts[index] + 1]
+            )
+            paragraphs_list.append(f'    <p class="t-body poem">{poem}</p>')
+            continue
         rendered = esc(line)
         style = text_styles.get(str(index))
         if style == "heading":
@@ -501,6 +575,8 @@ def exhibition_detail(slug):
             paragraphs_list.append(
                 f'    <h2 class="t-row"><strong><em>{rendered}</em></strong></h2>')
         else:
+            for term in body_italic_terms:
+                rendered = rendered.replace(esc(term), f"<em>{esc(term)}</em>")
             klass = "t-lead" if index == 0 and style != "body" else "t-body"
             paragraphs_list.append(f'    <p class="{klass}">{rendered}</p>')
     paragraphs = "\n".join(paragraphs_list)

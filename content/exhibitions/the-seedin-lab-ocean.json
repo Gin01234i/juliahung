@@ -7,6 +7,7 @@
   "kind": "Collaboration",
   "solo": false,
   "year": "2022",
+  "image_limit": 12,
   "cover_image": {
     "media": "2116cb_821b8dc0c7854678890a667c39365383~mv2.jpg",
     "width": 2408,
@@ -25,7 +26,7 @@
   ],
   "text": [
     "Artist Julia Hung reexamines the social and environmental issues under consumerism. She created her artwork with post-consumer wastes, to look into the ocean theme and raise questions.",
-    "<Biomimicry>",
+    "Biomimicry",
     "Hung questions the concept of value under consumerism, and believes everything has its purpose and value in nature. By repurposing artificial media - post-consumer wastes, into organic shapes imitating natural forms, perhaps the way of nature could be further examined and learned.",
     "Hung cuts used plastic package into strips and wraps them around metal wire to create a bony structure with gradient colors. The semitransparent part is ironed with layers of transparent plastic bags to harden with thickness. A thin resin coating is then added to further strengthen the suspended sculpture. The organic floaty shapes are opened for interpretation.",
     "Debris series",
@@ -37,6 +38,10 @@
     "Fossils",
     "The last but not the least, Hung presents daily post-consumer waste - fish bone, shell, and PET bottles caps as fossils, to ask what we are leaving behind for our future generation, and perhaps it is still possible to change."
   ],
+  "text_styles": {
+    "1": "heading-strong-em",
+    "4": "heading-strong-em"
+  },
   "text_zh": [
     "藝術家洪郁雯 Julia Hung 有感於消費主義而生的社會及環境問題，以消費後廢棄物為材創作，呼應永續海洋主題，提出疑問與觀者一同反思。",
     "「仿生」",

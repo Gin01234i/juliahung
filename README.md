@@ -11,7 +11,7 @@ GitHub access — see [`DEVELOPING_WITH_CODEX.md`](./DEVELOPING_WITH_CODEX.md).
 ## Running it
 
 ```bash
-python3 -m http.server 8000     # then open http://localhost:8000
+./start-local-server.command   # opens http://localhost:8000 automatically
 ```
 
 That is the whole toolchain. The repo root *is* the site.

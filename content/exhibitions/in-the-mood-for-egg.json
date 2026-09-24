@@ -31,6 +31,15 @@
     "They might not be 100% real, but they are surely not fake - they are merely artificial.",
     "Curator | Jeanne Graff"
   ],
+  "text_styles": {
+    "0": "body"
+  },
+  "poem_ranges": [
+    [
+      1,
+      8
+    ]
+  ],
   "text_zh": [
     "以中國人造假蛋和美國素食蛋的新聞為靈感，Julia呈現了⾃己的人造蛋，有可食用和非食用性的，來表現這個人造現實的時代。",
     "我們所在的世界",
